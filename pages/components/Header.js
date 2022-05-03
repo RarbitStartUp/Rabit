@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/Image'
+// import Image from 'next/Image'
 import {
   SearchIcon,
   PlusCircleIcon,
@@ -12,7 +12,7 @@ import {
 function Header() {
   return (
     <div>
-      <div className="mx-5 flex max-w-6xl justify-between xl:mx-auto">
+      {/* <div className="mx-5 flex max-w-6xl justify-between xl:mx-auto">
         <div className="relative  h-24 w-24 flex-shrink-0">
           <Image
             src="https://links.papareact.com/ocw"
@@ -20,7 +20,7 @@ function Header() {
             objectFit="contain"
           />
         </div>
-      </div>
+      </div> */}
 
       <div className="max-w-xs">
         <div className="relative mt-1 rounded-md">
