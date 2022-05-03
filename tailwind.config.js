@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      vali: ['VALORANT'],
+    },
   },
   plugins: [require('@tailwindcss/forms')],
 }

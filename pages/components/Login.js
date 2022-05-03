@@ -19,7 +19,7 @@ import { useRouter } from 'next/router'
 // import Link from 'next/link'
 // import Image from 'next/image'
 
-export default function Example() {
+export default function Login() {
   const router = useRouter()
 
   return (
@@ -114,7 +114,7 @@ export default function Example() {
 
             <div>
               <button
-                onClick={() => router.push('/components/Header')}
+                onClick={() => router.push('./components/Card')}
                 type="submit"
                 className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
