@@ -8,10 +8,13 @@ import {
   PaperAirplaneIcon,
   MenuIcon,
 } from '@heroicons/react/outline'
-import { MdSort } from 'react-icons/md'
-import { FilterIcon } from '@heroicons/react/solid'
+import { MdArrowBackIos, MdSort } from 'react-icons/md'
+import { BackspaceIcon, FilterIcon } from '@heroicons/react/solid'
+import { useRouter } from 'next/router'
 
 function Header() {
+  const router = useRouter()
+
   return (
     <div>
       {/* <div className="mx-5 flex max-w-6xl justify-between xl:mx-auto">
@@ -23,28 +26,41 @@ function Header() {
           />
         </div>
       </div> */}
-      <div className="flex justify-between">
-        <div className="max-w-xs pt-5 pl-5">
-          <div className="relative mt-1 rounded-md">
-            <div className="pointer-events-none absolute inset-y-0 flex items-center pl-3">
-              <SearchIcon className="h-5 w-5 text-gray-500" />
+
+      <div className="flex flex-row items-center justify-start space-x-4 pl-3">
+        <button
+          className="m-auto mt-6 flex flex-row items-center justify-start rounded-xl bg-white p-2.5  duration-300 ease-linear hover:text-[#424bb6] "
+          onClick={() => {
+            router.push('./components/Login')
+          }}
+          type="submit"
+        >
+          <MdArrowBackIos className="h-5 w-5 text-[#5865F2]" />
+        </button>
+
+        <div className="flex flex-row">
+          <div className="max-w-xs pt-5 ">
+            <div className="relative mt-1 rounded-md">
+              <div className="pointer-events-none absolute inset-y-0 flex items-center pl-3">
+                <SearchIcon className="h-5 w-5 text-gray-500" />
+              </div>
+              <input
+                className="sm-text-sm block w-full rounded-3xl border-[#5865F2] bg-gray-50 pl-10 focus:border-[#5865F2] focus:ring-[#5865F2]"
+                type="text"
+                placeholder="Search"
+              />
             </div>
-            <input
-              className="sm-text-sm block w-full rounded-3xl border-[#5865F2] bg-gray-50 pl-10 focus:border-[#5865F2] focus:ring-[#5865F2]"
-              type="text"
-              placeholder="Search"
-            />
           </div>
         </div>
-        <div className="flex flex-row items-center justify-end space-x-4 pr-8">
+        <div className="flex flex-row items-center justify-end space-x-4 pr-10">
           <button
-            className="m-auto mt-5 flex flex-row items-center justify-center rounded-xl bg-white p-2.5 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2"
+            className="m-auto mt-5 flex flex-row items-center justify-center rounded-xl bg-white p-2.5 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] "
             onClick={() => {}}
           >
             <FilterIcon className="h-5 w-5 text-[#5865F2]" />
           </button>
           <button
-            className="m-auto mt-5 flex flex-row items-center justify-center rounded-xl bg-white p-2.5 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2"
+            className="m-auto mt-5 flex flex-row items-center justify-center rounded-xl bg-white p-2.5 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] "
             onClick={() => {}}
           >
             <MdSort className="h-5 w-5 text-[#5865F2]" />
