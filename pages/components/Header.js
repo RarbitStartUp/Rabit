@@ -8,6 +8,8 @@ import {
   PaperAirplaneIcon,
   MenuIcon,
 } from '@heroicons/react/outline'
+import { MdSort } from 'react-icons/md'
+import { FilterIcon } from '@heroicons/react/solid'
 
 function Header() {
   return (
@@ -21,18 +23,31 @@ function Header() {
           />
         </div>
       </div> */}
-
-      <div className="max-w-xs">
-        <div className="relative mt-1 rounded-md">
-          <div className="pointer-events-none absolute inset-y-0 flex items-center pl-3">
-            <SearchIcon className="h-5 w-5 text-gray-500" />
+      <div className="flex items-center justify-between">
+        <div className="max-w-xs pt-10 pl-5">
+          <div className="relative mt-1 rounded-md">
+            <div className="pointer-events-none absolute inset-y-0 flex items-center pl-3">
+              <SearchIcon className="h-5 w-5 text-gray-500" />
+            </div>
+            <input
+              className="sm-text-sm block w-full rounded-3xl border-[#5865F2] bg-gray-50 pl-10 focus:border-[#5865F2] focus:ring-[#5865F2]"
+              type="text"
+              placeholder="Search"
+            />
           </div>
-          <input
-            className="sm-text-sm block w-full rounded-md border-gray-300 bg-gray-50 pl-10 focus:border-gray-300 focus:ring-gray-300"
-            type="text"
-            placeholder="Search"
-          />
         </div>
+        <button
+          className="m-auto mt-12 flex flex-row items-center justify-center rounded-xl bg-[#5865F2] p-2.5 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2"
+          onClick={() => {}}
+        >
+          <MdSort className="h-5 w-5 text-white" />
+        </button>
+        <button
+          className="m-auto mt-12 flex flex-row items-center justify-center rounded-xl bg-[#5865F2] p-2.5 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2"
+          onClick={() => {}}
+        >
+          <FilterIcon className="h-5 w-5 text-white" />
+        </button>
       </div>
     </div>
   )
