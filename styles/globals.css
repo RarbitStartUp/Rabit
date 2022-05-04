@@ -18,3 +18,20 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@layer components {
+  .navBtn {
+    @apply h-6 cursor-pointer
+    p-2.5 text-[#5865F2]
+     transition-all
+    duration-150
+     ease-out hover:scale-125 hover:text-[#424bb6] md:m-2;
+  }
+  /* .navBtn {
+    @apply hidden h-6 cursor-pointer
+    p-2.5 text-[#5865F2]
+     transition-all
+    duration-150
+     ease-out hover:scale-125 hover:text-[#424bb6] md:m-2 md:inline-flex;
+  } */
+}
