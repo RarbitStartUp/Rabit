@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <body className={toggle ? 'dark' : 'light'}>
         <Header />
-        <div className="flex h-[100vh] w-[100vw] items-center justify-center bg-gray-100 duration-300 ease-linear dark:bg-slate-900">
+        <div className="flex h-[70vh] w-[100vw] items-center justify-center bg-white duration-300 ease-linear dark:bg-slate-900">
           <Card_temp_2 toggle={toggle} setToggle={setToggle} />
         </div>
       </body>
