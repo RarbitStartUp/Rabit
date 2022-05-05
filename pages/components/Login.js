@@ -16,7 +16,6 @@
 */
 import { LockClosedIcon } from '@heroicons/react/solid'
 import { useRouter } from 'next/router'
-import Listing from './Listing'
 // import { FaFacebook } from 'react-icons/fa'
 // import { signIn } from 'next-auth/client'
 // import { signIn } from 'next-auth/react'
