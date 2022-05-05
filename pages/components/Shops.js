@@ -4,7 +4,7 @@ const shops = [
   {
     shopName: 'Sora Ramen',
     imageUrl:
-      'https://images.unsplash.com/photo-1478749485505-2a903a729c63?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      'https://images.unsplash.com/photo-1623341214825-9f4f963727da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
     rewardPoints: 1011,
     tokenAllocations: 10,
     location: 'Central',
