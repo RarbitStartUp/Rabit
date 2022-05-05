@@ -32,7 +32,7 @@ const shops = [
 
 export default function Shops() {
   return (
-    <div className="flex h-[20.5rem] w-[20.5rem] flex-col space-y-3 rounded-2xl bg-white p-4 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[20.5rem] md:w-[50rem] ">
+    <div className="mx-auto flex h-[20.5rem] w-[20.5rem] flex-col space-y-3 rounded-2xl bg-white pt-5 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[20.5rem] md:w-[50rem] ">
       {/* <div className="justify-center space-y-3 overflow-hidden"> */}
       {shops.map((shop) => (
         <Card
