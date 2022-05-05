@@ -13,7 +13,6 @@ import { VscChecklist, VscLocation } from 'react-icons/vsc'
 import { FaPlay } from 'react-icons/fa'
 import { MoonIcon } from '@heroicons/react/solid'
 import { SunIcon } from '@heroicons/react/solid'
-import Shops from './ShopsBackEnd'
 
 // export default function Card({ toggle, setToggle }) {
 export default function Card({
@@ -27,7 +26,10 @@ export default function Card({
   // const url = Shops.image[0]?.url
 
   return (
-    <div className="flex h-[100rem] w-[20.5rem] flex-col rounded-2xl bg-white p-4 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[20.5rem] md:w-[50rem] md:flex-row-reverse">
+    <div
+      onClick={() => router.push('./components/CardDetail')}
+      className="flex h-[100rem] w-[20.5rem] flex-col rounded-2xl bg-white p-4 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[20.5rem] md:w-[50rem] md:flex-row-reverse"
+    >
       <div className=" relative h-full  w-full basis-2/3 rounded-2xl shadow-md">
         <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>
