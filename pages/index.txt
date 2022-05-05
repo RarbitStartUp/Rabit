@@ -1,0 +1,35 @@
+import { NextPage } from 'next'
+import Head from 'next/head'
+import Login from './components/Login'
+import Header from './components/Header'
+
+// export async function getServerSideProps() {}
+
+export default function Home({ session }) {
+  if (!session) return <Login />
+
+  return (
+    <div
+    // className="flex min-h-screen flex-col items-center justify-center py-2"
+    >
+      <Head>
+        <title>Rarbit</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      {/* <Header /> */}
+      <Login />
+    </div>
+  )
+}
+
+// export default Home
+export async function getServerSideProps(context) {
+  // Get the user
+  const session = await getSession(context)
+
+  return {
+    props: {
+      session,
+    },
+  }
+}

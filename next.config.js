@@ -4,9 +4,11 @@ const withPWA = require('next-pwa')
 module.exports = withPWA({
   reactStrictMode: true,
   images: {
-    domains: ['images.unsplash.com'],
-    // domains: ['links.papareact.com'],
-    // domains: ['ibb.co'],
+    domains: [
+      'images.unsplash.com',
+      'platform-lookaside.fbsbx.com',
+      'firebasestorage.googleapis.com',
+    ],
   },
   pwa: {
     dest: 'public',

@@ -1,5 +1,4 @@
-import Image from 'next/image'
-// import ramen from '../public/ramen.jpg'
+// import Image from 'next/image'
 import { FaDollarSign, FaReact, FaRegComment } from 'react-icons/fa'
 import {
   MdRoom,
@@ -14,8 +13,19 @@ import { VscChecklist, VscLocation } from 'react-icons/vsc'
 import { FaPlay } from 'react-icons/fa'
 import { MoonIcon } from '@heroicons/react/solid'
 import { SunIcon } from '@heroicons/react/solid'
+import Shops from './Shops'
 
-export default function Card_temp_1({ toggle, setToggle }) {
+// export default function Card({ toggle, setToggle }) {
+export default function Card({
+  shopName,
+  location,
+  rewardPoints,
+  categories,
+  tokenAllocations,
+  imageUrl,
+}) {
+  // const url = Shops.image[0]?.url
+
   return (
     <div className="flex h-[30rem] w-[20.5rem] flex-col rounded-2xl bg-white p-4 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[20.5rem] md:w-[50rem] md:flex-row-reverse">
       <div className=" relative h-full  w-full basis-2/3 rounded-2xl shadow-md">
@@ -23,36 +33,40 @@ export default function Card_temp_1({ toggle, setToggle }) {
           <h1>NEW</h1>
         </div>
         <div className="relative h-full w-full rounded-2xl border-2 border-white">
-          <Image
-            src={
-              'https://images.unsplash.com/photo-1623341214825-9f4f963727da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
-            }
-            alt="thumbnail"
-            layout="fill"
-            objectFit="cover"
-            className=" rounded-2xl"
-          />
+          {imageUrl && (
+            <img
+              src={imageUrl}
+              alt="thumbnail"
+              layout="fill"
+              objectFit="cover"
+              className=" rounded-2xl"
+            />
+          )}
         </div>
       </div>
 
       <div className=" mr-2 h-full w-full rounded-2xl ">
         <p className="m-2 pl-1 text-lg font-bold text-[#5865F2]">
-          Japanese Restaurant
+          {categories}
         </p>
-        <h1 className="m-2 text-4xl font-bold dark:text-white">Sora Ramen</h1>
+        <h1 className="m-2 text-4xl font-bold dark:text-white">{shopName}</h1>
 
         <div className=" flex flex-row flex-wrap justify-around pt-1 pr-4 pl-2">
           <div className="m-2 flex flex-row items-center">
             <MdRedeem size={20} color="#5865F2" />
-            <h1 className="pl-1 dark:text-white">1100 points</h1>
+            <h1 className="pl-1 dark:text-white">
+              {rewardPoints + ' points'}{' '}
+            </h1>
           </div>
           <div className="m-2 flex flex-row items-center">
             <FaDollarSign size={20} color="#5865F2" />
-            <h1 className="pl-1 dark:text-white">10% token</h1>
+            <h1 className="pl-1 dark:text-white">
+              {tokenAllocations + ' % token'}
+            </h1>
           </div>
           <div className="m-2 flex flex-row items-center">
             <MdRoom size={20} color="red" className="dark:text-white" />
-            <h1 className="pl-1 dark:text-white">Hung Hom</h1>
+            <h1 className="pl-1 dark:text-white">{location}</h1>
           </div>
           <div className="m-2 flex flex-row items-center">
             <FaRegComment size={20} color="grey" className="dark:text-white" />

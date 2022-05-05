@@ -1,10 +1,11 @@
 import Head from 'next/head'
-import Image from 'next/image'
+// import Image from 'next/image'
 import { useState } from 'react'
-import Card_temp_2 from './Card_temp_2'
+import Card2 from './Card'
 import Header from './Header'
+import CardBackup from './CardBackup'
 
-export default function Home() {
+export default function CardBackup() {
   const [toggle, setToggle] = useState(false)
   return (
     <>
@@ -15,7 +16,7 @@ export default function Home() {
       <body className={toggle ? 'dark' : 'light'}>
         <Header />
         <div className="flex h-[70vh] w-[100vw] items-center justify-center bg-white duration-300 ease-linear dark:bg-slate-900">
-          <Card_temp_2 toggle={toggle} setToggle={setToggle} />
+          <Card2 toggle={toggle} setToggle={setToggle} />
         </div>
       </body>
     </>

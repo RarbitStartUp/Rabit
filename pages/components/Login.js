@@ -16,6 +16,11 @@
 */
 import { LockClosedIcon } from '@heroicons/react/solid'
 import { useRouter } from 'next/router'
+import Listing from './Listing'
+// import { FaFacebook } from 'react-icons/fa'
+// import { signIn } from 'next-auth/client'
+// import { signIn } from 'next-auth/react'
+
 // import Link from 'next/link'
 // import Image from 'next/image'
 
@@ -114,7 +119,7 @@ export default function Login() {
 
             <div>
               <button
-                onClick={() => router.push('./components/Card')}
+                onClick={() => router.push('./components/Listing')}
                 type="submit"
                 className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
@@ -126,6 +131,12 @@ export default function Login() {
                 </span>
                 Sign in
               </button>
+              {/* social media sign in */}
+              {/* <div className="flex flex-row">
+                <button className="m-auto mt-8 flex flex-row items-center justify-center  rounded-xl bg-[#5865F2] pt-2 pb-2 pl-6 pr-10 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2">
+                  <FaFacebook className="h-5 w-5 text-white" onClick={signIn} />
+                </button>
+              </div> */}
             </div>
           </form>
         </div>

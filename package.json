@@ -7,10 +7,14 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
+    "@types/next-auth": "^3.15.0",
+    "firebase": "^9.7.0",
     "next": "latest",
+    "next-auth": "^4.0.0-beta.7",
     "next-pwa": "^5.5.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-firebase-hooks": "^5.0.3",
     "react-icons": "^4.3.1"
   },
   "devDependencies": {
@@ -23,5 +27,20 @@
     "prettier-plugin-tailwindcss": "^0.1.1",
     "tailwindcss": "^3.0.7",
     "typescript": "4.5.4"
-  }
+  },
+  "types": "./index.d.ts",
+  "name": "rarbit",
+  "description": "This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).",
+  "version": "1.0.0",
+  "main": "next.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/RarbitStartUp/Rarbit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RarbitStartUp/Rarbit/issues"
+  },
+  "homepage": "https://github.com/RarbitStartUp/Rarbit#readme"
 }
