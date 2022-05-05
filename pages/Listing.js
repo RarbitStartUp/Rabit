@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './Header'
 import Shops from './Shops'
 
-function Listing() {
+export default function Listing() {
   return (
     <div>
       <Header />
@@ -10,5 +10,3 @@ function Listing() {
     </div>
   )
 }
-
-export default Listing

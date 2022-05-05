@@ -1,5 +1,20 @@
+import { MoonIcon } from '@heroicons/react/solid'
+import { SunIcon } from '@heroicons/react/solid'
+
+export default function Card({ toggle, setToggle }) 
+
+<button
+            className="m-auto mt-8 flex flex-row items-center justify-center rounded-xl bg-[#5865F2] p-2.5 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2"
+            onClick={() => setToggle(!toggle)}
+          >
+            {toggle ? (
+              <MoonIcon className="h-5 w-5 text-white" />
+            ) : (
+              <SunIcon className="h-5 w-5 text-white" />
+            )}
+          </button>
+
 import Head from 'next/head'
-// import Image from 'next/image'
 import { useState } from 'react'
 import Card from './Card'
 

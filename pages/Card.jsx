@@ -1,20 +1,8 @@
-// import Image from 'next/image'
-import { FaDollarSign, FaReact, FaRegComment } from 'react-icons/fa'
-import {
-  MdRoom,
-  MdBookmarks,
-  MdFavorite,
-  MdRedeem,
-  MdMoney,
-} from 'react-icons/md'
-import { SiTypescript } from 'react-icons/si'
-import { AiOutlineClockCircle, AiOutlineComment } from 'react-icons/ai'
-import { VscChecklist, VscLocation } from 'react-icons/vsc'
+import Image from 'next/image'
+import { FaDollarSign, FaRegComment } from 'react-icons/fa'
+import { MdRoom, MdBookmarks, MdFavorite, MdRedeem } from 'react-icons/md'
 import { FaPlay } from 'react-icons/fa'
-import { MoonIcon } from '@heroicons/react/solid'
-import { SunIcon } from '@heroicons/react/solid'
 
-// export default function Card({ toggle, setToggle }) {
 export default function Card({
   shopName,
   location,
@@ -23,20 +11,15 @@ export default function Card({
   tokenAllocations,
   imageUrl,
 }) {
-  // const url = Shops.image[0]?.url
-
   return (
-    <div
-      onClick={() => router.push('./components/CardDetail')}
-      className="flex h-[100rem] w-[20.5rem] flex-col rounded-2xl bg-white p-4 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[20.5rem] md:w-[50rem] md:flex-row-reverse"
-    >
+    <div className=" flex h-[50rem] w-[20.5rem] grid-cols-2 flex-col rounded-2xl bg-white p-4 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[20.5rem] md:w-[50rem] md:flex-row-reverse">
       <div className=" relative h-full  w-full basis-2/3 rounded-2xl shadow-md">
         <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>
         </div>
         <div className="relative h-full w-full rounded-2xl border-2 border-white">
           {imageUrl && (
-            <img
+            <Image
               src={imageUrl}
               alt="thumbnail"
               layout="fill"
@@ -81,16 +64,6 @@ export default function Card({
             <FaPlay className="animate-ping" size={10} color="#fff" />
             <h1 className="text-md pl-4 font-semibold text-white">Vote</h1>
           </button>
-          {/* <button
-            className="m-auto mt-8 flex flex-row items-center justify-center rounded-xl bg-[#5865F2] p-2.5 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2"
-            onClick={() => setToggle(!toggle)}
-          >
-            {toggle ? (
-              <MoonIcon className="h-5 w-5 text-white" />
-            ) : (
-              <SunIcon className="h-5 w-5 text-white" />
-            )}
-          </button> */}
 
           <button
             className="m-auto mb-3 mt-3 flex flex-row items-center justify-center rounded-xl bg-[#5865F2] p-2.5 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2"

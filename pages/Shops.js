@@ -1,17 +1,27 @@
-import { useCollection } from 'react-firebase-hooks/firestore'
+import { collection, onSnapshot, query, orderBy } from 'firebase/firestore'
+import { useEffect, useState } from 'react'
 import { db } from '../firebase'
-import 'firebase/firestore'
-import firebase from 'firebase/app'
 import Card from './Card'
 
 export default function Shops() {
-  const [realtimePosts] = useCollection(
-    db.collection('shops').orderBy('timestamp', 'desc')
+  const [shops, setShops] = useState([])
+
+  useEffect(
+    () =>
+      onSnapshot(
+        query(collection(db, 'shops'), orderBy('timestamp', 'desc')),
+        (snapshot) => {
+          setShops(snapshot.docs)
+        }
+      ),
+    [db]
   )
 
+  console.log(shops)
+
   return (
-    <div className="mx-auto flex justify-center space-y-3">
-      {realtimePosts?.docs.map((shop) => (
+    <div className="mx-auto flex flex-col justify-center space-y-3">
+      {shops.map((shop) => (
         <Card
           key={shop.id}
           shopName={shop.data().shopName}
