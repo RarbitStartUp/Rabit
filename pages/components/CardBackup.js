@@ -3,7 +3,6 @@ import Head from 'next/head'
 import { useState } from 'react'
 import Card2 from './Card'
 import Header from './Header'
-import CardBackup from './CardBackup'
 
 export default function CardBackup() {
   const [toggle, setToggle] = useState(false)
