@@ -12,31 +12,31 @@ export default function RangeSlider({
   const [minValue, setMinValue] = useState(initialMin)
   const [maxValue, setMaxValue] = useState(initialMax)
 
-  const handleMin = (e) => {
-    if (maxValue - minValue >= priceCap && maxValue <= max) {
-      if (parseInt(e.target.value) > parseInt(maxValue)) {
-      } else {
-        setMinValue(parseInt(e.target.value))
-      }
-    } else {
-      if (parseInt(e.target.value) < minValue) {
-        setMinValue(parseInt(e.target.value))
-      }
-    }
-  }
+  // const handleMin = (e) => {
+  //   if (maxValue - minValue >= priceCap && maxValue <= max) {
+  //     if (parseInt(e.target.value) > parseInt(maxValue)) {
+  //     } else {
+  //       setMinValue(parseInt(e.target.value))
+  //     }
+  //   } else {
+  //     if (parseInt(e.target.value) < minValue) {
+  //       setMinValue(parseInt(e.target.value))
+  //     }
+  //   }
+  // }
 
-  const handleMax = (e) => {
-    if (maxValue - minValue >= priceCap && maxValue <= max) {
-      if (parseInt(e.target.value) < parseInt(minValue)) {
-      } else {
-        setMaxValue(parseInt(e.target.value))
-      }
-    } else {
-      if (parseInt(e.target.value) > maxValue) {
-        setMaxValue(parseInt(e.target.value))
-      }
-    }
-  }
+  // const handleMax = (e) => {
+  //   if (maxValue - minValue >= priceCap && maxValue <= max) {
+  //     if (parseInt(e.target.value) < parseInt(minValue)) {
+  //     } else {
+  //       setMaxValue(parseInt(e.target.value))
+  //     }
+  //   } else {
+  //     if (parseInt(e.target.value) > maxValue) {
+  //       setMaxValue(parseInt(e.target.value))
+  //     }
+  //   }
+  // }
 
   useEffect(() => {
     progressRef.current.style.left = (minValue / max) * step + '%'
@@ -84,7 +84,7 @@ export default function RangeSlider({
 
           <div className="range-input relative  ">
             <input
-              onChange={handleMin}
+              // onChange={handleMin}
               type="range"
               min={min}
               step={step}
