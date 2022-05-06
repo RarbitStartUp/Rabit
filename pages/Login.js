@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
-import SoicalLogin from './auth/components/SoicalLogin'
-import EmailLogin from './auth/components/EmailLogin'
+import SoicalLogin from './components/auth/SoicalLogin'
+import EmailLogin from './components/auth/EmailLogin'
 
 export default function Login() {
   const router = useRouter()

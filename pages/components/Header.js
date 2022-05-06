@@ -8,15 +8,13 @@ import { signIn, signOut, useSession } from 'next-auth/react'
 
 function Header() {
   const { data: session } = useSession()
-  console.log(session)
 
   const router = useRouter()
 
   return (
-    // Username & Profile Pic
 
     <div>
-      {session ? (
+      {/* {session ? (
         <div className="flex flex-row items-center space-x-3 pt-3 pl-5">
           <img
             onClick={signOut}
@@ -33,7 +31,7 @@ function Header() {
         </div>
       ) : (
         <button onClick={signIn}>Sign In</button>
-      )}
+      )} */}
 
       {/* <div className="mx-5 flex max-w-6xl justify-between xl:mx-auto">
         <div className="relative  h-24 w-24 flex-shrink-0">
@@ -45,7 +43,7 @@ function Header() {
         </div>
       </div> */}
 
-      <div className="flex  max-w-6xl justify-between">
+      <div className="flex mx-auto max-w-6xl justify-between">
         {/* Search Bar*/}
         <div className="max-w-xs pt-5 pl-5">
           <div className="relative mt-1 rounded-md">

@@ -8,7 +8,10 @@
   "dependencies": {
     "@heroicons/react": "^1.0.6",
     "@types/next-auth": "^3.15.0",
+    "axios": "^0.27.2",
+    "dashify": "^2.0.0",
     "firebase": "^9.7.0",
+    "firebase-admin": "^10.2.0",
     "next": "latest",
     "next-auth": "^4.3.4",
     "next-pwa": "^5.5.2",
