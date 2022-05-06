@@ -13,18 +13,22 @@ export default function ShopDetail({
   description,
 }) {
   return (
-    <div className="h-30 w-30">
-      {imageUrl && (
-        <Image
-          src={imageUrl}
-          alt="thumbnail"
-          width={300}
-          height={300}
-          //   layout="fill"
-          objectFit="cover"
-          className="h-30 w-30"
-        />
-      )}
+    <div>
+      {/* <div className="w-[20.5rem]basis-2/3 md:h-[20.5rem]border-2 mt-3 h-[30rem] rounded-2xl border-white shadow-md"> */}
+      <div className=" ">
+        {imageUrl && (
+          <Image
+            src={imageUrl}
+            alt="thumbnail"
+            width={600}
+            height={400}
+            // layout="fill"
+            objectFit="cover"
+            className="h-30 w-30"
+          />
+        )}
+      </div>
+
       <div className="ml-5">
         {/* ShopName and Categories */}
         <p className="m-2 text-lg font-bold text-[#5865F2]">{categories}</p>
