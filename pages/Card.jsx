@@ -37,9 +37,7 @@ export default function Card({
         <div className=" flex flex-row flex-wrap justify-around pt-1 pr-4 pl-2">
           <div className="m-2 flex flex-row items-center">
             <MdRedeem size={20} color="#5865F2" />
-            <h1 className="pl-1 dark:text-white">
-              {rewardPoints + ' points'}{' '}
-            </h1>
+            <h1 className="pl-1 dark:text-white">{rewardPoints + ' points'}</h1>
           </div>
           <div className="m-2 flex flex-row items-center">
             <FaDollarSign size={20} color="#5865F2" />
