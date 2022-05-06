@@ -1,22 +1,34 @@
 import React from 'react'
 // import Image from 'next/Image'
-import {
-  SearchIcon,
-  PlusCircleIcon,
-  UserGroupIcon,
-  heartIcon,
-  PaperAirplaneIcon,
-  MenuIcon,
-} from '@heroicons/react/outline'
-import { MdArrowBackIos, MdSort } from 'react-icons/md'
-import { BackspaceIcon, FilterIcon } from '@heroicons/react/solid'
+import { SearchIcon } from '@heroicons/react/outline'
+import { MdSort } from 'react-icons/md'
+import { FilterIcon } from '@heroicons/react/solid'
 import { useRouter } from 'next/router'
+import { signIn, useSession } from 'next-auth/react'
 
 function Header() {
+  const { data: session } = useSession()
+  console.log(session)
+
   const router = useRouter()
 
   return (
+    // Username & Profile Pic
+
     <div>
+      {session ? (
+        <div className="flex-row justify-start pt-2 pl-5">
+          <div>Welcome Back ! {session?.user?.name}</div>
+          <img
+            src={session?.user?.image}
+            alt="profile pic"
+            className="h-10 cursor-pointer rounded-full"
+          />
+        </div>
+      ) : (
+        <button onClick={signIn}>Sign In</button>
+      )}
+
       {/* <div className="mx-5 flex max-w-6xl justify-between xl:mx-auto">
         <div className="relative  h-24 w-24 flex-shrink-0">
           <Image
@@ -28,16 +40,6 @@ function Header() {
       </div> */}
 
       <div className="flex  max-w-6xl justify-between">
-        {/* <button
-          className="m-auto mt-6 flex flex-row items-center justify-start rounded-xl bg-white p-2.5  duration-300 ease-linear hover:text-[#424bb6] "
-          onClick={() => {
-            router.push('./components/Login')
-          }}
-          type="submit"
-        >
-          <MdArrowBackIos className="h-5 w-5 text-[#5865F2]" />
-        </button> */}
-
         {/* Search Bar*/}
         <div className="max-w-xs pt-5 pl-5">
           <div className="relative mt-1 rounded-md">
