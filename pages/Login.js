@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-
 import SoicalLogin from './auth/components/SoicalLogin'
 import EmailLogin from './auth/components/EmailLogin'
 
