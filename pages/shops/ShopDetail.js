@@ -10,6 +10,7 @@ export default function ShopDetail({
   categories,
   tokenAllocations,
   imageUrl,
+  description,
 }) {
   return (
     <div className="h-30 w-30">
@@ -48,6 +49,16 @@ export default function ShopDetail({
             <FaRegComment size={20} color="grey" className="dark:text-white" />
             <h1 className="pl-1 dark:text-white">Comments</h1>
           </div>
+        </div>
+        <p className="m-2 text-lg font-bold text-[#5865F2]">Shop Description</p>
+        <p className="m-2 text-sm text-[#7b80b3]">{description}</p>
+
+        {/* Buttons */}
+        <div className="flex flex-row">
+          <button className="m-auto mt-3 mb-3 flex flex-row items-center justify-center  rounded-xl bg-[#5865F2] pt-2 pb-2 pl-6 pr-10 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2">
+            <FaPlay className="animate-ping" size={10} color="#fff" />
+            <h1 className="text-md pl-4 font-semibold text-white">Vote</h1>
+          </button>
         </div>
       </div>
     </div>
