@@ -12,7 +12,7 @@ export default function Card({
   imageUrl,
 }) {
   return (
-    <div className=" flex h-[50rem] w-[20.5rem] grid-cols-2 flex-col rounded-2xl bg-white p-4 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[20.5rem] md:w-[50rem] md:flex-row-reverse">
+    <div className=" mt-3 flex h-[50rem] w-[20.5rem] grid-cols-2 flex-col rounded-2xl bg-white p-4 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[20.5rem] md:w-[50rem] md:flex-row-reverse">
       <div className=" relative h-full  w-full basis-2/3 rounded-2xl shadow-md">
         <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>
@@ -31,9 +31,7 @@ export default function Card({
       </div>
 
       <div className=" mr-2 h-full w-full rounded-2xl ">
-        <p className="m-2 pl-1 text-lg font-bold text-[#5865F2]">
-          {categories}
-        </p>
+        <p className="m-2 text-lg font-bold text-[#5865F2]">{categories}</p>
         <h1 className="m-2 text-2xl font-bold dark:text-white">{shopName}</h1>
 
         <div className=" flex flex-row flex-wrap justify-around pt-1 pr-4 pl-2">
