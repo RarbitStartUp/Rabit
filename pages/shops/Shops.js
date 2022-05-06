@@ -2,7 +2,7 @@ import { collection, onSnapshot, query, orderBy } from 'firebase/firestore'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { db } from '../../firebase'
-import Card from '../Card'
+import Card from '../../Component/Card'
 
 export default function Shops() {
   const [shops, setShops] = useState([])

@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import { RiCoupon3Line } from 'react-icons/ri'
 import { FaDollarSign, FaRegComment } from 'react-icons/fa'
-import { MdRoom, MdBookmarks, MdFavorite, MdRedeem } from 'react-icons/md'
+import { MdRoom, MdRedeem } from 'react-icons/md'
 import { FaPlay } from 'react-icons/fa'
 import { BiBookmarks } from 'react-icons/bi'
+import { useRouter } from 'next/router'
 
 export default function ShopDetail({
   shopName,
@@ -14,6 +15,8 @@ export default function ShopDetail({
   imageUrl,
   description,
 }) {
+  const router = useRouter()
+
   return (
     <div>
       {/* <div className="w-[20.5rem]basis-2/3 md:h-[20.5rem]border-2 mt-3 h-[30rem] rounded-2xl border-white shadow-md"> */}
@@ -80,7 +83,10 @@ export default function ShopDetail({
 
         {/* Buttons */}
         <div className="mt-10 flex flex-row ">
-          <button className="m-auto mt-20 mb-3 flex flex-row items-center justify-center  rounded-xl bg-[#5865F2] pt-2 pb-2 pl-6 pr-10 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2">
+          <button
+            onClick={() => router.push('../Vote')}
+            className="m-auto mt-20 mb-3 flex flex-row items-center justify-center  rounded-xl bg-[#5865F2] pt-2 pb-2 pl-6 pr-10 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2"
+          >
             <FaPlay className="animate-ping" size={10} color="#fff" />
             <h1 className="text-md flex pl-4 font-semibold text-white">
               Vote for more Reward Points
