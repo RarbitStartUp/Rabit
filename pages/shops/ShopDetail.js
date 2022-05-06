@@ -1,7 +1,9 @@
 import Image from 'next/image'
+import { RiCoupon3Line } from 'react-icons/ri'
 import { FaDollarSign, FaRegComment } from 'react-icons/fa'
 import { MdRoom, MdBookmarks, MdFavorite, MdRedeem } from 'react-icons/md'
 import { FaPlay } from 'react-icons/fa'
+import { BiBookmarks } from 'react-icons/bi'
 
 export default function ShopDetail({
   shopName,
@@ -31,8 +33,19 @@ export default function ShopDetail({
 
       <div className="ml-5">
         {/* ShopName and Categories */}
-        <p className="m-2 text-lg font-bold text-[#5865F2]">{categories}</p>
+        <div className="flex  max-w-6xl justify-between">
+          <p className="m-2 text-lg font-bold text-[#5865F2]">{categories}</p>
+          <div className=" flex flex-row items-center justify-end space-x-4 pr-5">
+            <button
+              className=" flex flex-row items-center justify-center md:m-2"
+              onClick={() => {}}
+            >
+              <BiBookmarks className="h-7 w-7 text-[#5865F2]" />
+            </button>
+          </div>
+        </div>
         <h1 className="m-2 text-2xl font-bold dark:text-white">{shopName}</h1>
+
         {/* Subtile Details */}
         <div className="flex flex-row flex-wrap space-x-2">
           <div className="m-2 flex flex-row items-center">
@@ -52,6 +65,14 @@ export default function ShopDetail({
           <div className="m-2 flex flex-row items-center">
             <FaRegComment size={20} color="grey" className="dark:text-white" />
             <h1 className="pl-1 dark:text-white">Comments</h1>
+          </div>
+          <div className="m-2 flex flex-row items-center pl-1">
+            <RiCoupon3Line
+              size={20}
+              color="#5865F2"
+              className="dark:text-white"
+            />
+            <h1 className="pl-1 dark:text-white">Discounts Available</h1>
           </div>
         </div>
         <p className="m-2 text-lg font-bold text-[#5865F2]">Shop Description</p>
