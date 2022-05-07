@@ -1,5 +1,6 @@
 import RangeSlider3 from '../components/RangeSlider3'
 import RewardTable from '../components/RewardTable'
+import VoteButton from '../components/VoteButton'
 
 export default function Vote() {
   return (
@@ -7,6 +8,7 @@ export default function Vote() {
       <RangeSlider3 />
       <div className="mt-10"></div>
       <RewardTable />
+      <VoteButton />
     </div>
   )
 }
