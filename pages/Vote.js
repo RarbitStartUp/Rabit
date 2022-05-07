@@ -5,6 +5,7 @@ export default function Vote() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center">
       <RangeSlider3 />
+      <div className="mt-10"></div>
       <RewardTable />
     </div>
   )
