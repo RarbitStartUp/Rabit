@@ -9,9 +9,9 @@ const columns = [
   //   type: 'number',
   //   width: 70,
   // },
-  { field: 'shopName', headerName: 'Shop Name', width: 130 },
-  { field: 'date', headerName: 'Date', width: 130 },
-  { field: 'token', headerName: 'Token %', width: 130 },
+  { field: 'shopName', headerName: 'Shop Name', width: 100 },
+  { field: 'date', headerName: 'Date', width: 80 },
+  { field: 'token', headerName: 'Token %', width: 80 },
   { field: 'lockup', headerName: 'Lock Up til', width: 130 },
 
   // {
