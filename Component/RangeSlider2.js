@@ -31,34 +31,44 @@ export default function InputSlider() {
   }
 
   return (
-    <Box sx={{ width: 250 }}>
-      <Typography id="input-slider" gutterBottom>
-        Volume
-      </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item>
+    <Box
+      sx={{ width: 500 }}
+      alignItems="center"
+      justifyContent="center"
+      display="flex"
+    >
+      <Typography id="input-slider" gutterBottom></Typography>
+      <Grid item sx={{ width: 300 }}>
+        <Input
+          value={value}
+          size="small"
+          onChange={handleInputChange}
+          onBlur={handleBlur}
+          inputProps={{
+            step: 10,
+            min: 0,
+            max: 100,
+            type: 'number',
+            'aria-labelledby': 'input-slider',
+          }}
+        />
+        <Grid
+          container
+          //   spacing={2}
+          alignItems="center"
+          justifyContent="center"
+          display="flex"
+        ></Grid>
+        {/* <Grid item>
           <VolumeUp />
-        </Grid>
+        </Grid> */}
         <Grid item xs>
           <Slider
+            valueLabelDisplay="auto"
+            color="secondary"
             value={typeof value === 'number' ? value : 0}
             onChange={handleSliderChange}
             aria-labelledby="input-slider"
-          />
-        </Grid>
-        <Grid item>
-          <Input
-            value={value}
-            size="small"
-            onChange={handleInputChange}
-            onBlur={handleBlur}
-            inputProps={{
-              step: 10,
-              min: 0,
-              max: 100,
-              type: 'number',
-              'aria-labelledby': 'input-slider',
-            }}
           />
         </Grid>
       </Grid>

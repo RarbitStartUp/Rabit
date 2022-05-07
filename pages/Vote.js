@@ -1,18 +1,9 @@
-import RangeSlider from '../Component/RangeSlider'
-import RangeSlider2 from '../Component/RangeSlider2'
+import RangeSlider3 from '../Component/RangeSlider3'
 
 export default function Vote() {
   return (
-    <div>
-      <RangeSlider2 />
-      {/* <RangeSlider
-        initialMin={10}
-        // initialMax={100}
-        min={0}
-        max={100}
-        step={0}
-        // priceCap={50}
-      /> */}
+    <div className="flex min-h-screen flex-col items-center justify-center">
+      <RangeSlider3 />
     </div>
   )
 }
