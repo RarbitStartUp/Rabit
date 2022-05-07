@@ -5,7 +5,7 @@ export default function DiscountsCard({ imagePath, discountName, shopName }) {
       className="flex flex-row items-center rounded-lg border bg-white shadow-md hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 md:max-w-xl md:flex-row"
     >
       <img
-        className="h-25 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+        className="h-15 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
         src={imagePath}
         alt=""
       />
