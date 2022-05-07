@@ -6,20 +6,20 @@ import Typography from '@mui/material/Typography'
 import Tooltip from '@mui/material/Tooltip'
 import Box from '@mui/material/Box'
 
-function ValueLabelComponent(props) {
-  const { children, value } = props
+// function ValueLabelComponent(props) {
+//   const { children, value } = props
 
-  return (
-    <Tooltip enterTouchDelay={0} placement="top" title={value}>
-      {children}
-    </Tooltip>
-  )
-}
+//   return (
+//     <Tooltip enterTouchDelay={0} placement="top" title={value}>
+//       {children}
+//     </Tooltip>
+//   )
+// }
 
-ValueLabelComponent.propTypes = {
-  children: PropTypes.element.isRequired,
-  value: PropTypes.number.isRequired,
-}
+// ValueLabelComponent.propTypes = {
+//   children: PropTypes.element.isRequired,
+//   value: PropTypes.number.isRequired,
+// }
 
 const iOSBoxShadow =
   '0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.13),0 0 0 1px rgba(0,0,0,0.02)'
@@ -99,6 +99,7 @@ export default function CustomizedSlider() {
         marks={marks}
         valueLabelDisplay="on"
       />
+      {/* <Typography gutterBottom>{value}</Typography> */}
     </Box>
   )
 }
