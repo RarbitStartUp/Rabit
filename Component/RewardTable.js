@@ -2,36 +2,38 @@ import * as React from 'react'
 import { DataGrid } from '@mui/x-data-grid'
 
 const columns = [
-  { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'firstName', headerName: 'First name', width: 130 },
-  { field: 'lastName', headerName: 'Last name', width: 130 },
-  {
-    field: 'age',
-    headerName: 'Age',
-    type: 'number',
-    width: 90,
-  },
-  {
-    field: 'fullName',
-    headerName: 'Full name',
-    description: 'This column has a value getter and is not sortable.',
-    sortable: false,
-    width: 160,
-    valueGetter: (params) =>
-      `${params.row.firstName || ''} ${params.row.lastName || ''}`,
-  },
+  { field: 'id', headerName: 'ID', width: 50 },
+  // {
+  //   field: 'date',
+  //   headerName: 'Date',
+  //   type: 'number',
+  //   width: 70,
+  // },
+  { field: 'shopName', headerName: 'Shop Name', width: 130 },
+  { field: 'date', headerName: 'Date', width: 130 },
+  { field: 'token', headerName: 'Token %', width: 130 },
+
+  // {
+  //   field: 'fullName',
+  //   headerName: 'Full name',
+  //   description: 'This column has a value getter and is not sortable.',
+  //   sortable: false,
+  //   width: 160,
+  //   valueGetter: (params) =>
+  //     `${params.row.firstName || ''} ${params.row.lastName || ''}`,
+  // },
 ]
 
 const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+  { id: 1, shopName: 'Sora Ramen', token: '10', date: '5/1/2020' },
+  { id: 2, shopName: 'Rim Cafe', token: '20', date: '4/2/2020' },
+  { id: 3, shopName: 'Aqua Bar', token: '50', date: '8/7/2021' },
+  { id: 4, shopName: 'Steak', token: '45', date: '5/7/2021' },
+  { id: 5, shopName: 'Sushiro', token: '67', date: '6/7/2020' },
+  { id: 6, shopName: 'Pizza Express', token: '80', date: '1/8/2021' },
+  { id: 7, shopName: 'PastaHolic', token: '15', date: '15/9/2021' },
+  { id: 8, shopName: 'Spagetti', token: '5', date: '20/8/2021' },
+  { id: 9, shopName: 'MeatFever', token: '20', date: '7/8/2021' },
 ]
 
 export default function RewardTable() {
@@ -42,7 +44,7 @@ export default function RewardTable() {
         columns={columns}
         pageSize={5}
         rowsPerPageOptions={[5]}
-        checkboxSelection
+        // checkboxSelection
       />
     </div>
   )
