@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 
-export default function SoicalLogin() {
+export default function SocialLogin() {
   const router = useRouter()
 
   const array = [
