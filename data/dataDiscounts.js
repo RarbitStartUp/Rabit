@@ -8,7 +8,7 @@ export const dataDiscounts = [
     rewardPointsGain: 90,
     allocationsPercentage: 10,
     location: 'Central',
-    description: 'Top Chief from Japan',
+    description: 'As of 1/3, buy 1 get 1 free',
   },
   {
     id: '1',
