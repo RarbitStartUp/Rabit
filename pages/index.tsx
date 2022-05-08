@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Login from './Login'
-// import Testing from './testing'
+import Testing from './testing'
 
 // export async function getServerSideProps() {}
 

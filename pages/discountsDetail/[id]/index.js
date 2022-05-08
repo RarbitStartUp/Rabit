@@ -58,7 +58,7 @@ export default function DiscountsDetail({ dataDiscount }) {
       <p className="ml-5 mt-2 text-xl font-bold text-[#313564]">
         {dataDiscount.shopName}
       </p>
-      <p className="text-md ml-5 mt-2 font-bold text-[#313564]">
+      <p className="text-md ml-5 mt-2 mb-5 font-bold text-[#313564]">
         {dataDiscount.description}
       </p>
     </div>
