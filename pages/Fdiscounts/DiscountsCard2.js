@@ -3,7 +3,7 @@ import { FaDollarSign, FaRegComment } from 'react-icons/fa'
 import { MdRoom, MdBookmarks, MdFavorite, MdRedeem } from 'react-icons/md'
 import { FaPlay } from 'react-icons/fa'
 
-export default function DiscountsCard({
+export default function DiscountsCard2({
   imagePath,
   discountName,
   shopName,
@@ -30,16 +30,17 @@ export default function DiscountsCard({
       </div>
 
       <div className=" mr-2 rounded-2xl ">
-        <p className="m-2 text-lg font-bold text-[#5865F2]">{discountName}</p>
-        {/* <h1 className="m-2 text-2xl font-bold dark:text-white">
+        <p className="m-2 text-lg font-bold text-[#5865F2]">{shopName}</p>
+        <h1 className="m-2 text-2xl font-bold dark:text-white">
           {discountName}
-        </h1> */}
+        </h1>
 
         <div className=" flex flex-row flex-wrap justify-around pt-1 pr-4 pl-2">
           <div className="m-2 flex flex-row items-center">
             <MdRedeem size={20} color="#5865F2" />
             <h1 className="pl-1 dark:text-white">
-              {rewardPointsGain + ' points would be gained per consumption'}
+              {rewardPointsGain +
+                ' reward points would be gained per consumption'}
             </h1>
           </div>
           {/* <div className="m-2 flex flex-row items-center">
