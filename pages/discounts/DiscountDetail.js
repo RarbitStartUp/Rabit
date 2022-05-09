@@ -6,13 +6,13 @@ import { FaPlay } from 'react-icons/fa'
 import { BiBookmarks } from 'react-icons/bi'
 import { useRouter } from 'next/router'
 
-export default function ShopDetail({
-  shopName,
-  location,
-  rewardPoints,
-  categories,
-  tokenAllocations,
+export default function DiscountDetail({
   imagePath,
+  discountName,
+  shopName,
+  rewardPointsGain,
+  tokenAllocations,
+  location,
   description,
 }) {
   const router = useRouter()
@@ -37,7 +37,7 @@ export default function ShopDetail({
       <div className="ml-5">
         {/* ShopName and Categories */}
         <div className="flex  max-w-6xl justify-between">
-          <p className="m-2 text-lg font-bold text-[#5865F2]">{categories}</p>
+          <p className="m-2 text-lg font-bold text-[#5865F2]">{shopName}</p>
           <div className=" flex flex-row items-center justify-end space-x-4 pr-5">
             <button
               className=" flex flex-row items-center justify-center md:m-2"
@@ -47,13 +47,18 @@ export default function ShopDetail({
             </button>
           </div>
         </div>
-        <h1 className="m-2 text-2xl font-bold dark:text-white">{shopName}</h1>
+        <h1 className="m-2 text-2xl font-bold dark:text-white">
+          {discountName}
+        </h1>
 
         {/* Subtile Details */}
         <div className="flex flex-row flex-wrap space-x-2">
           <div className="m-2 flex flex-row items-center">
             <MdRedeem size={20} color="#5865F2" />
-            <h1 className="pl-1 dark:text-white">{rewardPoints + ' points'}</h1>
+            <h1 className="pl-1 dark:text-white">
+              {rewardPointsGain +
+                '  reward points would be gained per consumption'}
+            </h1>
           </div>
           <div className="m-2 flex flex-row items-center">
             <FaDollarSign size={20} color="#5865F2" />
@@ -94,7 +99,7 @@ export default function ShopDetail({
           >
             <RiCoupon3Line className="animate-ping" size={10} color="#fff" />
             <h1 className="text-md flex pl-4 font-semibold text-white">
-              Discounts Available
+              Other Discounts Available from the Shop
             </h1>
           </button>
         </div>

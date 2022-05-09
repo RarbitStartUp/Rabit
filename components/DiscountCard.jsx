@@ -3,13 +3,14 @@ import { FaDollarSign, FaRegComment } from 'react-icons/fa'
 import { MdRoom, MdBookmarks, MdFavorite, MdRedeem } from 'react-icons/md'
 import { FaPlay } from 'react-icons/fa'
 
-export default function Card({
+export default function DiscountCard({
   shopName,
+  discountName,
   location,
   rewardPoints,
-  categories,
+  // categories,
   tokenAllocations,
-  imageUrl,
+  imagePath,
 }) {
   return (
     <div className="mt-3 mr-0 ml-0 flex h-[30rem] w-full grid-cols-2 flex-col rounded-2xl bg-white p-4 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[20.5rem] md:w-[50rem] md:flex-row-reverse">
@@ -18,9 +19,9 @@ export default function Card({
           <h1>NEW</h1>
         </div>
         <div className="relative h-full w-full rounded-2xl border-2 border-white">
-          {imageUrl && (
+          {imagePath && (
             <Image
-              src={imageUrl}
+              src={imagePath}
               alt="thumbnail"
               layout="fill"
               objectFit="cover"
@@ -31,8 +32,10 @@ export default function Card({
       </div>
 
       <div className=" mr-2 rounded-2xl ">
-        <p className="m-2 text-lg font-bold text-[#5865F2]">{categories}</p>
-        <h1 className="m-2 text-2xl font-bold dark:text-white">{shopName}</h1>
+        <p className="m-2 text-lg font-bold text-[#5865F2]">{shopName}</p>
+        <h1 className="m-2 text-2xl font-bold dark:text-white">
+          {discountName}
+        </h1>
 
         <div className=" flex flex-row flex-wrap justify-around pt-1 pr-4 pl-2">
           <div className="m-2 flex flex-row items-center">

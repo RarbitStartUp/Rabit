@@ -1,15 +1,7 @@
-// export default function Detail() {
-//   return (
-//     <div>
-//       <h1>hi</h1>
-//     </div>
-//   )
-// }
-
-import { db } from '../../firebase'
+import { db } from '../../../firebase'
 import { getDoc, doc } from '@firebase/firestore'
 import { GetServerSideProps } from 'next'
-import ShopDetail from './ShopDetail'
+import FShopDetail from '../FShopDetail'
 
 export const getServerSideProps: GetServerSideProps = async (ctx: any) => {
   const docRef = doc(db, 'shops', ctx.query.id)
@@ -27,14 +19,14 @@ const Post = ({ data }: any) => {
 
   return (
     <div>
-      <ShopDetail
+      <FShopDetail
         key={data.id}
         shopName={data.shopName}
         categories={data.categories}
         location={data.location}
         rewardPoints={data.rewardPoints}
         tokenAllocations={data.tokenAllocations}
-        imageUrl={data.imageUrl}
+        imagePath={data.imagePath}
         description={data.description}
       />
     </div>

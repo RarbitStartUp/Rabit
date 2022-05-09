@@ -11,7 +11,7 @@ export default function Vote() {
       </h1>
       <div className="mt-10"></div>
       <RewardTable />
-      <VoteButton />
+      <VoteButton routePath="/Login" />
     </div>
   )
 }

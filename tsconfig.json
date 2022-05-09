@@ -24,7 +24,9 @@
     "pages/index.js",
     "pages/index1tsx",
     "pages/shops/[id].js",
-    "pages/discounts/DiscountsList.js"
+    "pages/discountsDetail/DiscountsList.js",
+    "pages/testing.js",
+    "pages/shops/index.js"
   ],
   "exclude": ["node_modules"]
 }

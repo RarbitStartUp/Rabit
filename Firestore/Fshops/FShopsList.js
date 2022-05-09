@@ -2,9 +2,9 @@ import { collection, onSnapshot, query, orderBy } from 'firebase/firestore'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { db } from '../../firebase'
-import Card from '../../components/Card'
+import ShopCard from '../../components/ShopCard'
 
-export default function Shops() {
+export default function ShopsList() {
   const [shops, setShops] = useState([])
 
   useEffect(
@@ -24,16 +24,16 @@ export default function Shops() {
     <div className="flex">
       <div className="mx-auto flex-col space-y-3">
         {shops.map((shop) => (
-          <Link href={'/shops/' + shop.id} key={shop.id}>
+          <Link href={'/Firestore/Fshops/' + shop.id} key={shop.id}>
             <a>
-              <Card
+              <ShopCard
                 key={shop.id}
                 shopName={shop.data().shopName}
                 categories={shop.data().categories}
                 location={shop.data().location}
                 rewardPoints={shop.data().rewardPoints}
                 tokenAllocations={shop.data().tokenAllocations}
-                imageUrl={shop.data().imageUrl}
+                imagePath={shop.data().imagePath}
                 timestamp={shop.data().timestamp}
                 email={shop.data().email}
               />
