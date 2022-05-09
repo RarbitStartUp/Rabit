@@ -12,11 +12,7 @@ export default function ShopCard({
   imagePath,
 }) {
   return (
-<<<<<<<< HEAD:pages/components/Card.jsx
     <div className=" mt-3 flex h-[30rem] w-[20.5rem] md:h-[20.5rem] md:w-[50rem] grid-cols-2 flex-col rounded-2xl bg-white p-4 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:flex-row-reverse sm:w-full">
-========
-    <div className="mt-3 mr-0 ml-0 flex h-[30rem] w-full grid-cols-2 flex-col rounded-2xl bg-white p-4 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[20.5rem] md:w-[50rem] md:flex-row-reverse">
->>>>>>>> 4e85b244f9da251778e9b2d91dfb72323fb48439:components/ShopCard.jsx
       <div className=" relative h-full  w-full basis-2/3 rounded-2xl shadow-md">
         {/* <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>

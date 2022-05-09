@@ -4,8 +4,8 @@ import { db } from '../firebase'
 
 import React from 'react'
 
-import Header from './components/Header'
-import ShopCard from './components/shop/ShopCard'
+import Header from '../components/Header'
+import ShopCard from '../components/ShopCard'
 
 export default function Listing() {
   const [shops, setShops] = useState([])

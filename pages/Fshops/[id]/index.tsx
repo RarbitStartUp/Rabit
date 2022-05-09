@@ -1,14 +1,7 @@
-<<<<<<< HEAD:pages/shops/[id].tsx
-import { db } from '../../firebase'
-import { getDoc, doc } from '@firebase/firestore'
-import { GetServerSideProps } from 'next'
-import ShopDetail from '../components/shop/ShopDetail'
-=======
 import { db } from '../../../firebase'
 import { getDoc, doc } from '@firebase/firestore'
 import { GetServerSideProps } from 'next'
 import FShopDetail from '../FShopDetail'
->>>>>>> 4e85b244f9da251778e9b2d91dfb72323fb48439:pages/Fshops/[id]/index.tsx
 
 export const getServerSideProps: GetServerSideProps = async (ctx: any) => {
   const docRef = doc(db, 'shops', ctx.query.id)

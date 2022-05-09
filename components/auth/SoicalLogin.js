@@ -4,9 +4,9 @@ export default function SoicalLogin() {
     const router = useRouter()
 
     const array = [
-        { type: "Twitter", icon: "/img/social/twitter.svg", provider: () => router.push('/Listing') },
-        { type: "Google", icon: "/img/social/google.svg", provider: () => router.push('/Listing') },
-        { type: "Meta", icon: "/img/social/facebook.svg", provider: () => router.push('/Listing') }
+        { type: "Twitter", icon: "/img/social/twitter.svg", provider: () => router.push('/Tabs') },
+        { type: "Google", icon: "/img/social/google.svg", provider: () => router.push('/Tabs') },
+        { type: "Meta", icon: "/img/social/facebook.svg", provider: () => router.push('/Tabs') }
     ];
 
     return (
