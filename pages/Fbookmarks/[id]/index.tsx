@@ -1,10 +1,10 @@
-import { db } from '../../firebase'
+import { db } from '../../../firebase'
 import { getDoc, doc } from '@firebase/firestore'
 import { GetServerSideProps } from 'next'
-import ShopDetail from '../components/shop/ShopDetail'
+import FBookmarkDetail from '../FBookmarkDetail'
 
 export const getServerSideProps: GetServerSideProps = async (ctx: any) => {
-  const docRef = doc(db, 'shops', ctx.query.id)
+  const docRef = doc(db, 'bookmarks', ctx.query.id)
   const docSnap = await getDoc(docRef)
   const data = JSON.parse(JSON.stringify(docSnap.data()))
   console.log(data)
@@ -19,14 +19,14 @@ const Post = ({ data }: any) => {
 
   return (
     <div>
-      <ShopDetail
+      <FBookmarkDetail
         key={data.id}
         shopName={data.shopName}
         categories={data.categories}
         location={data.location}
         rewardPoints={data.rewardPoints}
         tokenAllocations={data.tokenAllocations}
-        imageUrl={data.imageUrl}
+        imagePath={data.imagePath}
         description={data.description}
       />
     </div>

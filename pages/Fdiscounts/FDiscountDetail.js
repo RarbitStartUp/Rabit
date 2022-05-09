@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { RiCoupon3Line } from 'react-icons/ri'
 import { FaDollarSign, FaRegComment } from 'react-icons/fa'
 import { MdRoom, MdRedeem } from 'react-icons/md'
@@ -6,11 +7,12 @@ import { FaPlay } from 'react-icons/fa'
 import { BiBookmarks } from 'react-icons/bi'
 import { useRouter } from 'next/router'
 
-export default function ShopDetail({
+export default function FDiscountDetail({
   shopName,
+  discountName,
   location,
-  rewardPoints,
-  categories,
+  rewardPointsGain,
+  // categories,
   tokenAllocations,
   imagePath,
   description,
@@ -37,7 +39,7 @@ export default function ShopDetail({
       <div className="ml-5">
         {/* ShopName and Categories */}
         <div className="flex  max-w-6xl justify-between">
-          <p className="m-2 text-lg font-bold text-[#5865F2]">{categories}</p>
+          <p className="m-2 text-lg font-bold text-[#5865F2]">{shopName}</p>
           <div className=" flex flex-row items-center justify-end space-x-4 pr-5">
             <button
               className=" flex flex-row items-center justify-center md:m-2"
@@ -47,13 +49,17 @@ export default function ShopDetail({
             </button>
           </div>
         </div>
-        <h1 className="m-2 text-2xl font-bold dark:text-white">{shopName}</h1>
+        <h1 className="m-2 text-2xl font-bold dark:text-white">
+          {discountName}
+        </h1>
 
         {/* Subtile Details */}
         <div className="flex flex-row flex-wrap space-x-2">
           <div className="m-2 flex flex-row items-center">
             <MdRedeem size={20} color="#5865F2" />
-            <h1 className="pl-1 dark:text-white">{rewardPoints + ' points'}</h1>
+            <h1 className="pl-1 dark:text-white">
+              {rewardPointsGain + ' points'}
+            </h1>
           </div>
           <div className="m-2 flex flex-row items-center">
             <FaDollarSign size={20} color="#5865F2" />
@@ -89,7 +95,7 @@ export default function ShopDetail({
         {/* Buttons */}
         <div className="mt-10 flex flex-row ">
           <button
-            onClick={() => router.push('../discountsDetail/DiscountsList.js')}
+            onClick={() => router.push('../discountsDetail/DiscountsList')}
             className="m-auto mt-10  flex flex-row items-center justify-center  rounded-xl bg-[#5865F2] pt-2 pb-2 pl-6 pr-10 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2"
           >
             <RiCoupon3Line className="animate-ping" size={10} color="#fff" />
@@ -101,9 +107,9 @@ export default function ShopDetail({
         <div className="mt-3 flex flex-row ">
           <button
             onClick={() => router.push('../Vote')}
-            className="m-auto mb-3 flex flex-row items-center justify-center  rounded-xl bg-[#5865F2] pt-2 pb-2 pl-6 pr-10 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2"
+            className=" m-auto mb-3 flex flex-row items-center justify-center  rounded-xl bg-[#5865F2] pt-2 pb-2 pl-6 pr-10 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2"
           >
-            <FaPlay className="animate-ping" size={10} color="#fff" />
+            <FaPlay className=" animate-ping" size={10} color="#fff" />
             <h1 className="text-md flex pl-4 font-semibold text-white">
               Vote for more Reward Points
             </h1>

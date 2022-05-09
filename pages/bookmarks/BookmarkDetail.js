@@ -6,7 +6,7 @@ import { FaPlay } from 'react-icons/fa'
 import { BiBookmarks } from 'react-icons/bi'
 import { useRouter } from 'next/router'
 
-export default function ShopDetail({
+export default function BookmarkDetail({
   shopName,
   location,
   rewardPoints,
