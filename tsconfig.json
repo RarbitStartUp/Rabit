@@ -19,14 +19,10 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/_app.js",
+    "pages/_app.tsx",
     "pages/index.js",
     "pages/index.js",
-    "pages/index1tsx",
-    "pages/shops/[id].js",
-    "pages/discountsDetail/DiscountsList.js",
-    "pages/testing.js",
-    "pages/shops/index.js"
+    "pages/index1tsx"
   ],
   "exclude": ["node_modules"]
 }
