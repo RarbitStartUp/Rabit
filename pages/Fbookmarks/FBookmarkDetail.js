@@ -7,12 +7,11 @@ import { FaPlay } from 'react-icons/fa'
 import { BiBookmarks } from 'react-icons/bi'
 import { useRouter } from 'next/router'
 
-export default function FDiscountDetail({
+export default function BookmarkDetail({
   shopName,
-  discountName,
   location,
-  rewardPointsGain,
-  // categories,
+  rewardPoints,
+  categories,
   tokenAllocations,
   imagePath,
   description,
@@ -39,7 +38,7 @@ export default function FDiscountDetail({
       <div className="ml-5">
         {/* ShopName and Categories */}
         <div className="flex  max-w-6xl justify-between">
-          <p className="m-2 text-lg font-bold text-[#5865F2]">{shopName}</p>
+          <p className="m-2 text-lg font-bold text-[#5865F2]">{categories}</p>
           <div className=" flex flex-row items-center justify-end space-x-4 pr-5">
             <button
               className=" flex flex-row items-center justify-center md:m-2"
@@ -49,17 +48,13 @@ export default function FDiscountDetail({
             </button>
           </div>
         </div>
-        <h1 className="m-2 text-2xl font-bold dark:text-white">
-          {discountName}
-        </h1>
+        <h1 className="m-2 text-2xl font-bold dark:text-white">{shopName}</h1>
 
         {/* Subtile Details */}
         <div className="flex flex-row flex-wrap space-x-2">
           <div className="m-2 flex flex-row items-center">
             <MdRedeem size={20} color="#5865F2" />
-            <h1 className="pl-1 dark:text-white">
-              {rewardPointsGain + ' points'}
-            </h1>
+            <h1 className="pl-1 dark:text-white">{rewardPoints + ' points'}</h1>
           </div>
           <div className="m-2 flex flex-row items-center">
             <FaDollarSign size={20} color="#5865F2" />
@@ -107,9 +102,9 @@ export default function FDiscountDetail({
         <div className="mt-3 flex flex-row ">
           <button
             onClick={() => router.push('../Vote')}
-            className=" m-auto mb-3 flex flex-row items-center justify-center  rounded-xl bg-[#5865F2] pt-2 pb-2 pl-6 pr-10 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2"
+            className="m-auto mb-3 flex flex-row items-center justify-center  rounded-xl bg-[#5865F2] pt-2 pb-2 pl-6 pr-10 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2"
           >
-            <FaPlay className=" animate-ping" size={10} color="#fff" />
+            <FaPlay className="animate-ping" size={10} color="#fff" />
             <h1 className="text-md flex pl-4 font-semibold text-white">
               Vote for more Reward Points
             </h1>

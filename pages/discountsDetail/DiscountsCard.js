@@ -39,7 +39,8 @@ export default function DiscountsCard({
           <div className="m-2 flex flex-row items-center">
             <MdRedeem size={20} color="#5865F2" />
             <h1 className="pl-1 dark:text-white">
-              {rewardPointsGain + ' points would be gained per consumption'}
+              {rewardPointsGain +
+                ' reward points would be gained per consumption'}
             </h1>
           </div>
           {/* <div className="m-2 flex flex-row items-center">

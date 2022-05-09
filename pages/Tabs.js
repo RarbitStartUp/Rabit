@@ -8,6 +8,7 @@ import ShopsList from './shops/ShopsList'
 import BookmarksList from './bookmarks/BookmarksList'
 import FShopsList from './Fshops/FShopsList'
 import FDiscountsList from './Fdiscounts/FDiscountsList'
+import FBookmarksList from './Fbookmarks/FBookmarksList'
 
 export default function LabTabs() {
   const [value, setValue] = React.useState('1')
@@ -37,7 +38,9 @@ export default function LabTabs() {
         <TabPanel value="2">
           <FDiscountsList />
         </TabPanel>
-        <TabPanel value="3">Item Three</TabPanel>
+        <TabPanel value="3">
+          <FBookmarksList />
+        </TabPanel>
       </TabContext>
     </Box>
   )

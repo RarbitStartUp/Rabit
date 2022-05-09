@@ -1,4 +1,4 @@
-import Image from 'next/Image'
+import Image from 'next/image'
 import { server } from '../../../config'
 
 export const getStaticProps = async (context) => {
