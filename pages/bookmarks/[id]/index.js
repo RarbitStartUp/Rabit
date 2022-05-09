@@ -11,9 +11,9 @@ export const getStaticProps = async (context) => {
 }
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`${server}/api/bookmarks/`)
+  const res = await fetch(`${server}/api/bookmarks`)
 
-  const dataBookmarks = await res.json()
+  const dataBookmarks = await res.json();
 
   const ids = dataBookmarks.map((dataBookmark) => dataBookmark.id)
 
