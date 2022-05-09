@@ -3,13 +3,13 @@ import { FaDollarSign, FaRegComment } from 'react-icons/fa'
 import { MdRoom, MdBookmarks, MdFavorite, MdRedeem } from 'react-icons/md'
 import { FaPlay } from 'react-icons/fa'
 
-export default function ShopCard({
+export default function Card({
   shopName,
   location,
   rewardPoints,
   categories,
   tokenAllocations,
-  imagePath,
+  imageUrl,
 }) {
   return (
     <div className=" mt-3 flex h-[30rem] w-[20.5rem] md:h-[20.5rem] md:w-[50rem] grid-cols-2 flex-col rounded-2xl bg-white p-4 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:flex-row-reverse sm:w-full">
@@ -18,9 +18,9 @@ export default function ShopCard({
           <h1>NEW</h1>
         </div> */}
         <div className="relative h-full w-full rounded-2xl border-2 border-white">
-          {imagePath && (
+          {imageUrl && (
             <Image
-              src={imagePath}
+              src={imageUrl}
               alt="thumbnail"
               layout="fill"
               objectFit="cover"

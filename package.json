@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@headlessui/react": "^1.6.1",
@@ -18,18 +19,21 @@
     "@mui/styled-engine-sc": "^5.6.1",
     "@mui/system": "^5.6.4",
     "@mui/x-data-grid": "^5.10.0",
+=======
+    "@heroicons/react": "^1.0.6",
+>>>>>>> 8e1e9c24111d120181dbb0f9e67d36242c85bc5a
     "@types/next-auth": "^3.15.0",
+    "axios": "^0.27.2",
+    "dashify": "^2.0.0",
     "firebase": "^9.7.0",
-    "flowbite": "^1.4.5",
+    "firebase-admin": "^10.2.0",
     "next": "latest",
     "next-auth": "^4.3.4",
     "next-pwa": "^5.5.2",
-    "nouislider": "^15.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-firebase-hooks": "^5.0.3",
-    "react-icons": "^4.3.1",
-    "styled-components": "^5.3.5"
+    "react-icons": "^4.3.1"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.0",
