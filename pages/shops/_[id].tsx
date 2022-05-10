@@ -1,7 +1,7 @@
 import { db } from '../../firebase'
 import { getDoc, doc } from '@firebase/firestore'
 import { GetServerSideProps } from 'next'
-import ShopDetail from '../components/shop/ShopDetail'
+import ShopDetail from '../../components/shop/ShopDetail'
 
 export const getServerSideProps: GetServerSideProps = async (ctx: any) => {
   const docRef = doc(db, 'shops', ctx.query.id)

@@ -1,6 +1,10 @@
 import DiscountCard from '../../components/DiscountCard'
 import Link from 'next/link'
 import { server } from '../../config/index'
+<<<<<<< HEAD
+=======
+import Header from '../../components/Header'
+>>>>>>> 52361c99bfa37546f4be2696227b4ad999246ab9
 
 // import path from 'path'
 // import fs from 'fs'

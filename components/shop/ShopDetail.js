@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { RiCoupon3Line } from 'react-icons/ri'
 import { FaDollarSign, FaRegComment } from 'react-icons/fa'
-import { MdRoom, MdBookmarks, MdFavorite, MdRedeem } from 'react-icons/md'
+import { MdRoom, MdRedeem } from 'react-icons/md'
 import { FaPlay } from 'react-icons/fa'
 import { BiBookmarks } from 'react-icons/bi'
 
