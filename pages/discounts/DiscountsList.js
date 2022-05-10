@@ -1,10 +1,10 @@
 import DiscountCard from '../../components/DiscountCard'
 import Link from 'next/link'
 import { server } from '../../config/index'
-import Header from '../Header'
 
 // import path from 'path'
 // import fs from 'fs'
+import Header from '../../components/Header'
 
 export const getStaticProps = async () => {
   const res = await fetch(`${server}/api/discounts`)
@@ -24,6 +24,9 @@ export const getStaticProps = async () => {
 export default function ShopsList({ dataDiscounts }) {
   return (
     <div className="">
+      <h1 className="ml-5 mt-10 text-2xl font-bold text-[#5865F2]">
+        Discounts Available
+      </h1>
       <Header />
       <div className="mx-auto flex-col space-y-3">
         {dataDiscounts.map((dataDiscount) => (
