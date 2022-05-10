@@ -11,7 +11,7 @@ export default function SignIn({ providers }) {
           <div key={provider.name}>
             <button
               className="m-2 rounded-lg bg-[#5865F2] p-3 text-white shadow-md"
-              onClick={() => signIn(provider.id, { callbackUrl: '/Listing' })}
+              onClick={() => signIn(provider.id, { callbackUrl: '/Tabs' })}
             >
               Sign in with {provider.name}
             </button>
