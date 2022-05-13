@@ -132,7 +132,7 @@ export default function Reward() {
               </div>
             </div>
           </div>
-          <div class="py-5 text-center">Tab bar goes here</div>
+          {/* <div class="py-5 text-center">Tab bar goes here</div> */}
         </div>
       </div>
     </>
