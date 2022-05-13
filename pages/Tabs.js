@@ -38,7 +38,7 @@ export default function BottomTabs() {
               'rounded-3xl py-2.5 text-sm font-medium leading-5 text-[#5865F2]',
               'ring-offset-5 ring-white ring-opacity-60 ring-offset-blue-400 focus:outline-none focus:ring-2',
               selected
-                ? 'bg-white px-10 shadow'
+                ? 'bg-white px-8 shadow'
                 : 'text-[#9499d4] hover:bg-white/[0.12] hover:text-white'
             )
           }

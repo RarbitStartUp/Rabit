@@ -1,4 +1,6 @@
-export default function Vote() {
+import PopUpMenu from '../PopUpMenu'
+
+export default function Reward() {
   return (
     <>
       <div className="h-screen bg-slate-100">
@@ -9,28 +11,7 @@ export default function Vote() {
             </div>
 
             <div class="-my-2 -mr-2">
-              <button
-                type="button"
-                class="inline-flex items-center justify-center p-2 text-slate-400"
-                aria-expanded="false"
-              >
-                <span class="sr-only">Open menu</span>
-                <svg
-                  class="h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </button>
+              <PopUpMenu />
             </div>
           </div>
           <div class="flex-grow flex-col gap-y-10">
@@ -151,7 +132,7 @@ export default function Vote() {
               </div>
             </div>
           </div>
-          <div class="py-5 text-center"></div>
+          <div class="py-5 text-center">Tab bar goes here</div>
         </div>
       </div>
     </>
