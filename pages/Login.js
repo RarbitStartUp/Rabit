@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import SoicalLogin from '../components/auth/SoicalLogin'
+import SocialLogin from '../components/auth/SocialLogin'
 import EmailLogin from '../components/auth/EmailLogin'
 
 export default function Login() {
@@ -8,13 +8,13 @@ export default function Login() {
   return (
     <>
       <div className="h-screen bg-slate-100">
-        <div className=" mx-auto px-2 h-full">
-          <div className="flex content-center items-center justify-center h-full">
-            <div className="w-full lg:w-3/12 px-4">
-              <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-white border-0">
-                <SoicalLogin />
-                <div className="rounded-t mb-0  pb-6">
-                  <hr className="mt-6 border-b-1 bg-slate-100" />
+        <div className=" mx-auto h-full px-2">
+          <div className="flex h-full content-center items-center justify-center">
+            <div className="w-full px-4 lg:w-3/12">
+              <div className="relative mb-6 flex w-full min-w-0 flex-col break-words rounded-lg border-0 bg-white shadow-lg">
+                <SocialLogin />
+                <div className="mb-0 rounded-t  pb-6">
+                  <hr className="border-b-1 mt-6 bg-slate-100" />
                 </div>
                 <EmailLogin />
               </div>

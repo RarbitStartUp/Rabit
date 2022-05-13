@@ -1,12 +1,8 @@
 import { Tab } from '@headlessui/react'
-
+import Tabs from './Tabs'
+import Reward from './reward/Reward'
 import { MdRedeem, MdOutlineExplore } from 'react-icons/md'
-import { AiTwotoneShop } from 'react-icons/Ai'
-import { RiBookMarkFill } from 'react-icons/Ri'
-
-import FShopsList from './Fshops/FShopsList'
-import FDiscountsList from './Fdiscounts/FDiscountsList'
-import FBookmarksList from './Fbookmarks/FBookmarksList'
+import { BsFillCameraFill } from 'react-icons/Bs'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -14,7 +10,7 @@ function classNames(...classes) {
 
 export default function BottomTabs() {
   return (
-    <Tab.Group>
+    <Tab.Group defaultIndex={2}>
       <Tab.List className="flex justify-around ">
         <Tab
           className={({ selected }) =>
@@ -27,9 +23,9 @@ export default function BottomTabs() {
             )
           }
         >
-          <div className="my-1 flex flex-row items-center justify-center">
-            <AiTwotoneShop className="mr-2" size={20} />
-            Shops
+          <div className="flex flex-col items-center justify-center">
+            <MdRedeem size={20} />
+            Rewards
           </div>
         </Tab>
         <Tab
@@ -43,9 +39,9 @@ export default function BottomTabs() {
             )
           }
         >
-          <div className="flex flex-row items-center justify-center">
-            <MdRedeem className="mr-2" size={20} />
-            Discounts
+          <div className="flex flex-col items-center justify-center">
+            <BsFillCameraFill size={20} />
+            Scan
           </div>
         </Tab>
         <Tab
@@ -54,26 +50,24 @@ export default function BottomTabs() {
               'rounded-3xl py-2.5 text-sm font-medium leading-5 text-[#5865F2]',
               'ring-offset-5 ring-white ring-opacity-60 ring-offset-blue-400 focus:outline-none focus:ring-2',
               selected
-                ? 'bg-white px-8 shadow'
+                ? 'bg-white px-10 shadow'
                 : 'text-[#9499d4] hover:bg-white/[0.12] hover:text-white'
             )
           }
         >
-          <div className="flex flex-row items-center justify-center">
-            <RiBookMarkFill className="mr-2" size={20} />
-            Bookmarks
+          <div className="flex flex-col items-center justify-center">
+            <MdOutlineExplore size={20} />
+            Explore
           </div>
         </Tab>
       </Tab.List>
       <Tab.Panels>
         <Tab.Panel>
-          <FShopsList />
+          <Reward />
         </Tab.Panel>
+        <Tab.Panel></Tab.Panel>
         <Tab.Panel>
-          <FDiscountsList />
-        </Tab.Panel>
-        <Tab.Panel>
-          <FBookmarksList />
+          <Tabs />
         </Tab.Panel>
       </Tab.Panels>
     </Tab.Group>
@@ -93,3 +87,8 @@ export default function BottomTabs() {
           }
         ></Tab> */
 }
+
+// Icons Options for Camera :
+
+// RiCameraLensFill
+// RiCameraLensLine
