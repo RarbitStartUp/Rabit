@@ -1,6 +1,6 @@
 import { Tab } from '@headlessui/react'
 
-import { MdRedeem, MdOutlineExplore } from 'react-icons/md'
+import { MdRedeem } from 'react-icons/md'
 import { AiTwotoneShop } from 'react-icons/Ai'
 import { RiBookMarkFill } from 'react-icons/Ri'
 

@@ -4,11 +4,11 @@ import Tab from '@mui/material/Tab'
 import TabContext from '@mui/lab/TabContext'
 import TabList from '@mui/lab/TabList'
 import TabPanel from '@mui/lab/TabPanel'
-import ShopsList from './shops/ShopsList'
-import BookmarksList from './bookmarks/BookmarksList'
-import FShopsList from './Fshops/FShopsList'
-import FDiscountsList from './Fdiscounts/FDiscountsList'
-import FBookmarksList from './Fbookmarks/FBookmarksList'
+import ShopsList from '../../pages/shops/ShopsList'
+import BookmarksList from '../../pages/bookmarks/BookmarksList'
+import FShopsList from '../../pages/Fshops/FShopsList'
+import FDiscountsList from '../../pages/Fdiscounts/FDiscountsList'
+import FBookmarksList from '../../pages/Fbookmarks/FBookmarksList'
 
 export default function LabTabs() {
   const [value, setValue] = React.useState('1')
@@ -23,7 +23,7 @@ export default function LabTabs() {
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList
             onChange={handleChange}
-            // indicatorColor="secondar"
+            // indicatorColor="secondary"
             variant="fullWidth"
             // aria-label="lab API tabs example"
           >
