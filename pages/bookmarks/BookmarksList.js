@@ -33,12 +33,10 @@ export default function BookmarksList({ dataBookmarks }) {
                 key={dataBookmark.id}
                 shopName={dataBookmark.shopName}
                 categories={dataBookmark.categories}
-                location={dataBookmark.location}
+                imagePath={dataBookmark.imagePath}
                 rewardPoints={dataBookmark.rewardPoints}
                 tokenAllocations={dataBookmark.tokenAllocations}
-                imagePath={dataBookmark.imagePath}
-                // timestamp={dataBookmark.timestamp}
-                // email={dataBookmark.email}
+                location={dataBookmark.location} 
               />
             </a>
           </Link>

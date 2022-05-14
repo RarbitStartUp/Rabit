@@ -37,8 +37,6 @@ export default function ShopsList({ dataShops }) {
                 rewardPoints={dataShop.rewardPoints}
                 tokenAllocations={dataShop.tokenAllocations}
                 imagePath={dataShop.imagePath}
-                // timestamp={dataShop.timestamp}
-                // email={dataShop.email}
               />
             </a>
           </Link>
