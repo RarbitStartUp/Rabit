@@ -1,8 +1,8 @@
 import { Tab } from '@headlessui/react'
 
 import { MdRedeem } from 'react-icons/md'
-import { AiTwotoneShop } from 'react-icons/Ai'
-import { RiBookMarkFill } from 'react-icons/Ri'
+import { AiTwotoneShop } from 'react-icons/ai'
+import { RiBookMarkFill } from 'react-icons/ri'
 
 import FShopsList from './Fshops/FShopsList'
 import FDiscountsList from './Fdiscounts/FDiscountsList'

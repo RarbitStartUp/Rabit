@@ -2,7 +2,7 @@ import { Tab } from '@headlessui/react'
 import Tabs from './Tabs'
 import Reward from './reward/Reward'
 import { MdRedeem, MdOutlineExplore } from 'react-icons/md'
-import { BsFillCameraFill } from 'react-icons/Bs'
+import { BsFillCameraFill } from 'react-icons/bs'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
