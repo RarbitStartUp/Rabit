@@ -11,7 +11,7 @@ export const dataShops = [
     description: 'Top Chief from Japan',
   },
   {
-    id: 1,
+    id: '1',
     shopName: 'Rim Cafe',
     categories: 'Cafe',
     imagePath:
