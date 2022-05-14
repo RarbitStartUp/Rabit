@@ -23,7 +23,6 @@ const Post = ({ data }: any) => {
         key={data.id}
         shopName={data.shopName}
         discountName={data.discountName}
-        // categories={data.categories}
         location={data.location}
         rewardPointsGain={data.rewardPointsGain}
         tokenAllocations={data.tokenAllocations}

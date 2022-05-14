@@ -32,12 +32,10 @@ export default function DiscountsList({ dataDiscounts }) {
               <DiscountCard
                 discountName={dataDiscount.discountName}
                 shopName={dataDiscount.shopName}
-                categories={dataDiscount.categories}
                 imagePath={dataDiscount.imagePath}
                 rewardPointsGain={dataDiscount.rewardPointsGain}
                 tokenAllocations={dataDiscount.tokenAllocations}
                 location={dataDiscount.location}
-                description={dataDiscount.description}
               />
             </a>
           </Link>

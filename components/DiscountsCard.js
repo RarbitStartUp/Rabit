@@ -1,8 +1,13 @@
 import Image from 'next/image'
-import { FaDollarSign, FaCommentDots, FaVoteYea } from 'react-icons/fa'
+import {
+  FaDollarSign,
+  FaRegComment,
+  FaCommentDots,
+  FaVoteYea,
+} from 'react-icons/fa'
 import { MdRoom, MdBookmarks, MdRedeem } from 'react-icons/md'
 
-export default function DiscountsCard2({
+export default function DiscountsCard({
   imagePath,
   discountName,
   shopName,
@@ -37,7 +42,7 @@ export default function DiscountsCard2({
           <div className="mt-3 mr-1 flex flex-row items-center justify-end space-x-4">
             <button
               className=" flex flex-row items-center justify-center "
-              onClick={() => router.push('../discountsAvailable/DiscountsList')}
+              onClick={() => router.push('../discountsDetail/DiscountsList')}
             >
               <MdRedeem className=" h-7 w-7 text-[#5865F2] hover:text-[#424bb6]" />
             </button>

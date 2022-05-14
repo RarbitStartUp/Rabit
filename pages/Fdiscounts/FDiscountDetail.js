@@ -9,7 +9,6 @@ export default function FDiscountDetail({
   discountName,
   location,
   rewardPointsGain,
-  // categories,
   tokenAllocations,
   imagePath,
   description,
