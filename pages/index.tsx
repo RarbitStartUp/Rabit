@@ -13,8 +13,7 @@ const Home: NextPage = () => {
         <Login />
       </div>
     </>
-
   )
 }
 
-export default Home;
+export default Home

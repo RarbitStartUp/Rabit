@@ -23,6 +23,6 @@
     "pages/index.js",
     "pages/index.js",
     "pages/index1tsx"
-  ],
+, "pages/DatePicker.jsx"  ],
   "exclude": ["node_modules"]
 }
