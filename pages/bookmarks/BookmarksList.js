@@ -37,8 +37,8 @@ export default function BookmarksList({ dataBookmarks }) {
                 rewardPoints={dataBookmark.rewardPoints}
                 tokenAllocations={dataBookmark.tokenAllocations}
                 imagePath={dataBookmark.imagePath}
-                timestamp={dataBookmark.timestamp}
-                email={dataBookmark.email}
+                // timestamp={dataBookmark.timestamp}
+                // email={dataBookmark.email}
               />
             </a>
           </Link>
