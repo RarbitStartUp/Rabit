@@ -1,6 +1,6 @@
 // import DropdownMenu from './DropDownMenu'
 import RewardTable2 from '../components/RewardTable2'
-import DatePicker from './DatePicker'
+import DatePicker from '../components/DatePicker'
 
 export default function Records() {
   return (

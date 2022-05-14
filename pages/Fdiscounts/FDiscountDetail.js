@@ -1,10 +1,7 @@
 import Image from 'next/image'
-import Link from 'next/link'
-import { RiCoupon3Line } from 'react-icons/ri'
-import { FaDollarSign, FaRegComment } from 'react-icons/fa'
-import { MdRoom, MdRedeem } from 'react-icons/md'
-import { FaPlay } from 'react-icons/fa'
-import { BiBookmarks } from 'react-icons/bi'
+import { FaDollarSign } from 'react-icons/fa'
+import { MdRoom, MdRedeem, MdBookmarks } from 'react-icons/md'
+import { FaCommentDots, FaVoteYea } from 'react-icons/fa'
 import { useRouter } from 'next/router'
 
 export default function FDiscountDetail({
@@ -38,14 +35,34 @@ export default function FDiscountDetail({
 
       <div className="ml-5">
         {/* ShopName and Categories */}
-        <div className="flex  max-w-6xl justify-between">
-          <p className="m-2 text-lg font-bold text-[#5865F2]">{shopName}</p>
-          <div className=" flex flex-row items-center justify-end space-x-4 pr-5">
+        <div className="mr-5 flex  max-w-6xl justify-between">
+          <p className="mt-3 mr-2 ml-2 mb-1 text-lg font-bold text-[#5865F2]">
+            {shopName}
+          </p>
+          <div className="mt-3 mr-1 flex flex-row items-center justify-end space-x-4">
             <button
-              className=" flex flex-row items-center justify-center md:m-2"
+              className=" flex flex-row items-center justify-center "
+              onClick={() => router.push('../discountsDetail/DiscountsList')}
+            >
+              <MdRedeem className=" h-7 w-7 text-[#5865F2] hover:text-[#424bb6]" />
+            </button>
+            <button
+              className=" flex flex-row items-center justify-center "
               onClick={() => {}}
             >
-              <BiBookmarks className="h-7 w-7 text-[#5865F2]" />
+              <FaCommentDots className="ml-2 h-7 w-7 text-[#5865F2] hover:text-[#424bb6]" />
+            </button>
+            <button
+              className=" flex flex-row items-center justify-center "
+              onClick={() => router.push('../Vote')}
+            >
+              <FaVoteYea className="ml-2 h-7 w-7 text-[#5865F2] hover:text-[#424bb6]" />
+            </button>
+            <button
+              className=" flex flex-row items-center justify-center "
+              onClick={() => {}}
+            >
+              <MdBookmarks className="ml-2 h-7 w-7 text-[#5865F2] hover:text-[#424bb6]" />
             </button>
           </div>
         </div>
@@ -58,7 +75,7 @@ export default function FDiscountDetail({
           <div className="m-2 flex flex-row items-center">
             <MdRedeem size={20} color="#5865F2" />
             <h1 className="pl-1 dark:text-white">
-              {rewardPointsGain + ' points'}
+              {rewardPointsGain + ' reward points gained per consumption'}
             </h1>
           </div>
           <div className="m-2 flex flex-row items-center">
@@ -71,10 +88,7 @@ export default function FDiscountDetail({
             <MdRoom size={20} color="red" className="dark:text-white" />
             <h1 className="pl-1 dark:text-white">{location}</h1>
           </div>
-          <div className="m-2 flex flex-row items-center">
-            <FaRegComment size={20} color="grey" className="dark:text-white" />
-            <h1 className="pl-1 dark:text-white">Comments</h1>
-          </div>
+
           {/* <Link href="./DiscountAvailable">
             <a>
               <div className="m-2 flex flex-row items-center pl-1">
@@ -89,32 +103,22 @@ export default function FDiscountDetail({
             </a>
           </Link> */}
         </div>
-        <p className="m-2 text-lg font-bold text-[#5865F2]">Shop Description</p>
+        <p className="m-2 text-lg font-bold text-[#5865F2]">
+          Discount Description
+        </p>
         <p className="m-2 text-sm text-[#7b80b3]">{description}</p>
-
-        {/* Buttons */}
-        <div className="mt-10 flex flex-row ">
-          <button
-            onClick={() => router.push('../discountsDetail/DiscountsList')}
-            className="m-auto mt-10  flex flex-row items-center justify-center  rounded-xl bg-[#5865F2] pt-2 pb-2 pl-6 pr-10 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2"
-          >
-            <RiCoupon3Line className="animate-ping" size={10} color="#fff" />
-            <h1 className="text-md flex pl-4 font-semibold text-white">
-              Discounts Available
-            </h1>
-          </button>
-        </div>
-        <div className="mt-3 flex flex-row ">
-          <button
-            onClick={() => router.push('../Vote')}
-            className=" m-auto mb-3 flex flex-row items-center justify-center  rounded-xl bg-[#5865F2] pt-2 pb-2 pl-6 pr-10 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2"
-          >
-            <FaPlay className=" animate-ping" size={10} color="#fff" />
-            <h1 className="text-md flex pl-4 font-semibold text-white">
-              Vote for more Reward Points
-            </h1>
-          </button>
-        </div>
+        <p className="mr-2 ml-2 mb-1 mt-5 text-lg font-bold text-[#5865F2]">
+          Discount QR Code
+        </p>
+        <Image
+          src={'/img/RarbitQRCode/RarbitQRCode.png'}
+          alt="thumbnail"
+          width={300}
+          height={300}
+          // layout="fill"
+          objectFit="cover"
+          // className=""
+        />
       </div>
     </div>
   )

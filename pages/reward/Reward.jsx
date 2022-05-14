@@ -1,4 +1,4 @@
-import PopUpMenu from '../PopUpMenu'
+import PopUpMenu from '../../components/PopUpMenu'
 
 export default function Reward() {
   return (

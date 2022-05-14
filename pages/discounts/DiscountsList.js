@@ -21,16 +21,13 @@ export const getStaticProps = async () => {
   }
 }
 
-export default function ShopsList({ dataDiscounts }) {
+export default function DiscountsList({ dataDiscounts }) {
   return (
     <div className="">
-      <h1 className="ml-5 mt-10 text-2xl font-bold text-[#5865F2]">
-        Discounts Available
-      </h1>
       <Header />
       <div className="mx-auto flex-col space-y-3">
         {dataDiscounts.map((dataDiscount) => (
-          <Link href={'/Discounts/' + dataDiscount.id} key={dataDiscount.id}>
+          <Link href={'/discounts/' + dataDiscount.id} key={dataDiscount.id}>
             <a>
               <DiscountCard
                 discountName={dataDiscount.discountName}

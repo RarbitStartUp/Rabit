@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import { FaDollarSign, FaRegComment } from 'react-icons/fa'
 import { MdRoom, MdBookmarks, MdFavorite, MdRedeem } from 'react-icons/md'
-import { FaPlay } from 'react-icons/fa'
+import { FaPlay, FaVoteYea, FaCommentDots } from 'react-icons/fa'
+import { useRouter } from 'next/router'
 
 export default function ShopCard({
   shopName,
@@ -11,8 +12,10 @@ export default function ShopCard({
   tokenAllocations,
   imagePath,
 }) {
+  const router = useRouter()
+
   return (
-    <div className=" mt-3 flex h-[30rem] w-full grid-cols-2 flex-col rounded-2xl bg-white p-4 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 sm:w-full md:h-[20.5rem] md:w-[50rem] md:flex-row-reverse">
+    <div className="mt-3 flex h-[25rem] w-full grid-cols-2 flex-col rounded-2xl bg-white p-4 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 sm:w-full md:h-[20.5rem] md:w-[50rem] md:flex-row-reverse">
       <div className=" relative h-full  w-full basis-2/3 rounded-2xl shadow-md">
         {/* <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>
@@ -31,49 +34,59 @@ export default function ShopCard({
       </div>
 
       <div className=" mr-2 rounded-2xl ">
-        <p className="m-2 text-lg font-bold text-[#5865F2]">{categories}</p>
-        <h1 className="m-2 text-2xl font-bold dark:text-white">{shopName}</h1>
-
-        <div className=" flex flex-row flex-wrap justify-between pt-1 pr-4 pl-2">
-          <div className="m-2 flex flex-row items-center">
-            <MdRedeem size={20} color="#5865F2" />
-            <h1 className="pl-1 dark:text-white">{rewardPoints + ' points'}</h1>
-          </div>
-          <div className="m-2 flex flex-row items-center">
-            <FaDollarSign size={20} color="#5865F2" />
-            <h1 className="pl-1 dark:text-white">
-              {tokenAllocations + ' % token'}
-            </h1>
-          </div>
-          <div className="m-2 flex flex-row items-center">
-            <MdRoom size={20} color="red" className="dark:text-white" />
-            <h1 className="pl-1 dark:text-white">{location}</h1>
-          </div>
-          <div className="m-2 flex flex-row items-center">
-            <FaRegComment size={20} color="grey" className="dark:text-white" />
-            <h1 className="pl-1 dark:text-white">Comments</h1>
+        <div className="flex max-w-6xl justify-between">
+          <p className=" mt-2 ml-2 mr-2 text-lg font-bold text-[#5865F2]">
+            {categories}
+          </p>
+          <div className="mt-3 mr-1 flex flex-row items-center justify-end space-x-4">
+            <button
+              className=" flex flex-row items-center justify-center "
+              onClick={() => router.push('../discountsDetail/DiscountsList')}
+            >
+              <MdRedeem className=" h-7 w-7 text-[#5865F2] hover:text-[#424bb6]" />
+            </button>
+            <button
+              className=" flex flex-row items-center justify-center "
+              onClick={() => {}}
+            >
+              <FaCommentDots className="ml-2 h-7 w-7 text-[#5865F2] hover:text-[#424bb6]" />
+            </button>
+            <button
+              className=" flex flex-row items-center justify-center "
+              onClick={() => router.push('../Vote')}
+            >
+              <FaVoteYea className="ml-2 h-7 w-7 text-[#5865F2] hover:text-[#424bb6]" />
+            </button>
+            <button
+              className=" flex flex-row items-center justify-center "
+              onClick={() => {}}
+            >
+              <MdBookmarks className="ml-2 h-7 w-7 text-[#5865F2] hover:text-[#424bb6]" />
+            </button>
           </div>
         </div>
 
-        <div className="flex flex-row">
-          <button className="m-auto mt-3 mb-3 flex flex-row items-center justify-center  rounded-xl bg-[#5865F2] pt-2 pb-2 pl-6 pr-10 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2">
-            <FaPlay className="animate-ping" size={10} color="#fff" />
-            <h1 className="text-md pl-4 font-semibold text-white">Vote</h1>
-          </button>
+        <h1 className="mt-1 ml-2 mr-2 text-2xl font-bold dark:text-white">
+          {shopName}
+        </h1>
 
-          <button
-            className="m-auto mb-3 mt-3 flex flex-row items-center justify-center rounded-xl bg-[#5865F2] p-2.5 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2"
-            onClick={() => {}}
-          >
-            <MdBookmarks className="h-5 w-5 text-white" />
-          </button>
-
-          <button
-            className="m-auto mt-3 mb-3 flex flex-row items-center justify-center rounded-xl bg-[#5865F2] p-2.5 shadow-md shadow-[#5865f28a] duration-300 ease-linear hover:bg-[#424bb6] md:m-2"
-            onClick={() => {}}
-          >
-            <MdFavorite className="h-5 w-5 text-white" />
-          </button>
+        <div className=" flex flex-row flex-wrap space-x-2 pt-1 pr-4 pl-2">
+          <div className="mt-2 flex flex-row items-center">
+            <MdRedeem size={20} color="#5865F2" />
+            <h1 className="pl-1  text-black dark:text-white">
+              {rewardPoints + ' points'}
+            </h1>
+          </div>
+          <div className="mt-2 flex flex-row items-center">
+            <FaDollarSign size={20} color="#5865F2" />
+            <h1 className="pl-1 text-black dark:text-white">
+              {tokenAllocations + '% token'}
+            </h1>
+          </div>
+          <div className="mt-2 flex flex-row items-center">
+            <MdRoom size={20} color="red" className=" dark:text-white" />
+            <h1 className="pl-1 text-black dark:text-white">{location}</h1>
+          </div>
         </div>
       </div>
     </div>
