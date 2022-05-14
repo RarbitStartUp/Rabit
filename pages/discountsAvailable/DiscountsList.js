@@ -28,7 +28,7 @@ export default function DiscountsList({ dataDiscounts }) {
       </h1>
       {dataDiscounts.map((dataDiscount) => (
         <Link
-          href={'/discountsDetail/' + dataDiscount.id}
+          href={'/discountsAvailable/' + dataDiscount.id}
           key={dataDiscount.id}
         >
           <a>

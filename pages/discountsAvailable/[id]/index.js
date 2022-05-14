@@ -60,7 +60,7 @@ export default function DiscountsDetail({ dataDiscount }) {
           <div className="mt-3 mr-1 flex flex-row items-center justify-end space-x-4">
             <button
               className=" flex flex-row items-center justify-center "
-              onClick={() => router.push('../discountsDetail/DiscountsList')}
+              onClick={() => router.push('../discountsAvailable/DiscountsList')}
             >
               <MdRedeem className=" h-7 w-7 text-[#5865F2] hover:text-[#424bb6]" />
             </button>
