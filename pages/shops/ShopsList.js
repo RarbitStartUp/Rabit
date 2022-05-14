@@ -30,7 +30,6 @@ export default function ShopsList({ dataShops }) {
           <Link href={'/shops/' + dataShop.id} key={dataShop.id}>
             <a>
               <ShopCard
-                key={dataShop.id}
                 shopName={dataShop.shopName}
                 categories={dataShop.categories}
                 location={dataShop.location}

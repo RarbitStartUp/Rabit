@@ -5,9 +5,7 @@ import { MdRoom, MdRedeem } from 'react-icons/md'
 export default function DiscountsCard({
   imagePath,
   discountName,
-  shopName,
   rewardPointsGain,
-  location,
 }) {
   return (
     <div className=" mt-3 mr-2 ml-2 flex h-[20rem] w-full grid-cols-2 flex-col rounded-2xl bg-white p-4 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[20.5rem] md:w-[50rem] md:flex-row-reverse">

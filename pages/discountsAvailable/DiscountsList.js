@@ -37,7 +37,7 @@ export default function DiscountsList({ dataDiscounts }) {
               shopName={dataDiscount.shopName}
               imagePath={dataDiscount.imagePath}
               rewardPointsGain={dataDiscount.rewardPointsGain}
-              allocationsPercentage={dataDiscount.allocationsPercentage}
+              tokenAllocations={dataDiscount.tokenAllocations}
               location={dataDiscount.location}
               description={dataDiscount.description}
             />
