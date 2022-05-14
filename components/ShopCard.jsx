@@ -35,7 +35,7 @@ export default function ShopCard({
 
       <div className=" mr-2 rounded-2xl ">
         <div className="flex max-w-6xl justify-between">
-          <p className=" mt-2 ml-2 mr-2 text-lg font-bold text-[#5865F2]">
+          <p className=" mt-3 ml-2 mr-2 text-lg font-bold text-[#5865F2]">
             {categories}
           </p>
           <div className="mt-3 mr-1 flex flex-row items-center justify-end space-x-4">
