@@ -1,5 +1,5 @@
 import { server } from '../../../config'
-import DiscountDetail from '../DiscountDetail'
+import DiscountDetail from '../../../components/discount/DiscountDetail'
 
 export const getStaticProps = async (context) => {
   const res = await fetch(`${server}/api/discounts/${context.params.id}`)

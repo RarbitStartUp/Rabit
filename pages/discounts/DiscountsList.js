@@ -1,4 +1,4 @@
-import DiscountCard from '../../components/discount/DiscountCard'
+import DiscountCard from '../../components/discount/DiscountsCard'
 import Link from 'next/link'
 import { server } from '../../config/index'
 
