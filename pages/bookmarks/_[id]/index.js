@@ -1,5 +1,5 @@
 import { server } from '../../../config'
-import BookmarkDetail from '../BookmarkDetail'
+import ShopDetail from '../../../components/shop/ShopDetail'
 
 export const getStaticProps = async (context) => {
   const res = await fetch(`${server}/api/bookmarks/${context.params.id}`)
@@ -13,7 +13,7 @@ export const getStaticProps = async (context) => {
 export const getStaticPaths = async () => {
   const res = await fetch(`${server}/api/bookmarks`)
 
-  const dataBookmarks = await res.json();
+  const dataBookmarks = await res.json()
 
   const ids = dataBookmarks.map((dataBookmark) => dataBookmark.id)
 
@@ -30,8 +30,7 @@ export const getStaticPaths = async () => {
 export default function BookmarksDetail({ dataBookmark }) {
   return (
     <div>
-      <BookmarkDetail
-        key={dataBookmark.id}
+      <ShopDetail
         shopName={dataBookmark.shopName}
         categories={dataBookmark.categories}
         location={dataBookmark.location}

@@ -1,20 +1,11 @@
-import ShopCard from '../../components/ShopCard'
+import ShopCard from '../../components/shop/ShopCard'
 import Link from 'next/link'
 import { server } from '../../config/index'
 import Header from '../../components/Header'
 
-// import path from 'path'
-// import fs from 'fs'
-
 export const getStaticProps = async () => {
   const res = await fetch(`${server}/api/shops`)
   const dataShops = await res.json()
-
-  // const dataFilePath = path.join(process.cwd(), 'jsonFiles', 'data.json')
-  // console.log(dataFilePath) // will be YourProject/jsonFiles/data.json
-
-  // const fileContents = fs.readFileSync(dataFilePath, 'utf8')
-  // const data = JSON.parse(fileContents)
 
   return {
     props: { dataShops },

@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { FaRegComment, FaCommentDots } from 'react-icons/fa'
-import { MdRoom, MdRedeem } from 'react-icons/md'
+import { FaCommentDots } from 'react-icons/fa'
+import { MdRedeem } from 'react-icons/md'
 
 export default function DiscountsCard({
   imagePath,

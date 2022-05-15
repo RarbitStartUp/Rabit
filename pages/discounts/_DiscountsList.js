@@ -1,20 +1,12 @@
-import DiscountCard from '../../components/DiscountCard'
+import DiscountCard from '../../components/discount/DiscountCard'
 import Link from 'next/link'
 import { server } from '../../config/index'
 
-// import path from 'path'
-// import fs from 'fs'
 import Header from '../../components/Header'
 
 export const getStaticProps = async () => {
   const res = await fetch(`${server}/api/discounts`)
   const dataDiscounts = await res.json()
-
-  // const dataFilePath = path.join(process.cwd(), 'jsonFiles', 'data.json')
-  // console.log(dataFilePath) // will be YourProject/jsonFiles/data.json
-
-  // const fileContents = fs.readFileSync(dataFilePath, 'utf8')
-  // const data = JSON.parse(fileContents)
 
   return {
     props: { dataDiscounts },

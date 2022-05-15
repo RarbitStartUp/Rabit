@@ -1,6 +1,6 @@
 import { Tab } from '@headlessui/react'
 import Tabs from './Tabs'
-import Reward from './reward/Reward'
+import Reward from './Reward'
 import { MdRedeem, MdOutlineExplore } from 'react-icons/md'
 import { BsFillCameraFill } from 'react-icons/bs'
 

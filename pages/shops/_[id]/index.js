@@ -1,5 +1,5 @@
 import { server } from '../../../config'
-import ShopDetail from '../ShopDetail'
+import ShopDetail from '../../../components/ShopDetail'
 
 export const getStaticProps = async (context) => {
   const res = await fetch(`${server}/api/shops/${context.params.id}`)
@@ -31,7 +31,6 @@ export default function ShopsDetail({ dataShop }) {
   return (
     <div>
       <ShopDetail
-        key={dataShop.id}
         shopName={dataShop.shopName}
         categories={dataShop.categories}
         location={dataShop.location}

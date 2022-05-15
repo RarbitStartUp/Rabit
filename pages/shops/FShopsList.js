@@ -2,7 +2,7 @@ import { collection, onSnapshot, query, orderBy } from 'firebase/firestore'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { db } from '../../firebase'
-import ShopCard from '../../components/ShopCard'
+import ShopCard from '../../components/shop/ShopCard'
 import Header from '../../components/Header'
 
 export default function ShopsList() {
@@ -27,7 +27,7 @@ export default function ShopsList() {
       <div className="flex">
         <div className="mx-auto flex-col space-y-3">
           {shops.map((shop) => (
-            <Link href={'/Fshops/' + shop.id} key={shop.id}>
+            <Link href={'/shops/' + shop.id} key={shop.id}>
               <a>
                 <ShopCard
                   key={shop.id}

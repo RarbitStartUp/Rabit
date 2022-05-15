@@ -4,9 +4,9 @@ import { MdRedeem } from 'react-icons/md'
 import { AiTwotoneShop } from 'react-icons/ai'
 import { RiBookMarkFill } from 'react-icons/ri'
 
-import FShopsList from './Fshops/FShopsList'
-import FDiscountsList from './Fdiscounts/FDiscountsList'
-import FBookmarksList from './Fbookmarks/FBookmarksList'
+import FShopsList from './shops/FShopsList'
+import FDiscountsList from './discounts/FDiscountsList'
+import FBookmarksList from './bookmarks/FBookmarksList'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')

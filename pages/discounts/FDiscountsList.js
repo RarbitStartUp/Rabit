@@ -2,7 +2,7 @@ import { collection, onSnapshot, query, orderBy } from 'firebase/firestore'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { db } from '../../firebase'
-import DiscountCard from '../../components/DiscountsCard'
+import DiscountCard from '../../components/discount/DiscountsCard'
 import Header from '../../components/Header'
 
 export default function DiscountsList() {
@@ -27,7 +27,7 @@ export default function DiscountsList() {
       <div className="flex">
         <div className="mx-auto flex-col space-y-3">
           {discounts.map((discount) => (
-            <Link href={'/Fdiscounts/' + discount.id} key={discount.id}>
+            <Link href={'/discounts/' + discount.id} key={discount.id}>
               <a>
                 <DiscountCard
                   shopName={discount.data().shopName}

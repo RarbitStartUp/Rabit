@@ -1,26 +1,17 @@
-import DiscountsCard from './DiscountsCard'
+import DiscountsAvailableCard from '../../components/discount/DiscountsAvailableCard'
 import Link from 'next/link'
 import { server } from '../../config/index'
-
-// import path from 'path'
-// import fs from 'fs'
 
 export const getStaticProps = async () => {
   const res = await fetch(`${server}/api/discounts`)
   const dataDiscounts = await res.json()
-
-  // const dataFilePath = path.join(process.cwd(), 'jsonFiles', 'data.json')
-  // console.log(dataFilePath) // will be YourProject/jsonFiles/data.json
-
-  // const fileContents = fs.readFileSync(dataFilePath, 'utf8')
-  // const data = JSON.parse(fileContents)
 
   return {
     props: { dataDiscounts },
   }
 }
 
-export default function DiscountsList({ dataDiscounts }) {
+export default function DiscountsAvailableList({ dataDiscounts }) {
   return (
     <div className="mx-auto flex-row justify-center space-y-3">
       <h1 className="ml-5 mt-10 text-2xl font-bold text-[#5865F2]">
@@ -32,14 +23,10 @@ export default function DiscountsList({ dataDiscounts }) {
           key={dataDiscount.id}
         >
           <a>
-            <DiscountsCard
+            <DiscountsAvailableCard
               discountName={dataDiscount.discountName}
-              shopName={dataDiscount.shopName}
               imagePath={dataDiscount.imagePath}
               rewardPointsGain={dataDiscount.rewardPointsGain}
-              tokenAllocations={dataDiscount.tokenAllocations}
-              location={dataDiscount.location}
-              description={dataDiscount.description}
             />
           </a>
         </Link>

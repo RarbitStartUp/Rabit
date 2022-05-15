@@ -1,10 +1,10 @@
-import PopUpMenu from '../../components/PopUpMenu'
+import PopUpMenu from '../components/PopUpMenu'
 
 export default function Reward() {
   return (
     <>
       <div className="h-screen bg-slate-100">
-        <div class="mx-auto flex h-screen max-w-7xl flex-col px-9 sm:px-9 md:px-0 md:px-4">
+        <div class="mx-auto flex h-screen max-w-7xl flex-col px-9 sm:px-9 md:px-4">
           <div class="flex items-center justify-between pt-10 pb-7">
             <div class="flex flex-auto justify-start lg:w-0 lg:flex-1">
               <span class="text-2xl font-bold">Rarbit</span>
