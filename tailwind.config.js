@@ -5,7 +5,13 @@ module.exports = {
     './node_modules/flowbite/**/*.js',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#8B5CF6',
+        secondary: '#D5D5D5',
+        icon: '#B9B9B9',
+      },
+    },
     fontFamily: {
       vali: ['VALORANT'],
     },

@@ -4,7 +4,6 @@ import { Fragment } from 'react'
 import { FcMenu } from 'react-icons/fc'
 import { MdLanguage, MdHistory, MdLogout } from 'react-icons/md'
 
-
 export default function PopUpMenu() {
   const router = useRouter()
 
@@ -14,7 +13,6 @@ export default function PopUpMenu() {
       <div>
         <Menu.Button className="inline-flex w-full justify-center rounded-md bg-white bg-opacity-0 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-60 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
           <FcMenu size={20} />
-         
         </Menu.Button>
       </div>
       <Transition
@@ -30,17 +28,17 @@ export default function PopUpMenu() {
           <div className="px-1 py-1 ">
             <Menu.Item>
               {({ active }) => (
-                              <button
-                                  onClick={() => router.push('/Records')}
+                <button
+                  onClick={() => router.push('/Records')}
                   className={`${
-                    (active ? 'bg-violet-500 text-white' : 'text-violet-500', )
+                    active ? 'bg-violet-500 text-white' : 'text-primary'
                   } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                 >
                   {active ? (
                     <MdHistory className="mr-2 h-5 w-5" aria-hidden="true" />
                   ) : (
                     <MdHistory className="mr-2 h-5 w-5" aria-hidden="true" />
-                                  )}
+                  )}
                   Record
                 </button>
               )}
