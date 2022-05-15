@@ -25,7 +25,7 @@ export default function EmailLogin() {
           </div>
           <div className="mt-6 text-center">
             <button
-              className="mr-1 mb-1 w-full rounded bg-red-500 px-6 py-3 text-sm font-medium text-white shadow outline-none hover:shadow-lg focus:outline-none active:bg-red-700"
+              className="mr-1 mb-1 w-full rounded bg-primary px-6 py-3 text-sm font-medium text-white shadow outline-none hover:shadow-lg focus:outline-none active:bg-red-700"
               type="button"
               onClick={() => router.push('/BottomTabs')}
             >

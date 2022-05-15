@@ -19,7 +19,7 @@ export default function Reward() {
               <div class="flex flex-1 flex-col justify-center bg-white p-8">
                 <div
                   style={{ height: 2.7 + 'rem', width: 2.7 + 'rem' }}
-                  class="text-primary bg-primary flex items-center justify-center rounded-full border bg-opacity-20"
+                  class="flex items-center justify-center rounded-full border bg-primary bg-opacity-20 text-primary"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@ export default function Reward() {
                     Total allocation
                   </div>
                   <div class="ml-auto flex items-center">
-                    <button class="rounded bg-red-500 py-2 px-4 text-sm font-medium text-white shadow outline-none hover:shadow-lg focus:outline-none active:bg-gray-700">
+                    <button class="rounded bg-primary py-2 px-4 text-sm font-medium text-white shadow outline-none hover:shadow-lg focus:outline-none active:bg-gray-700">
                       {' '}
                       Add shop
                     </button>

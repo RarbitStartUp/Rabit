@@ -43,25 +43,25 @@ export default function ShopCard({
               className=" flex flex-row items-center justify-center "
               onClick={() => router.push('../discountsAvailable/DiscountsList')}
             >
-              <MdRedeem className=" h-6 w-6 text-icon hover:text-[#424bb6]" />
+              <MdRedeem className=" h-6 w-6 text-icon hover:text-hover" />
             </button>
             <button
               className=" flex flex-row items-center justify-center "
               onClick={() => {}}
             >
-              <FaCommentDots className="ml-2 h-6 w-6 text-icon hover:text-[#424bb6]" />
+              <FaCommentDots className="ml-2 h-6 w-6 text-icon hover:text-hover" />
             </button>
             <button
               className=" flex flex-row items-center justify-center "
               onClick={() => router.push('../Vote')}
             >
-              <FaVoteYea className="ml-2 h-6 w-6 text-icon hover:text-[#424bb6]" />
+              <FaVoteYea className="ml-2 h-6 w-6 text-icon hover:text-hover" />
             </button>
             <button
               className=" flex flex-row items-center justify-center "
               onClick={() => {}}
             >
-              <MdBookmarks className="ml-2 h-6 w-6 text-icon hover:text-[#424bb6]" />
+              <MdBookmarks className="ml-2 h-6 w-6 text-icon hover:text-hover" />
             </button>
           </div>
         </div>

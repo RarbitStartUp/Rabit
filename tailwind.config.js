@@ -9,7 +9,8 @@ module.exports = {
       colors: {
         primary: '#8B5CF6',
         secondary: '#D5D5D5',
-        icon: '#B9B9B9',
+        icon: '#C2C5CC ',
+        hover: '#424bb6',
       },
     },
     fontFamily: {
