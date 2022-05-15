@@ -28,7 +28,7 @@ export default function BottomTabs() {
           }
         >
           <div className="my-1 flex flex-row items-center justify-center">
-            <AiTwotoneShop className="mr-2" size={20} />
+            <AiTwotoneShop className="mr-2" size={17} />
             Shops
           </div>
         </Tab>
@@ -44,7 +44,7 @@ export default function BottomTabs() {
           }
         >
           <div className="flex flex-row items-center justify-center">
-            <MdRedeem className="mr-2" size={20} />
+            <MdRedeem className="mr-2" size={17} />
             Discounts
           </div>
         </Tab>
@@ -60,7 +60,7 @@ export default function BottomTabs() {
           }
         >
           <div className="flex flex-row items-center justify-center">
-            <RiBookMarkFill className="mr-2" size={20} />
+            <RiBookMarkFill className="mr-2" size={17} />
             Bookmarks
           </div>
         </Tab>

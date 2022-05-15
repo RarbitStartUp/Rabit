@@ -1,6 +1,11 @@
 import Image from 'next/image'
-import { FaDollarSign, FaCommentDots, FaVoteYea } from 'react-icons/fa'
-import { MdRoom, MdRedeem, MdBookmarks } from 'react-icons/md'
+import { FaCommentDots, FaVoteYea } from 'react-icons/fa'
+import {
+  MdRoom,
+  MdRedeem,
+  MdBookmarks,
+  MdOutlineGeneratingTokens,
+} from 'react-icons/md'
 import { useRouter } from 'next/router'
 
 export default function ShopDetail({
@@ -34,7 +39,7 @@ export default function ShopDetail({
       <div className="ml-5">
         {/* ShopName and Categories */}
         <div className="mr-5 flex max-w-6xl justify-between">
-          <p className="mt-3 mr-2 ml-2 mb-1 text-lg font-bold text-[#5865F2]">
+          <p className="mt-3 mr-2 ml-2 mb-1 text-lg font-bold text-secondary">
             {categories}
           </p>
           {/* Icons Buttons */}
@@ -43,40 +48,40 @@ export default function ShopDetail({
               className=" flex flex-row items-center justify-center "
               onClick={() => router.push('../discountsAvailable/DiscountsList')}
             >
-              <MdRedeem className=" h-7 w-7 text-[#5865F2] hover:text-[#424bb6]" />
+              <MdRedeem className=" h-6 w-6 text-icon hover:text-hover" />
             </button>
             <button
               className=" flex flex-row items-center justify-center "
               onClick={() => {}}
             >
-              <FaCommentDots className="ml-2 h-7 w-7 text-[#5865F2] hover:text-[#424bb6]" />
+              <FaCommentDots className="ml-2 h-6 w-6 text-icon hover:text-hover" />
             </button>
             <button
               className=" flex flex-row items-center justify-center "
               onClick={() => router.push('../Vote')}
             >
-              <FaVoteYea className="ml-2 h-7 w-7 text-[#5865F2] hover:text-[#424bb6]" />
+              <FaVoteYea className="ml-2 h-6 w-6 text-icon hover:text-hover" />
             </button>
             <button
               className=" flex flex-row items-center justify-center "
               onClick={() => {}}
             >
-              <MdBookmarks className="ml-2 h-7 w-7 text-[#5865F2] hover:text-[#424bb6]" />
+              <MdBookmarks className="ml-2 h-6 w-6 text-icon hover:text-hover" />
             </button>
           </div>
         </div>
-        <h1 className="mb-2 ml-2 mr-2 text-2xl font-bold dark:text-white">
+        <h1 className="mb-2 ml-2 mr-2 text-2xl font-bold text-primary dark:text-white">
           {shopName}
         </h1>
 
         {/* Subtile Details */}
         <div className="flex flex-row flex-wrap space-x-2">
           <div className="m-2 flex flex-row items-center">
-            <MdRedeem size={20} color="#5865F2" />
+            <MdRedeem size={20} className="text-miniIcon" />
             <h1 className="pl-1 dark:text-white">{rewardPoints + ' points'}</h1>
           </div>
           <div className="m-2 flex flex-row items-center">
-            <FaDollarSign size={20} color="#5865F2" />
+            <MdOutlineGeneratingTokens size={20} className="text-miniIcon" />
             <h1 className="pl-1 dark:text-white">
               {tokenAllocations + ' % token'}
             </h1>
@@ -86,8 +91,9 @@ export default function ShopDetail({
             <h1 className="pl-1 dark:text-white">{location}</h1>
           </div>
         </div>
-        <p className="m-2 text-lg font-bold text-[#5865F2]">Shop Description</p>
-        <p className="m-2 text-sm text-[#7b80b3]">{description}</p>
+
+        <p className="m-2 text-lg font-bold text-third">Shop Description</p>
+        <p className="m-2 text-sm text-black dark:text-white">{description}</p>
       </div>
     </div>
   )

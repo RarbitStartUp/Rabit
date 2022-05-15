@@ -21,7 +21,7 @@ function Header() {
               <SearchIcon className="h-5 w-5 text-gray-500" />
             </div>
             <input
-              className="sm-text-sm focus:border-1 block w-full rounded-3xl border-0 border-primary bg-gray-50 pl-10 focus:border-primary focus:ring-primary"
+              className="sm-text-sm focus:border-1 block w-full rounded-3xl border-0 border-primary bg-gray-50 pl-10 placeholder-secondary focus:border-primary focus:ring-primary"
               type="text"
               placeholder="Search"
             />
@@ -31,16 +31,16 @@ function Header() {
         {/* Right Side */}
         <div className="flex flex-row items-center justify-end space-x-4 pr-5">
           <button
-            className="shadow-grey m-auto mt-6 flex flex-row items-center justify-center rounded-xl bg-white p-2.5 shadow-md duration-300 ease-linear hover:bg-[#424bb6] "
+            className="shadow-grey m-auto mt-6 flex flex-row items-center justify-center rounded-xl bg-white p-2.5 text-primary shadow-md duration-300 ease-linear hover:bg-primary hover:text-white "
             onClick={() => {}}
           >
-            <FilterIcon className="h-5 w-5 text-[#5865F2]" />
+            <FilterIcon className="h-5 w-5" />
           </button>
           <button
-            className="shadow-grey m-auto mt-6 flex flex-row items-center justify-center rounded-xl bg-white p-2.5 shadow-md duration-300 ease-linear hover:bg-[#424bb6] "
+            className="shadow-grey m-auto mt-6 flex flex-row items-center justify-center rounded-xl bg-white p-2.5 text-primary shadow-md duration-300 ease-linear hover:bg-primary hover:text-white "
             onClick={() => {}}
           >
-            <MdSort className="h-5 w-5 text-[#5865F2]" />
+            <MdSort className="h-5 w-5" />
           </button>
         </div>
       </div>

@@ -1,7 +1,11 @@
 import Image from 'next/image'
-import { FaDollarSign, FaRegComment } from 'react-icons/fa'
-import { MdRoom, MdBookmarks, MdFavorite, MdRedeem } from 'react-icons/md'
-import { FaPlay, FaVoteYea, FaCommentDots } from 'react-icons/fa'
+import {
+  MdRoom,
+  MdBookmarks,
+  MdRedeem,
+  MdOutlineGeneratingTokens,
+} from 'react-icons/md'
+import { FaVoteYea, FaCommentDots } from 'react-icons/fa'
 import { useRouter } from 'next/router'
 
 export default function ShopCard({
@@ -15,7 +19,7 @@ export default function ShopCard({
   const router = useRouter()
 
   return (
-    <div className="mt-3 flex h-[25rem] w-full grid-cols-2 flex-col rounded-2xl bg-white p-4 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 sm:w-full md:h-[20.5rem] md:w-[50rem] md:flex-row-reverse">
+    <div className="mt-3 flex h-[25rem] w-full flex-col rounded-2xl bg-white p-4 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 sm:w-full md:h-[25rem] md:w-[28rem] ">
       <div className=" relative h-full  w-full basis-2/3 rounded-2xl shadow-md">
         {/* <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>
@@ -72,19 +76,19 @@ export default function ShopCard({
 
         <div className=" flex flex-row flex-wrap space-x-2 pt-1 pr-4 pl-2">
           <div className="mt-2 flex flex-row items-center">
-            <MdRedeem size={20} className="text-icon" />
+            <MdRedeem size={17} className="text-miniIcon" />
             <h1 className="pl-1  text-black dark:text-white">
               {rewardPoints + ' points'}
             </h1>
           </div>
           <div className="mt-2 flex flex-row items-center">
-            <FaDollarSign size={20} className="text-icon" />
+            <MdOutlineGeneratingTokens size={17} className="text-miniIcon" />
             <h1 className="pl-1 text-black dark:text-white">
               {tokenAllocations + '% token'}
             </h1>
           </div>
           <div className="mt-2 flex flex-row items-center">
-            <MdRoom size={20} color="red" className=" dark:text-white" />
+            <MdRoom size={17} color="red" className=" dark:text-white" />
             <h1 className="pl-1 text-black dark:text-white">{location}</h1>
           </div>
         </div>

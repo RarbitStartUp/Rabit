@@ -4,7 +4,7 @@ import { MdRoom, MdRedeem, MdBookmarks } from 'react-icons/md'
 import { FaCommentDots, FaVoteYea } from 'react-icons/fa'
 import { useRouter } from 'next/router'
 
-export default function FDiscountDetail({
+export default function DiscountDetail({
   shopName,
   discountName,
   location,
@@ -35,71 +35,71 @@ export default function FDiscountDetail({
       <div className="ml-5">
         {/* ShopName and Categories */}
         <div className="mr-5 flex  max-w-6xl justify-between">
-          <p className="mt-3 mr-2 ml-2 mb-1 text-lg font-bold text-[#5865F2]">
+          <p className="mt-3 mr-2 ml-2 mb-1 text-lg font-bold text-secondary">
             {shopName}
           </p>
           <div className="mt-3 mr-1 flex flex-row items-center justify-end space-x-4">
             <button
               className=" flex flex-row items-center justify-center "
-              onClick={() => router.push('../discountsAvailable/DiscountsList')}
+              onClick={() =>
+                router.push('../../discountsAvailable/DiscountsAvailableList')
+              }
             >
-              <MdRedeem className=" h-7 w-7 text-[#5865F2] hover:text-[#424bb6]" />
+              <MdRedeem className=" h-6 w-6 text-icon hover:text-hover" />
             </button>
             <button
               className=" flex flex-row items-center justify-center "
               onClick={() => {}}
             >
-              <FaCommentDots className="ml-2 h-7 w-7 text-[#5865F2] hover:text-[#424bb6]" />
+              <FaCommentDots className="ml-2 h-6 w-6 text-icon hover:text-hover" />
             </button>
             <button
               className=" flex flex-row items-center justify-center "
               onClick={() => router.push('../Vote')}
             >
-              <FaVoteYea className="ml-2 h-7 w-7 text-[#5865F2] hover:text-[#424bb6]" />
+              <FaVoteYea className="ml-2 h-6 w-6 text-icon hover:text-hover" />
             </button>
             <button
               className=" flex flex-row items-center justify-center "
               onClick={() => {}}
             >
-              <MdBookmarks className="ml-2 h-7 w-7 text-[#5865F2] hover:text-[#424bb6]" />
+              <MdBookmarks className="ml-2 h-6 w-6 text-icon hover:text-hover" />
             </button>
           </div>
         </div>
-        <h1 className="m-2 text-2xl font-bold dark:text-white">
+        <h1 className="m-2 text-2xl font-bold text-primary dark:text-white">
           {discountName}
         </h1>
 
         {/* Subtile Details */}
         <div className="flex flex-row flex-wrap space-x-2">
           <div className="m-2 flex flex-row items-center">
-            <MdRedeem size={20} color="#5865F2" />
+            <MdRedeem size={17} className="text-miniIcon" />
             <h1 className="pl-1 dark:text-white">
               {rewardPointsGain + ' reward points gained per consumption'}
             </h1>
           </div>
           <div className="m-2 flex flex-row items-center">
-            <FaDollarSign size={20} color="#5865F2" />
+            <FaDollarSign size={17} className="text-miniIcon" />
             <h1 className="pl-1 dark:text-white">
               {tokenAllocations + ' % token'}
             </h1>
           </div>
           <div className="m-2 flex flex-row items-center">
-            <MdRoom size={20} color="red" className="dark:text-white" />
+            <MdRoom size={17} color="red" className="dark:text-white" />
             <h1 className="pl-1 dark:text-white">{location}</h1>
           </div>
         </div>
-        <p className="m-2 text-lg font-bold text-[#5865F2]">
-          Discount Description
-        </p>
+        <p className="m-2 text-lg font-bold text-third">Discount Description</p>
         <p className="m-2 text-sm text-[#7b80b3]">{description}</p>
-        <p className="mr-2 ml-2 mb-1 mt-5 text-lg font-bold text-[#5865F2]">
+        <p className="mr-2 ml-2 mb-1 mt-5 text-lg font-bold text-third">
           Discount QR Code
         </p>
         <Image
           src={'/img/RarbitQRCode/RarbitQRCode.png'}
           alt="thumbnail"
-          width={300}
-          height={300}
+          width={200}
+          height={200}
           // layout="fill"
           objectFit="cover"
           // className=""
