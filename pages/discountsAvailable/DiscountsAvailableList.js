@@ -5,7 +5,7 @@ import Header from '../../components/Header'
 
 export const getStaticProps = async () => {
   const res = await fetch(`${server}/api/discounts`)
-  const dataDiscounts = await res.json()
+  const dataDiscounts = await res.json(JSON.stringify())
 
   return {
     props: { dataDiscounts },
