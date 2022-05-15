@@ -12,7 +12,7 @@ function Header() {
   const router = useRouter()
 
   return (
-    <div>
+    <div className="">
       <div className="mx-auto flex max-w-6xl justify-between">
         {/* Search Bar*/}
         <div className="max-w-xs pt-5 pl-5">

@@ -8,7 +8,7 @@ export default function DiscountsCard({
   rewardPointsGain,
 }) {
   return (
-    <div className=" mt-3 mr-2 ml-2 flex h-[20rem] w-full grid-cols-2 flex-col rounded-2xl bg-white p-4 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[20.5rem] md:w-[50rem] md:flex-row-reverse">
+    <div className=" mt-3 mr-2 ml-2 flex h-[25rem] w-full grid-cols-2 flex-col  rounded-2xl bg-white p-4 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[25rem] md:w-[28rem] ">
       <div className=" relative h-full w-full  basis-2/3 rounded-2xl shadow-md">
         {/* <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>
@@ -28,7 +28,7 @@ export default function DiscountsCard({
 
       <div className=" mr-2 rounded-2xl ">
         <div className="mr-5 flex max-w-6xl justify-between">
-          <p className="mt-3 mr-2 ml-2 mb-1 text-lg font-bold text-[#5865F2]">
+          <p className="mt-3 mr-2 ml-2 mb-1 text-lg font-bold text-primary">
             {discountName}
           </p>
           {/* Icons Buttons */}
@@ -37,14 +37,14 @@ export default function DiscountsCard({
               className=" flex flex-row items-center justify-center "
               onClick={() => router.push('../discountsAvailable/DiscountsList')}
             >
-              <FaCommentDots className=" h-7 w-7 text-[#5865F2] hover:text-[#424bb6]" />
+              <FaCommentDots className=" h-6 w-6 text-icon hover:text-hover" />
             </button>
           </div>
         </div>
 
         <div className=" flex flex-row flex-wrap justify-between pt-1 pr-4 pl-2">
           <div className="flex flex-row items-center">
-            <MdRedeem className="" size={20} color="#5865F2" />
+            <MdRedeem className="text-miniIcon" size={17} />
             <h1 className="pl-2 dark:text-white">
               {rewardPointsGain + ' reward points gained per consumption'}
             </h1>
