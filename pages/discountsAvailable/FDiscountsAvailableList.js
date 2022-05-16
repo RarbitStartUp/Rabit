@@ -26,7 +26,7 @@ export default function FDiscountsAvailableList() {
       <h1 className="ml-5 mt-10 flex text-2xl font-bold text-primary">
         Discounts Available
       </h1>
-      <p className="ml-5 mt-3 flex text-xl font-bold text-secondary">
+      <p className="ml-5 mt-2 flex text-xl font-bold text-secondary">
         from this shop
       </p>
       <Header />
