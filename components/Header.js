@@ -12,8 +12,8 @@ function Header() {
   const router = useRouter()
 
   return (
-    <div className="">
-      <div className="mx-auto flex max-w-6xl justify-between">
+    <div className="flex">
+      <div className="mx-auto flex max-w-6xl justify-start justify-between">
         {/* Search Bar*/}
         <div className="max-w-xs pt-5 pl-5">
           <div className="relative mt-1 rounded-md">
@@ -31,7 +31,7 @@ function Header() {
         {/* Right Side */}
         <div className="flex flex-row items-center justify-end space-x-3 pr-5">
           <button
-            className="shadow-grey m-auto ml-2 mt-6 flex flex-row items-center justify-center rounded-xl bg-white p-2.5 text-primary shadow-md duration-300 ease-linear hover:bg-primary hover:text-white "
+            className="shadow-grey m-auto ml-4 mt-6 flex flex-row items-center justify-center rounded-xl bg-white p-2.5 text-primary shadow-md duration-300 ease-linear hover:bg-primary hover:text-white "
             onClick={() => {}}
           >
             <FilterIcon className="h-5 w-5" />
