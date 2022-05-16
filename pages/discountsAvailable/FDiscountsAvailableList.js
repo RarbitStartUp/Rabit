@@ -23,21 +23,25 @@ export default function FDiscountsAvailableList() {
 
   return (
     <div>
+      <h1 className="ml-5 mt-10 flex text-2xl font-bold text-primary">
+        Discounts Available
+      </h1>
+      <p className="ml-5 mt-3 flex text-xl font-bold text-secondary">
+        from this shop
+      </p>
       <Header />
-      <div className="flex">
-        <div className="mx-auto flex-col space-y-3">
-          {discounts.map((discount) => (
-            <Link href={'/discountsAvailable/' + discount.id} key={discount.id}>
-              <a>
-                <DiscountsAvailableCard
-                  discountName={discount.data().discountName}
-                  imagePath={discount.data().imagePath}
-                  rewardPointsGain={discount.data().rewardPointsGain}
-                />
-              </a>
-            </Link>
-          ))}
-        </div>
+      <div className="mx-auto flex-col space-y-3">
+        {discounts.map((discount) => (
+          <Link href={'/discountsAvailable/' + discount.id} key={discount.id}>
+            <a>
+              <DiscountsAvailableCard
+                discountName={discount.data().discountName}
+                imagePath={discount.data().imagePath}
+                rewardPointsGain={discount.data().rewardPointsGain}
+              />
+            </a>
+          </Link>
+        ))}
       </div>
     </div>
   )
