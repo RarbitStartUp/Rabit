@@ -96,7 +96,7 @@ export default function ShopDetail({
           </div>
         </div>
 
-        <p className="m-2 text-lg font-bold text-third">Shop Description</p>
+        <p className="text-md m-2 font-bold text-third">Shop Description</p>
         <p className="m-2 text-sm text-black dark:text-white">{description}</p>
       </div>
     </div>

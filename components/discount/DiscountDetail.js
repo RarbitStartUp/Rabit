@@ -94,9 +94,9 @@ export default function DiscountDetail({
             <h1 className="pl-1 text-sm dark:text-white">{location}</h1>
           </div>
         </div>
-        <p className="m-2 text-lg font-bold text-third">Discount Description</p>
+        <p className="text-md m-2 font-bold text-third">Discount Description</p>
         <p className="m-2 text-sm text-content">{description}</p>
-        <p className="mr-2 ml-2 mb-1 mt-5 text-lg font-bold text-third">
+        <p className="text-md mr-2 ml-2 mb-1 mt-5 font-bold text-third">
           Discount QR Code
         </p>
         <Image

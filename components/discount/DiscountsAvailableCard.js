@@ -47,7 +47,7 @@ export default function DiscountsCard({
         <div className=" flex flex-row flex-wrap justify-between pt-1 pr-4 pl-2">
           <div className="flex flex-row items-center">
             <MdRedeem className="text-miniIcon" size={17} />
-            <h1 className="pl-2 dark:text-white">
+            <h1 className="pl-2 text-sm dark:text-white">
               {rewardPointsGain + ' reward points gained per consumption'}
             </h1>
           </div>
