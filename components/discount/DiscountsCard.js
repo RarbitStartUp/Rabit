@@ -75,13 +75,13 @@ export default function DiscountsCard({
         <div className=" flex flex-row flex-wrap space-x-2 pt-1 pr-4 pl-2">
           <div className="mt-2 flex flex-row items-center">
             <MdRedeem className="text-miniIcon" size={17} />
-            <h1 className="pl-1 dark:text-white">
+            <h1 className="pl-1 text-sm dark:text-white">
               {rewardPointsGain + ' points'}
             </h1>
           </div>
           <div className="mt-2 flex flex-row items-center">
             <MdOutlineGeneratingTokens className="text-miniIcon" size={17} />
-            <h1 className="pl-1 text-black dark:text-white">
+            <h1 className="pl-1 text-sm text-sm text-black dark:text-white">
               {tokenAllocations + '% token'}
             </h1>
           </div>
