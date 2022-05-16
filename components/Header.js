@@ -13,7 +13,7 @@ function Header() {
 
   return (
     <div className="flex">
-      <div className="mx-auto flex max-w-6xl justify-start justify-between">
+      <div className="flex justify-between">
         {/* Search Bar*/}
         <div className="max-w-xs pt-5 pl-5">
           <div className="relative mt-1 rounded-md">
