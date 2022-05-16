@@ -72,7 +72,7 @@ export default function ShopDetail({
             </button>
           </div>
         </div>
-        <h1 className="mb-2 ml-2 mr-2 text-2xl font-bold text-primary dark:text-white">
+        <h1 className="mb-2 ml-2 mr-2 text-xl font-bold text-primary dark:text-white">
           {shopName}
         </h1>
 
