@@ -29,9 +29,9 @@ function Header() {
         </div>
 
         {/* Right Side */}
-        <div className="flex flex-row items-center justify-end space-x-4 pr-5">
+        <div className="flex flex-row items-center justify-end space-x-3 pr-5">
           <button
-            className="shadow-grey m-auto mt-6 flex flex-row items-center justify-center rounded-xl bg-white p-2.5 text-primary shadow-md duration-300 ease-linear hover:bg-primary hover:text-white "
+            className="shadow-grey m-auto ml-2 mt-6 flex flex-row items-center justify-center rounded-xl bg-white p-2.5 text-primary shadow-md duration-300 ease-linear hover:bg-primary hover:text-white "
             onClick={() => {}}
           >
             <FilterIcon className="h-5 w-5" />

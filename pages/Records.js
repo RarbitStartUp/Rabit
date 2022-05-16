@@ -5,7 +5,7 @@ import DatePicker from '../components/DatePicker'
 export default function Records() {
   return (
     <div className="mt-5 flex flex-col items-center justify-center">
-      <h1 className="mt-3 text-2xl font-bold text-[#5865F2]">Records</h1>
+      <h1 className="mt-3 text-2xl font-bold text-primary">Records</h1>
       <div className="mt-10"></div>
       <DatePicker />
       <div className="mt-10"></div>
