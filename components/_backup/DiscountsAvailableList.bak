@@ -1,0 +1,51 @@
+import DiscountsAvailableCard from '../../components/discount/DiscountsAvailableCard'
+import Link from 'next/link'
+import { server } from '../../config/index'
+import Header from '../../components/Header'
+import { dataDiscounts } from '../../data/dataDiscounts'
+
+export const getStaticProps = async ({ query: { id } }, result) => {
+  // const results = dataDiscounts.filter((dataDiscount) => dataDiscount.id === id)
+  const datas = dataDiscounts.filter((dataDiscount) => dataDiscount.id === id)
+
+  if (datas.length > 0) {
+    result.status(200).json(result[0])
+  } else {
+    result
+      .status(404)
+      .json({ message: `Discount with the id of ${id} is not found` })
+  }
+  // const res = await fetch(`${server}/api/discounts`)
+  // const dataDiscounts = await res.json()
+
+  return {
+    props: { datas },
+  }
+}
+
+export default function DiscountsAvailableList({ datas }) {
+  return (
+    <div>
+      <h1 className="ml-5 mt-10 flex text-2xl font-bold text-primary">
+        Discounts Available
+      </h1>
+      <p className="ml-5 mt-3 flex text-xl font-bold text-secondary">
+        from this shop
+      </p>
+      <Header />
+      <div className="mx-auto flex-row space-y-3">
+        {datas.map((data) => (
+          <Link href={'/discountsAvailable/' + data.id} key={data.id}>
+            <a>
+              <DiscountsAvailableCard
+                discountName={data.discountName}
+                imagePath={data.imagePath}
+                rewardPointsGain={data.rewardPointsGain}
+              />
+            </a>
+          </Link>
+        ))}
+      </div>
+    </div>
+  )
+}

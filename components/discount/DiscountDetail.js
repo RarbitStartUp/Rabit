@@ -46,7 +46,7 @@ export default function DiscountDetail({
             <button
               className=" flex flex-row items-center justify-center "
               onClick={() =>
-                router.push('../../discountsAvailable/DiscountsAvailableList')
+                router.push('../../discountsAvailable/FDiscountsAvailableList')
               }
             >
               <MdRedeem className=" h-6 w-6 text-icon hover:text-hover" />

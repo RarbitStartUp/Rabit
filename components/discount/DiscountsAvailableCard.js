@@ -35,7 +35,9 @@ export default function DiscountsCard({
           <div className="mt-3 mr-1 flex flex-row items-center justify-end space-x-4">
             <button
               className=" flex flex-row items-center justify-center "
-              onClick={() => router.push('../discountsAvailable/DiscountsList')}
+              onClick={() =>
+                router.push('../../discountsAvailable/FDiscountsAvailableList')
+              }
             >
               <FaCommentDots className=" h-6 w-6 text-icon hover:text-hover" />
             </button>
