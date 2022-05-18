@@ -79,24 +79,24 @@ export default function DiscountDetail({
         <div className="flex flex-row flex-wrap space-x-2">
           <div className="m-2 flex flex-row items-center">
             <MdRedeem size={17} className="text-miniIcon" />
-            <h1 className="pl-1 dark:text-white">
+            <h1 className="pl-1 text-sm dark:text-white">
               {rewardPointsGain + ' reward points gained per consumption'}
             </h1>
           </div>
           <div className="m-2 flex flex-row items-center">
             <MdOutlineGeneratingTokens size={17} className="text-miniIcon" />
-            <h1 className="pl-1 dark:text-white">
+            <h1 className="pl-1 text-sm dark:text-white">
               {tokenAllocations + ' % token'}
             </h1>
           </div>
           <div className="m-2 flex flex-row items-center">
             <MdRoom size={17} color="red" className="dark:text-white" />
-            <h1 className="pl-1 dark:text-white">{location}</h1>
+            <h1 className="pl-1 text-sm dark:text-white">{location}</h1>
           </div>
         </div>
-        <p className="m-2 text-lg font-bold text-third">Discount Description</p>
+        <p className="text-md m-2 font-bold text-third">Discount Description</p>
         <p className="m-2 text-sm text-content">{description}</p>
-        <p className="mr-2 ml-2 mb-1 mt-5 text-lg font-bold text-third">
+        <p className="text-md mr-2 ml-2 mb-1 mt-5 font-bold text-third">
           Discount QR Code
         </p>
         <Image

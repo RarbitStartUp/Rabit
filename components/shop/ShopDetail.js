@@ -72,7 +72,7 @@ export default function ShopDetail({
             </button>
           </div>
         </div>
-        <h1 className="mb-2 ml-2 mr-2 text-2xl font-bold text-primary dark:text-white">
+        <h1 className="mb-2 ml-2 mr-2 text-xl font-bold text-primary dark:text-white">
           {shopName}
         </h1>
 
@@ -80,21 +80,23 @@ export default function ShopDetail({
         <div className="flex flex-row flex-wrap space-x-2">
           <div className="m-2 flex flex-row items-center">
             <MdRedeem size={20} className="text-miniIcon" />
-            <h1 className="pl-1 dark:text-white">{rewardPoints + ' points'}</h1>
+            <h1 className="pl-1 text-sm dark:text-white">
+              {rewardPoints + ' points'}
+            </h1>
           </div>
           <div className="m-2 flex flex-row items-center">
             <MdOutlineGeneratingTokens size={20} className="text-miniIcon" />
-            <h1 className="pl-1 dark:text-white">
+            <h1 className="pl-1 text-sm dark:text-white">
               {tokenAllocations + ' % token'}
             </h1>
           </div>
           <div className="m-2 flex flex-row items-center">
             <MdRoom size={20} color="red" className="dark:text-white" />
-            <h1 className="pl-1 dark:text-white">{location}</h1>
+            <h1 className="pl-1 text-sm dark:text-white">{location}</h1>
           </div>
         </div>
 
-        <p className="m-2 text-lg font-bold text-third">Shop Description</p>
+        <p className="text-md m-2 font-bold text-third">Shop Description</p>
         <p className="m-2 text-sm text-black dark:text-white">{description}</p>
       </div>
     </div>
