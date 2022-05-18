@@ -65,6 +65,7 @@ export default function PopUpMenu() {
             <Menu.Item>
               {({ active }) => (
                 <button
+                  onClick={() => router.push('../Login')}
                   className={`${
                     active ? 'bg-violet-500 text-white' : 'text-violet-500'
                   } group flex w-full items-center rounded-md px-2 py-2 text-sm`}

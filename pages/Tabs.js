@@ -8,7 +8,7 @@ import FShopsList from './shops/FShopsList'
 import FDiscountsList from './discounts/FDiscountsList'
 import FBookmarksList from './bookmarks/FBookmarksList'
 
-import BottomTabsExplore from './BottomTabsExplore'
+import BottomTabsExplore from '../components/BottomTabs/BottomTabsExplore'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -18,19 +18,19 @@ export default function Tabs() {
   return (
     <div>
       <Tab.Group>
-        <Tab.List className=" flex justify-around">
+        <Tab.List className="flex justify-around">
           <Tab
             className={({ selected }) =>
               classNames(
-                'rounded-3xl py-2.5 text-sm font-medium leading-5 text-primary',
+                'rounded-3xl bg-white py-2.5 px-4 text-sm font-medium leading-5 text-secondary',
                 'ring-offset-5 ring-white ring-opacity-60 ring-offset-blue-400 focus:outline-none focus:ring-2',
                 selected
-                  ? 'bg-white px-10 shadow'
+                  ? 'bg-white px-10 text-primary shadow'
                   : 'text-secondary hover:bg-white/[0.12] hover:text-white '
               )
             }
           >
-            <div className="my-1 flex flex-row items-center justify-center">
+            <div className=" my-1 flex flex-row items-center justify-center">
               <AiTwotoneShop className="mr-2" size={17} />
               Shops
             </div>
@@ -38,15 +38,15 @@ export default function Tabs() {
           <Tab
             className={({ selected }) =>
               classNames(
-                'rounded-3xl py-2.5 text-sm font-medium leading-5 text-primary',
+                'rounded-3xl bg-white py-2.5 px-4 text-sm font-medium leading-5 text-secondary',
                 'ring-offset-5 ring-white ring-opacity-60 ring-offset-blue-400 focus:outline-none focus:ring-2',
                 selected
-                  ? 'bg-white px-8 shadow'
+                  ? 'bg-white px-8 text-primary shadow'
                   : 'text-secondary hover:bg-white/[0.12] hover:text-white'
               )
             }
           >
-            <div className="flex flex-row items-center justify-center">
+            <div className=" flex flex-row items-center justify-center">
               <MdRedeem className="mr-2" size={17} />
               Discounts
             </div>
@@ -54,10 +54,10 @@ export default function Tabs() {
           <Tab
             className={({ selected }) =>
               classNames(
-                'rounded-3xl py-2.5 text-sm font-medium leading-5 text-primary',
+                'rounded-3xl bg-white py-2.5 px-4 text-sm font-medium leading-5 text-secondary',
                 'ring-offset-5 ring-white ring-opacity-60 ring-offset-blue-400 focus:outline-none focus:ring-2',
                 selected
-                  ? 'bg-white px-8 shadow'
+                  ? 'bg-white px-8 text-primary shadow'
                   : 'text-secondary hover:bg-white/[0.12] hover:text-white'
               )
             }

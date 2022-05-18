@@ -1,4 +1,4 @@
-import BottomTabsReward from './BottomTabsReward'
+import BottomTabsReward from '../components/BottomTabs/BottomTabsReward'
 import PopUpMenu from '../components/PopUpMenu'
 
 export default function Reward() {
