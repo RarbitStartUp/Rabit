@@ -13,9 +13,9 @@ function Header() {
 
   return (
     <div className="flex">
-      <div className="flex justify-between">
+      <div className="flex max-w-6xl justify-between">
         {/* Search Bar*/}
-        <div className="max-w-xs pt-5 pl-5">
+        <div className="max-w-6xl pt-5 pl-5">
           <div className="relative mt-2 rounded-md">
             <div className="pointer-events-none absolute inset-y-0 flex items-center pl-3">
               <SearchIcon className="h-5 w-5 text-gray-500" />
