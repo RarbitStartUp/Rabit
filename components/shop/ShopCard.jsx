@@ -19,7 +19,7 @@ export default function ShopCard({
   const router = useRouter()
 
   return (
-    <div className="mt-3 flex h-[20rem] w-full flex-col rounded-2xl bg-white p-0 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[25rem] md:w-[28rem] ">
+    <div className="mt-3 flex h-[25rem] w-full flex-col rounded-2xl bg-white p-0 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[25rem] md:w-[28rem] ">
       <div className=" relative h-full  w-full basis-2/3 rounded-t-2xl shadow-md">
         {/* <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>

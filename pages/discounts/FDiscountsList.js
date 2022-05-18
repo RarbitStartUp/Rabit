@@ -42,6 +42,7 @@ export default function FDiscountsList() {
           ))}
         </div>
       </div>
+      <div className="h-20" />
     </div>
   )
 }

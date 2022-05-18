@@ -43,6 +43,7 @@ export default function FDiscountsAvailableList() {
           </Link>
         ))}
       </div>
+      <div className="h-20" />
     </div>
   )
 }

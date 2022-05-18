@@ -22,8 +22,9 @@ export default function FShopsList() {
   console.log(shops)
 
   return (
-    <div class="">
-      <Header className="" />
+    <div>
+      <Header />
+
       <div className="flex">
         <div className="mx-auto flex-col space-y-3">
           {shops.map((shop) => (
@@ -45,6 +46,7 @@ export default function FShopsList() {
           ))}
         </div>
       </div>
+      <div className="h-20" />
     </div>
   )
 }
