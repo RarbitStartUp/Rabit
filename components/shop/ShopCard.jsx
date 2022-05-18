@@ -43,7 +43,7 @@ export default function ShopCard({
             <p className=" text-md mt-3 ml-2 mr-2 text-secondary">
               {categories}
             </p>
-            <div className="mt-3 mr-1 flex flex-row items-center justify-end space-x-4">
+            <div className="mt-3 mr-5 flex flex-row items-center justify-end space-x-4">
               <button
                 className=" flex flex-row items-center justify-center "
                 onClick={() =>

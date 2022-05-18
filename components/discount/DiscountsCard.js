@@ -16,19 +16,19 @@ export default function DiscountsCard({
   location,
 }) {
   return (
-    <div className=" mt-3 mr-2 ml-2 flex h-[25rem] w-full grid-cols-2 flex-col rounded-2xl bg-white p-0 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[25rem] md:w-[28rem] ">
-      <div className=" relative h-full w-full  basis-2/3 rounded-2xl shadow-md">
+    <div className=" mt-3 mr-2 ml-2 flex h-[25rem] w-screen grid-cols-2 flex-col bg-white p-0 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[25rem] md:w-[25rem] md:rounded-t-2xl ">
+      <div className=" relative h-full w-full  basis-2/3 shadow-md md:rounded-t-2xl">
         {/* <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>
         </div> */}
-        <div className="relative h-full w-full rounded-2xl border-0 border-white">
+        <div className="md: relative h-full w-full border-0 border-white md:rounded-t-2xl">
           {imagePath && (
             <Image
               src={imagePath}
               alt="thumbnail"
               layout="fill"
               objectFit="cover"
-              className=" rounded-t-2xl"
+              className="md:rounded-t-2xl"
             />
           )}
         </div>
@@ -38,7 +38,7 @@ export default function DiscountsCard({
         <div className=" mr-2 rounded-2xl ">
           <div className="flex max-w-6xl justify-between">
             <p className="text-md mt-3 ml-2 mr-2 text-secondary">{shopName}</p>
-            <div className="mt-3 mr-1 flex flex-row items-center justify-end space-x-4">
+            <div className="mt-3 mr-5 flex flex-row items-center justify-end space-x-4">
               <button
                 className=" flex flex-row items-center justify-center "
                 onClick={() =>
@@ -82,7 +82,7 @@ export default function DiscountsCard({
             </div>
             <div className="mt-2 flex flex-row items-center">
               <MdOutlineGeneratingTokens className="text-miniIcon" size={17} />
-              <h1 className="pl-1 text-sm text-sm text-black dark:text-white">
+              <h1 className="pl-1 text-sm text-black dark:text-white">
                 {tokenAllocations + '% token'}
               </h1>
             </div>
