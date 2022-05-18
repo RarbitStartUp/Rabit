@@ -10,7 +10,7 @@ export default function BottomTabs() {
           <a class="block w-full py-4 px-3 text-center text-primary transition duration-300 hover:text-primary">
             <div className="flex flex-col items-center justify-center">
               <MdRedeem size={20} />
-              Reward
+              <div className="text-xs">Reward</div>
             </div>
           </a>
         </Link>
@@ -21,7 +21,7 @@ export default function BottomTabs() {
         >
           <div className="flex flex-col items-center justify-center">
             <BsFillCameraFill size={20} />
-            Scan
+             <div className="text-xs">Scan</div>
           </div>
         </a>
 
@@ -29,7 +29,7 @@ export default function BottomTabs() {
           <a class="block w-full py-4 px-3 text-center hover:text-primary">
             <div className="flex flex-col items-center justify-center">
               <MdOutlineExplore size={20} />
-              Explore
+              <div className="text-xs">Explore</div>
             </div>
           </a>
         </Link>
