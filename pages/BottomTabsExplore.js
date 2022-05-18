@@ -26,7 +26,7 @@ export default function BottomTabs() {
         </a>
 
         <Link href="/Tabs">
-          <a class="block w-full py-4 px-3 text-center hover:text-primary">
+          <a class="block w-full py-4 px-3 text-center text-primary hover:text-primary">
             <div className="flex flex-col items-center justify-center">
               <MdOutlineExplore size={20} />
               Explore

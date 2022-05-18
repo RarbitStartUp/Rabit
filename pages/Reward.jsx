@@ -1,4 +1,4 @@
-import BottomTabs from './BottomTabs'
+import BottomTabsReward from './BottomTabsReward'
 import PopUpMenu from '../components/PopUpMenu'
 
 export default function Reward() {
@@ -136,7 +136,7 @@ export default function Reward() {
           {/* <div class="py-5 text-center">Tab bar goes here</div> */}
         </div>
       </div>
-      <BottomTabs />
+      <BottomTabsReward />
     </div>
   )
 }

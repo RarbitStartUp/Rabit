@@ -8,7 +8,7 @@ import FShopsList from './shops/FShopsList'
 import FDiscountsList from './discounts/FDiscountsList'
 import FBookmarksList from './bookmarks/FBookmarksList'
 
-import BottomTabs from './BottomTabs'
+import BottomTabsExplore from './BottomTabsExplore'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -80,7 +80,7 @@ export default function Tabs() {
           </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>
-      <BottomTabs />
+      <BottomTabsExplore />
     </div>
   )
 }
