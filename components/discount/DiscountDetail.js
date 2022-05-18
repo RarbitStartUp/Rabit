@@ -71,7 +71,7 @@ export default function DiscountDetail({
             </button>
           </div>
         </div>
-        <h1 className="m-2 text-2xl font-bold text-primary dark:text-white">
+        <h1 className="m-2 text-xl font-bold text-primary dark:text-white">
           {discountName}
         </h1>
 
