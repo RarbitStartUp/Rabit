@@ -1,8 +1,9 @@
+import BottomTabs from './BottomTabs'
 import PopUpMenu from '../components/PopUpMenu'
 
 export default function Reward() {
   return (
-    <>
+    <div>
       <div className="h-screen bg-slate-100">
         <div class="mx-auto flex h-screen max-w-7xl flex-col px-9 sm:px-9 md:px-4">
           <div class="flex items-center justify-between pt-10 pb-7">
@@ -135,6 +136,7 @@ export default function Reward() {
           {/* <div class="py-5 text-center">Tab bar goes here</div> */}
         </div>
       </div>
-    </>
+      <BottomTabs />
+    </div>
   )
 }

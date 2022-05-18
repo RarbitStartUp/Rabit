@@ -8,7 +8,7 @@ import FShopsList from './shops/FShopsList'
 import FDiscountsList from './discounts/FDiscountsList'
 import FBookmarksList from './bookmarks/FBookmarksList'
 
-import BottomTabs2 from './BottomTabs2'
+import BottomTabs from './BottomTabs'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -18,7 +18,7 @@ export default function Tabs() {
   return (
     <div>
       <Tab.Group>
-        <Tab.List className="flex justify-around ">
+        <Tab.List className=" flex justify-around">
           <Tab
             className={({ selected }) =>
               classNames(
@@ -80,7 +80,7 @@ export default function Tabs() {
           </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>
-      <BottomTabs2 />
+      <BottomTabs />
     </div>
   )
 }
