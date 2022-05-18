@@ -21,7 +21,7 @@ export default function BottomTabs() {
         >
           <div className="flex flex-col items-center justify-center">
             <BsFillCameraFill size={20} />
-            Camera
+            Scan
           </div>
         </a>
 
