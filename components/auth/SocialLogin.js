@@ -7,17 +7,17 @@ export default function SocialLogin() {
     {
       type: 'Twitter',
       icon: '/img/social/twitter.svg',
-      provider: () => router.push('/BottomTabs'),
+      provider: () => router.push('/Reward'),
     },
     {
       type: 'Google',
       icon: '/img/social/google.svg',
-      provider: () => router.push('/BottomTabs'),
+      provider: () => router.push('/Reward'),
     },
     {
       type: 'Meta',
       icon: '/img/social/facebook.svg',
-      provider: () => router.push('/BottomTabs'),
+      provider: () => router.push('/Reward'),
     },
   ]
 
