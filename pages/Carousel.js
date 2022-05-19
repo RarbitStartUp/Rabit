@@ -17,35 +17,35 @@ export default function Carousel({ images }) {
   ]
 
   const [currentSlide, setCurrentSlide] = useState(0)
-  const [trans, setTrans] = useState(false)
-  const [transR, setTransR] = useState(false)
+  // const [trans, setTrans] = useState(false)
+  // const [transR, setTransR] = useState(false)
 
-  useEffect(() => {
-    if (transR) {
-      setTimeout(() => {
-        setTransR(false)
-      }, 700)
-    }
+  // useEffect(() => {
+  //   if (transR) {
+  //     setTimeout(() => {
+  //       setTransR(false)
+  //     }, 700)
+  //   }
 
-    if (trans) {
-      setTimeout(() => {
-        setTrans(false)
-        // setIndex((index + 1) % images.length)
-        // setIndex1((index1 + 1) % images.length)
-      }, 800)
-    }
-  }, [trans, transR])
+  //   if (trans) {
+  //     setTimeout(() => {
+  //       setTrans(false)
+  //       // setIndex((index + 1) % images.length)
+  //       // setIndex1((index1 + 1) % images.length)
+  //     }, 800)
+  //   }
+  // }, [trans, transR])
 
   const handleNextSlide = () => {
-    setTrans(true)
-    setTransR(false)
+    // setTrans(true)
+    // setTransR(false)
     let newSlide = currentSlide === images.length - 1 ? 0 : currentSlide + 1
     setCurrentSlide(newSlide)
   }
 
   const handlePrevSlide = () => {
-    setTransR(true)
-    setTrans(false)
+    // setTransR(true)
+    // setTrans(false)
     let newSlide = currentSlide === 0 ? images.length - 1 : currentSlide - 1
     setCurrentSlide(newSlide)
   }
@@ -58,13 +58,16 @@ export default function Carousel({ images }) {
         className="absolute inset-y-1/2 left-3 z-20 m-auto cursor-pointer text-white/50"
       />
       <div
-        className={`relative m-auto flex h-[50vh] w-full overflow-hidden ${
-          trans
-            ? '-translate-x-full transform transition duration-500 ease-linear'
-            : transR
-            ? 'animate-slideL'
-            : ''
-        }`}
+        className={
+          'relative m-auto flex h-[50vh] w-full overflow-hidden'
+          // ${
+          //   trans
+          //     ? '-translate-x-full transform transition duration-500 ease-linear'
+          //     : transR
+          //     ? 'animate-slideL'
+          //     : ''
+          //   }`
+        }
       >
         <Swipe
           onSwipeLeft={handleNextSlide}
@@ -79,7 +82,7 @@ export default function Carousel({ images }) {
                   src={image}
                   layout="fill"
                   objectFit="contain"
-                  // className="animate-fadeIn"
+                  className="animate-fadeIn"
                 />
               )
             }

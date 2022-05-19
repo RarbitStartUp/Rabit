@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 
-export default function Carousel2() {
+export default function Carousel1() {
   const [index, setIndex] = useState(0)
   const [index1, setIndex1] = useState(1)
   const [trans, setTrans] = useState(false)
@@ -80,7 +80,7 @@ export default function Carousel2() {
               onClick={handlePrev}
               className="absolute inset-y-1/2 left-3 z-20 m-auto cursor-pointer text-white/50"
             />
-            <div className="relative m-auto flex  w-screen overflow-hidden md:w-[40rem]">
+            <div className="relative m-auto flex h-full w-full overflow-hidden md:w-[40rem]">
               <Image
                 className={` ${
                   trans
@@ -91,6 +91,7 @@ export default function Carousel2() {
                 }`}
                 src={images[index]}
                 layout="fill"
+                objectFit="cover"
                 alt=""
               />
               <img
