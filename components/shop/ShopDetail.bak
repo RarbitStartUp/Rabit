@@ -1,8 +1,5 @@
 import Image from 'next/image'
-import { useState } from 'react'
-import Swipe from 'react-easy-swipe'
 import { FaCommentDots, FaVoteYea } from 'react-icons/fa'
-import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 import {
   MdRoom,
   MdRedeem,
@@ -21,72 +18,12 @@ export default function ShopDetail({
   description,
 }) {
   const router = useRouter()
-  const [currentSlide, setCurrentSlide] = useState(0)
-
-  const handleNextSlide = () => {
-    let newSlide = currentSlide === imagePath.length - 1 ? 0 : currentSlide + 1
-    setCurrentSlide(newSlide)
-  }
-
-  const handlePrevSlide = () => {
-    let newSlide = currentSlide === 0 ? imagePath.length - 1 : currentSlide - 1
-    setCurrentSlide(newSlide)
-  }
 
   return (
     <div>
       {/* <div className="w-[20.5rem]basis-2/3 md:h-[20.5rem]border-2 mt-3 h-[30rem] rounded-2xl border-white shadow-md"> */}
       <div className=" ">
-        <div className="relative">
-          <AiOutlineLeft
-            onClick={handlePrevSlide}
-            className="absolute inset-y-1/2 left-0 z-20 m-auto cursor-pointer text-5xl text-gray-400"
-          />
-          <div className="relative m-auto flex h-[50vh] w-full overflow-hidden">
-            <Swipe
-              onSwipeLeft={handleNextSlide}
-              onSwipeRight={handlePrevSlide}
-              className="relative z-10 h-full w-full"
-            >
-              {imagePath.map((imagePath, index) => {
-                if (index === currentSlide) {
-                  return (
-                    <Image
-                      key={imagePath}
-                      image={imagePath}
-                      layout="fill"
-                      objectFit="contain"
-                      className="animate-fadeIn"
-                    />
-                  )
-                }
-              })}
-            </Swipe>
-          </div>
-          <AiOutlineRight
-            onClick={handleNextSlide}
-            className="absolute inset-y-1/2 right-0 z-20 m-auto cursor-pointer text-5xl text-gray-400"
-          />
-
-          <div className="relative flex justify-center p-2">
-            {imagePath.map((_, index) => {
-              return (
-                <div
-                  className={
-                    index === currentSlide
-                      ? 'mx-2 mb-2 h-4 w-4 cursor-pointer rounded-full bg-gray-700'
-                      : 'mx-2 mb-2 h-4 w-4 cursor-pointer rounded-full bg-gray-300'
-                  }
-                  key={index}
-                  onClick={() => {
-                    setCurrentSlide(index)
-                  }}
-                />
-              )
-            })}
-          </div>
-        </div>
-        {/* {imagePath && (
+        {imagePath && (
           <Image
             src={imagePath}
             alt="thumbnail"
@@ -96,7 +33,7 @@ export default function ShopDetail({
             objectFit="cover"
             className="h-30 w-30"
           />
-        )} */}
+        )}
       </div>
 
       <div className="ml-5">

@@ -38,6 +38,7 @@ export default function FShopsList() {
                   rewardPoints={shop.data().rewardPoints}
                   tokenAllocations={shop.data().tokenAllocations}
                   imagePath={shop.data().imagePath}
+                  imagePath1={shop.data().imagePath1}
                   timestamp={shop.data().timestamp}
                   email={shop.data().email}
                 />

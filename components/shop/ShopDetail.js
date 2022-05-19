@@ -1,5 +1,8 @@
 import Image from 'next/image'
+import { useState } from 'react'
+import Swipe from 'react-easy-swipe'
 import { FaCommentDots, FaVoteYea } from 'react-icons/fa'
+import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 import {
   MdRoom,
   MdRedeem,
@@ -7,6 +10,7 @@ import {
   MdOutlineGeneratingTokens,
 } from 'react-icons/md'
 import { useRouter } from 'next/router'
+import Carousel from '../../pages/Carousel'
 
 export default function ShopDetail({
   shopName,
@@ -15,6 +19,7 @@ export default function ShopDetail({
   categories,
   tokenAllocations,
   imagePath,
+  imagePath1,
   description,
 }) {
   const router = useRouter()
@@ -22,8 +27,9 @@ export default function ShopDetail({
   return (
     <div>
       {/* <div className="w-[20.5rem]basis-2/3 md:h-[20.5rem]border-2 mt-3 h-[30rem] rounded-2xl border-white shadow-md"> */}
-      <div className=" ">
-        {imagePath && (
+      <Carousel imagePath={imagePath} imagePath1={imagePath1} />
+      <div>
+        {/* {imagePath && (
           <Image
             src={imagePath}
             alt="thumbnail"
@@ -33,7 +39,7 @@ export default function ShopDetail({
             objectFit="cover"
             className="h-30 w-30"
           />
-        )}
+        )} */}
       </div>
 
       <div className="ml-5">
