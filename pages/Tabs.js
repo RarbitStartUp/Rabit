@@ -1,7 +1,7 @@
 import { Tab } from '@headlessui/react'
 
 import { MdRedeem } from 'react-icons/md'
-import { AiTwotoneShop } from 'react-icons/ai'
+import { ImSpoonKnife } from 'react-icons/im'
 import { RiBookMarkFill } from 'react-icons/ri'
 
 import FShopsList from './shops/FShopsList'
@@ -31,7 +31,7 @@ export default function Tabs() {
             }
           >
             <div className=" my-1 flex flex-row items-center justify-center">
-              <AiTwotoneShop className="mr-2" size={17} />
+              <ImSpoonKnife className="mr-2" size={17} />
               Shops
             </div>
           </Tab>
