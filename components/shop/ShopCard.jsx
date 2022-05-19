@@ -15,6 +15,7 @@ export default function ShopCard({
   categories,
   tokenAllocations,
   imagePath,
+  imagePath1,
 }) {
   const router = useRouter()
 
@@ -24,7 +25,16 @@ export default function ShopCard({
         {/* <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>
         </div> */}
-        <div className="relative h-full w-full  border-0 border-white">
+        <div className="relative flex h-full w-full flex-col  border-0 border-white">
+          {imagePath1 && (
+            <Image
+              src={imagePath1}
+              alt="thumbnail"
+              layout="fill"
+              objectFit="cover"
+              className="md:rounded-t-2xl"
+            />
+          )}
           {imagePath && (
             <Image
               src={imagePath}

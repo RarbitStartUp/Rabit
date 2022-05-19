@@ -26,6 +26,7 @@ const Post = ({ data }: any) => {
         rewardPoints={data.rewardPoints}
         tokenAllocations={data.tokenAllocations}
         imagePath={data.imagePath}
+        imagePath1={data.imagePath1}
         description={data.description}
       />
     </div>
