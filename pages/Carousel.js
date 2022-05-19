@@ -63,7 +63,7 @@ export default function Carousel({ imagePath, imagePath1 }) {
         />
         <div
           className={
-            'relative m-auto flex h-[50vh] w-full overflow-hidden'
+            'relative m-auto flex h-[40vh] w-full overflow-hidden'
             // ${
             //   trans
             //     ? '-translate-x-full transform transition duration-500 ease-linear'
@@ -100,7 +100,7 @@ export default function Carousel({ imagePath, imagePath1 }) {
         />
 
         {/* dots */}
-        <div className="relative flex justify-center p-5">
+        <div className="relative flex justify-center pt-5">
           {images.map((_, index) => {
             return (
               <div
