@@ -36,6 +36,7 @@ export default function FDiscountsList() {
                   rewardPointsGain={discount.data().rewardPointsGain}
                   tokenAllocations={discount.data().tokenAllocations}
                   imagePath={discount.data().imagePath}
+                  imagePath1={discount.data().imagePath1}
                 />
               </a>
             </Link>

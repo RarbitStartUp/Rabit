@@ -7,6 +7,7 @@ import {
 } from 'react-icons/md'
 import { FaVoteYea, FaCommentDots } from 'react-icons/fa'
 import { useRouter } from 'next/router'
+import Carousel from '../../pages/Carousel'
 
 export default function ShopCard({
   shopName,
@@ -20,22 +21,14 @@ export default function ShopCard({
   const router = useRouter()
 
   return (
-    <div className="p1-1 mt-3 flex h-[25rem] w-screen flex-col  bg-white p-0 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[25rem] md:w-[25rem] md:rounded-2xl ">
+    <div className="p1-1 mt-3 flex h-[30rem] w-screen flex-col  bg-white p-0 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[25rem] md:w-[25rem] md:rounded-2xl ">
       <div className="shadow-sh mdadow-md  md:rou relative h-full w-full basis-2/3">
         {/* <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>
         </div> */}
         <div className="relative flex h-full w-full flex-col  border-0 border-white">
-          {imagePath1 && (
-            <Image
-              src={imagePath1}
-              alt="thumbnail"
-              layout="fill"
-              objectFit="cover"
-              className="md:rounded-t-2xl"
-            />
-          )}
-          {imagePath && (
+          <Carousel imagePath={imagePath} imagePath1={imagePath1} />
+          {/* {imagePath && (
             <Image
               src={imagePath}
               alt="thumbnail"
@@ -43,7 +36,7 @@ export default function ShopCard({
               objectFit="cover"
               className="md:rounded-t-2xl"
             />
-          )}
+          )} */}
         </div>
       </div>
 

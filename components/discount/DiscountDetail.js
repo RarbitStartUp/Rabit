@@ -7,6 +7,7 @@ import {
 } from 'react-icons/md'
 import { FaCommentDots, FaVoteYea } from 'react-icons/fa'
 import { useRouter } from 'next/router'
+import Carousel from '../../pages/Carousel'
 
 export default function DiscountDetail({
   shopName,
@@ -15,6 +16,7 @@ export default function DiscountDetail({
   rewardPointsGain,
   tokenAllocations,
   imagePath,
+  imagePath1,
   description,
 }) {
   const router = useRouter()
@@ -23,6 +25,8 @@ export default function DiscountDetail({
     <div>
       {/* <div className="w-[20.5rem]basis-2/3 md:h-[20.5rem]border-2 mt-3 h-[30rem] rounded-2xl border-white shadow-md"> */}
       <div className=" ">
+        <Carousel imagePath={imagePath} imagePath1={imagePath1} />
+        {/* 
         {imagePath && (
           <Image
             src={imagePath}
@@ -33,7 +37,7 @@ export default function DiscountDetail({
             objectFit="cover"
             className="h-30 w-30"
           />
-        )}
+        )} */}
       </div>
 
       <div className="ml-5">

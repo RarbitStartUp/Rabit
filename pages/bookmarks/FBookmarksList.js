@@ -37,6 +37,7 @@ export default function FBookmarksList() {
                   rewardPoints={bookmark.data().rewardPoints}
                   tokenAllocations={bookmark.data().tokenAllocations}
                   imagePath={bookmark.data().imagePath}
+                  imagePath1={bookmark.data().imagePath1}
                   timestamp={bookmark.data().timestamp}
                   email={bookmark.data().email}
                 />
