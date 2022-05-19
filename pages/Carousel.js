@@ -85,7 +85,7 @@ export default function Carousel({ imagePath, imagePath1 }) {
                     key={image.id}
                     src={image}
                     layout="fill"
-                    objectFit="contain"
+                    objectFit="cover"
                     className="animate-fadeIn"
                   />
                 )
@@ -100,7 +100,7 @@ export default function Carousel({ imagePath, imagePath1 }) {
         />
 
         {/* dots */}
-        <div className="relative flex justify-center md:p-5">
+        <div className="relative flex justify-center p-5">
           {images.map((_, index) => {
             return (
               <div
