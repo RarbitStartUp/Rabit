@@ -96,13 +96,13 @@ export default function Carousel({ images }) {
       />
 
       {/* dots */}
-      <div className="relative flex justify-center sm:pt-2 md:p-5">
+      <div className="relative flex justify-center md:p-5">
         {images.map((_, index) => {
           return (
             <div
               className={
                 index === currentSlide
-                  ? 'mx-2 mb-2 h-2 w-2 cursor-pointer rounded-full bg-gray-700'
+                  ? 'mx-2 mb-2 h-2 w-2 cursor-pointer rounded-full bg-primary'
                   : 'mx-2 mb-2 h-2 w-2 cursor-pointer rounded-full bg-gray-300'
               }
               key={index}
