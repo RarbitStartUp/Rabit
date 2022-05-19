@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from '../components/Header'
 import Tabs from './Tabs'
-import Image from 'next/image'
 
 function Explore() {
   return (

@@ -15,6 +15,20 @@ module.exports = {
         icon: '#C2C5CC ',
         hover: '#8B5CF6',
       },
+      animation: {
+        slideL: 'slideL 500ms linear',
+        slideR: 'slideR 500ms linear',
+      },
+      keyframes: {
+        slideL: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        slideR: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+      },
     },
     fontFamily: {
       vali: ['VALORANT'],

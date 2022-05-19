@@ -12,20 +12,20 @@ export default function EmailLogin() {
         <form>
           <div className="relative mb-3 w-full">
             <label
-              className="mb-2 block text-xs font-bold uppercase text-slate-700"
+              className="mb-2 ml-1 block text-xs font-bold uppercase text-slate-700"
               htmlFor="grid-password"
             >
               Email
             </label>
             <input
               type="email"
-              className="w-full rounded border-0 border-2 border-slate-100 bg-white px-3 py-3 text-sm text-slate-700 placeholder-slate-400 focus:outline-none focus:ring"
+              className=" focus:border-1 w-full rounded border-slate-100 bg-white px-3 py-3 text-sm text-slate-700 placeholder-slate-400 focus:border-primary"
               placeholder="Email"
             />
           </div>
           <div className="mt-6 text-center">
             <button
-              className="mr-1 mb-1 w-full rounded bg-primary px-6 py-3 text-sm font-medium text-white shadow outline-none hover:shadow-lg focus:outline-none active:bg-red-700"
+              className="mr-1 mb-1 w-full rounded bg-primary px-6 py-3 text-sm font-medium text-white shadow  hover:shadow-lg  active:bg-red-700"
               type="button"
               onClick={() => router.push('/Reward')}
             >
