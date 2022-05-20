@@ -22,7 +22,7 @@ export default function ShopCard({
 
   return (
     <div className="p1-1 mt-3 flex h-[30rem] w-screen flex-col  bg-white p-0 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[25rem] md:w-[25rem] md:rounded-2xl ">
-      <div className="shadow-sh mdadow-md  md:rou relative h-full w-full basis-2/3">
+      <div className="relative h-full w-full basis-2/3 ">
         {/* <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>
         </div> */}

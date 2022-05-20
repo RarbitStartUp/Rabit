@@ -6,23 +6,31 @@ import {
   MdRedeem,
   MdOutlineGeneratingTokens,
 } from 'react-icons/md'
+import Carousel from '../../pages/Carousel'
+import { useRouter } from 'next/router'
+import Carousel from '../../pages/Carousel'
 
 export default function DiscountsCard({
   imagePath,
+  imagePath1,
   discountName,
   shopName,
   rewardPointsGain,
   tokenAllocations,
   location,
 }) {
+  const router = useRouter()
+
   return (
-    <div className=" mt-3 mr-2 ml-2 flex h-[25rem] w-screen grid-cols-2 flex-col bg-white p-0 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[25rem] md:w-[25rem] md:rounded-t-2xl ">
-      <div className=" relative h-full w-full  basis-2/3 shadow-md md:rounded-t-2xl">
+    <div className=" mt-3 mr-2 ml-2 flex h-[30rem] w-screen grid-cols-2 flex-col bg-white p-0 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[25rem] md:w-[25rem] md:rounded-t-2xl ">
+      <div className="relative h-full w-full  basis-2/3 md:rounded-t-2xl">
         {/* <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>
         </div> */}
-        <div className="md: relative h-full w-full border-0 border-white md:rounded-t-2xl">
-          {imagePath && (
+        <div className="relative h-full w-full border-0 border-white md:rounded-t-2xl">
+          <Carousel imagePath={imagePath} imagePath1={imagePath1} />
+
+          {/* {imagePath && (
             <Image
               src={imagePath}
               alt="thumbnail"
@@ -30,7 +38,7 @@ export default function DiscountsCard({
               objectFit="cover"
               className="md:rounded-t-2xl"
             />
-          )}
+          )} */}
         </div>
       </div>
 

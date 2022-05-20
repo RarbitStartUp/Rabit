@@ -37,13 +37,14 @@ export default function FDiscountsAvailableList() {
               <DiscountsAvailableCard
                 discountName={discount.data().discountName}
                 imagePath={discount.data().imagePath}
+                imagePath1={discount.data().imagePath1}
                 rewardPointsGain={discount.data().rewardPointsGain}
               />
             </a>
           </Link>
         ))}
       </div>
-      <div className="h-20" />
+      <div className="h-10" />
     </div>
   )
 }
