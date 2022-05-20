@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { FaCommentDots } from 'react-icons/fa'
 import { MdRedeem } from 'react-icons/md'
-import Carousel from '../../pages/Carousel'
+import CarouselCard from '../../pages/CarouselCard'
 import { useRouter } from 'next/router'
 
 export default function DiscountsCard({
@@ -19,7 +19,7 @@ export default function DiscountsCard({
           <h1>NEW</h1>
         </div> */}
         <div className="relative h-full w-full rounded-2xl border-0 border-white">
-          <Carousel imagePath={imagePath} imagePath1={imagePath1} />
+          <CarouselCard imagePath={imagePath} imagePath1={imagePath1} />
 
           {/* {imagePath && (
             <Image

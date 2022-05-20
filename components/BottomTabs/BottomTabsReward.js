@@ -5,7 +5,7 @@ import { BsFillCameraFill } from 'react-icons/bs'
 export default function BottomTabs() {
   return (
     <div>
-      <nav class="fixed inset-x-0 bottom-0 flex justify-between bg-white/[0.95] text-sm text-secondary shadow">
+      <nav class=" fixed inset-x-0 bottom-0 flex justify-between bg-white/[0.95] text-sm text-secondary shadow">
         <Link href="/Reward">
           <a class="block w-full py-4 px-3 text-center text-primary transition duration-300 hover:text-primary">
             <div className="flex flex-col items-center justify-center">
@@ -21,7 +21,7 @@ export default function BottomTabs() {
         >
           <div className="flex flex-col items-center justify-center">
             <BsFillCameraFill size={20} />
-             <div className="text-xs">Scan</div>
+            <div className="text-xs">Scan</div>
           </div>
         </a>
 

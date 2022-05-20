@@ -10,7 +10,7 @@ import {
   MdOutlineGeneratingTokens,
 } from 'react-icons/md'
 import { useRouter } from 'next/router'
-import Carousel from '../../pages/Carousel'
+import CarouselDetail from '../../pages/CarouselDetail'
 
 export default function ShopDetail({
   shopName,
@@ -20,6 +20,9 @@ export default function ShopDetail({
   tokenAllocations,
   imagePath,
   imagePath1,
+  imagePath2,
+  imagePath3,
+  imagePath4,
   description,
 }) {
   const router = useRouter()
@@ -27,7 +30,13 @@ export default function ShopDetail({
   return (
     <div>
       {/* <div className="w-[20.5rem]basis-2/3 md:h-[20.5rem]border-2 mt-3 h-[30rem] rounded-2xl border-white shadow-md"> */}
-      <Carousel imagePath={imagePath} imagePath1={imagePath1} />
+      <CarouselDetail
+        imagePath={imagePath}
+        imagePath1={imagePath1}
+        imagePath2={imagePath2}
+        imagePath3={imagePath3}
+        imagePath4={imagePath4}
+      />
       <div>
         {/* {imagePath && (
           <Image

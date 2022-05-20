@@ -6,9 +6,8 @@ import {
   MdRedeem,
   MdOutlineGeneratingTokens,
 } from 'react-icons/md'
-import Carousel from '../../pages/Carousel'
+import CarouselCard from '../../pages/CarouselCard'
 import { useRouter } from 'next/router'
-import Carousel from '../../pages/Carousel'
 
 export default function DiscountsCard({
   imagePath,
@@ -28,7 +27,7 @@ export default function DiscountsCard({
           <h1>NEW</h1>
         </div> */}
         <div className="relative h-full w-full border-0 border-white md:rounded-t-2xl">
-          <Carousel imagePath={imagePath} imagePath1={imagePath1} />
+          <CarouselCard imagePath={imagePath} imagePath1={imagePath1} />
 
           {/* {imagePath && (
             <Image

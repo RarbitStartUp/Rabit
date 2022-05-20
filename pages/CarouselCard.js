@@ -10,10 +10,19 @@ import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
  * @param images - Array of images with src and alt attributes
  * @returns React component
  */
-export default function Carousel({ imagePath, imagePath1 }) {
+export default function Carousel({
+  imagePath,
+  imagePath1,
+  imagePath2,
+  imagePath3,
+  imagePath4,
+}) {
   var images = [
     `${imagePath}`,
     `${imagePath1}`,
+    `${imagePath2}`,
+    `${imagePath3}`,
+    `${imagePath4}`,
 
     // 'https://images.unsplash.com/photo-1623341214825-9f4f963727da?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFtZW58ZW58MHx8MHx8&auto=format&fit=crop&w=900',
     // 'https://images.unsplash.com/photo-1557872943-16a5ac26437e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHJhbWVufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900',
@@ -54,69 +63,67 @@ export default function Carousel({ imagePath, imagePath1 }) {
   }
 
   return (
-    <div>
-      <div className="relative">
-        <AiOutlineLeft
-          size={30}
-          onClick={handlePrevSlide}
-          className="absolute inset-y-1/2 left-3 z-20 m-auto cursor-pointer text-white/50"
-        />
-        <div
-          className={
-            'relative m-auto flex h-[40vh] w-full overflow-hidden'
-            // ${
-            //   trans
-            //     ? '-translate-x-full transform transition duration-500 ease-linear'
-            //     : transR
-            //     ? 'animate-slideL'
-            //     : ''
-            //   }`
-          }
+    <div className="static">
+      <AiOutlineLeft
+        size={30}
+        onClick={handlePrevSlide}
+        className="absolute inset-y-1/2 left-3 z-20 m-auto cursor-pointer text-white/50"
+      />
+      <div
+        className={
+          'relative m-auto flex h-[40vh] w-full overflow-hidden'
+          // ${
+          //   trans
+          //     ? '-translate-x-full transform transition duration-500 ease-linear'
+          //     : transR
+          //     ? 'animate-slideL'
+          //     : ''
+          //   }`
+        }
+      >
+        <Swipe
+          onSwipeLeft={handleNextSlide}
+          onSwipeRight={handlePrevSlide}
+          className="relative z-10 h-full w-full"
         >
-          <Swipe
-            onSwipeLeft={handleNextSlide}
-            onSwipeRight={handlePrevSlide}
-            className="relative z-10 h-full w-full"
-          >
-            {images.map((image, index) => {
-              if (index === currentSlide) {
-                return (
-                  <Image
-                    key={image.id}
-                    src={image}
-                    layout="fill"
-                    objectFit="cover"
-                    className="animate-fadeIn"
-                  />
-                )
-              }
-            })}
-          </Swipe>
-        </div>
-        <AiOutlineRight
-          size={30}
-          onClick={handleNextSlide}
-          className="absolute inset-y-1/2 right-3 z-20 m-auto cursor-pointer text-white/50"
-        />
-
-        {/* dots */}
-        <div className="relative flex justify-center pt-5">
-          {images.map((_, index) => {
-            return (
-              <div
-                className={
-                  index === currentSlide
-                    ? 'mx-2 mb-2 h-2 w-2 cursor-pointer rounded-full bg-primary'
-                    : 'mx-2 mb-2 h-2 w-2 cursor-pointer rounded-full bg-gray-300'
-                }
-                key={index}
-                onClick={() => {
-                  setCurrentSlide(index)
-                }}
-              />
-            )
+          {images.map((image, index) => {
+            if (index === currentSlide) {
+              return (
+                <Image
+                  key={image.id}
+                  src={image}
+                  layout="fill"
+                  objectFit="cover"
+                  className="animate-fadeIn md:rounded-t-2xl"
+                />
+              )
+            }
           })}
-        </div>
+        </Swipe>
+      </div>
+      <AiOutlineRight
+        size={30}
+        onClick={handleNextSlide}
+        className="absolute inset-y-1/2 right-3 z-20 m-auto cursor-pointer text-white/50 "
+      />
+
+      {/* dots */}
+      <div className="relative bottom-5 z-20 flex justify-center">
+        {images.map((_, index) => {
+          return (
+            <div
+              className={
+                index === currentSlide
+                  ? 'mx-2 mb-2 h-2 w-2 cursor-pointer rounded-full bg-white/50'
+                  : 'mx-2 mb-2 h-1.5 w-1.5 cursor-pointer rounded-full bg-white/30 '
+              }
+              key={index}
+              onClick={() => {
+                setCurrentSlide(index)
+              }}
+            />
+          )
+        })}
       </div>
     </div>
   )

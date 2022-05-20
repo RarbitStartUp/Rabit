@@ -7,7 +7,7 @@ import {
 } from 'react-icons/md'
 import { FaVoteYea, FaCommentDots } from 'react-icons/fa'
 import { useRouter } from 'next/router'
-import Carousel from '../../pages/Carousel'
+import CarouselCard from '../../pages/CarouselCard'
 
 export default function ShopCard({
   shopName,
@@ -17,17 +17,26 @@ export default function ShopCard({
   tokenAllocations,
   imagePath,
   imagePath1,
+  imagePath2,
+  imagePath3,
+  imagePath4,
 }) {
   const router = useRouter()
 
   return (
-    <div className="p1-1 mt-3 flex h-[30rem] w-screen flex-col  bg-white p-0 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[25rem] md:w-[25rem] md:rounded-2xl ">
-      <div className="relative h-full w-full basis-2/3 ">
+    <div className="p1-1 mt-3 flex h-[28rem] w-screen flex-col  bg-white p-0 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[28rem] md:w-[25rem] md:rounded-2xl ">
+      <div className="md:rounded--2xl relative h-full w-full basis-2/3 ">
         {/* <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>
         </div> */}
-        <div className="relative flex h-full w-full flex-col  border-0 border-white">
-          <Carousel imagePath={imagePath} imagePath1={imagePath1} />
+        <div className="relative flex h-full w-full flex-col border-0 border-white md:rounded-t-2xl">
+          <CarouselCard
+            imagePath={imagePath}
+            imagePath1={imagePath1}
+            imagePath2={imagePath2}
+            imagePath3={imagePath3}
+            imagePath4={imagePath4}
+          />
           {/* {imagePath && (
             <Image
               src={imagePath}
@@ -41,12 +50,12 @@ export default function ShopCard({
       </div>
 
       <div className="ml-5 mb-5">
-        <div className=" mr-2 rounded-2xl ">
+        <div className="mr-2 rounded-2xl ">
           <div className="flex max-w-6xl justify-between">
-            <p className=" text-md mt-3 ml-2 mr-2 text-secondary">
+            <p className=" text-md mt-0 ml-2 mr-2 text-secondary">
               {categories}
             </p>
-            <div className="mt-3 mr-5 flex flex-row items-center justify-end space-x-4">
+            <div className=" mr-5 flex flex-row items-center justify-end space-x-4">
               <button
                 className=" flex flex-row items-center justify-center "
                 onClick={() =>

@@ -39,6 +39,9 @@ export default function FShopsList() {
                   tokenAllocations={shop.data().tokenAllocations}
                   imagePath={shop.data().imagePath}
                   imagePath1={shop.data().imagePath1}
+                  imagePath2={shop.data().imagePath2}
+                  imagePath3={shop.data().imagePath3}
+                  imagePath4={shop.data().imagePath4}
                   timestamp={shop.data().timestamp}
                   email={shop.data().email}
                 />
