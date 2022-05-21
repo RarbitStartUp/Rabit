@@ -8,6 +8,7 @@ module.exports = withPWA({
       'images.unsplash.com',
       'platform-lookaside.fbsbx.com',
       'firebasestorage.googleapis.com',
+      'www.worldatlas.com',
     ],
   },
   pwa: {

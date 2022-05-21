@@ -1,14 +1,18 @@
 import BottomTabsReward from '../components/BottomTabs/BottomTabsReward'
 import PopUpMenu from '../components/PopUpMenu'
+import DropDownMenu from '../components/DropDownMenu'
+import { FiPlusCircle } from 'react-icons/fi'
+import { useRouter } from 'next/router'
 
 export default function Reward() {
+  const router = useRouter()
   return (
     <div>
-      <div className="h-screen bg-slate-100">
+      <div className="h-screen bg-white">
         <div class="mx-auto flex h-screen max-w-7xl flex-col px-9 sm:px-9 md:px-4">
           <div class="flex items-center justify-between pt-10 pb-7">
             <div class="flex flex-auto justify-start lg:w-0 lg:flex-1">
-              <span class="text-2xl font-bold">Rarbit</span>
+              <span class="text-2xl font-bold text-gray-600">Rarbit</span>
             </div>
 
             <div class="-my-2 -mr-2">
@@ -17,28 +21,9 @@ export default function Reward() {
           </div>
           <div class="flex-grow flex-col gap-y-10">
             <div class="box sm:flex">
-              <div class="flex flex-1 flex-col justify-center bg-white p-8">
-                <div
-                  style={{ height: 2.7 + 'rem', width: 2.7 + 'rem' }}
-                  class="flex items-center justify-center rounded-full border bg-primary bg-opacity-20 text-primary"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide"
-                  >
-                    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <path d="M16 10a4 4 0 01-8 0"></path>
-                  </svg>
-                </div>
+              <div class="flex flex-1 flex-col justify-center rounded-2xl bg-white p-8 shadow">
+                <DropDownMenu />
+
                 <div class="mt-[25px] flex items-center">
                   <div class="relative text-2xl font-medium">$400.00</div>
                   <div class="flex cursor-pointer px-2 text-green-500">
@@ -69,15 +54,20 @@ export default function Reward() {
               </div>
             </div>
             <div class="box sm:flex">
-              <div class="mt-4 flex flex-1 flex-col justify-center bg-white p-8">
+              <div class="mt-4 flex flex-1 flex-col justify-center rounded-2xl bg-white p-8 shadow">
                 <div class="flex items-center">
                   <div class="text-1xl truncate font-medium md:text-2xl">
-                    Total allocation
+                    Total Allocations
                   </div>
                   <div class="ml-auto flex items-center">
-                    <button class="rounded bg-primary py-2 px-4 text-sm font-medium text-white shadow outline-none hover:shadow-lg focus:outline-none active:bg-gray-700">
-                      {' '}
-                      Add shop
+                    <button
+                      className="rounded-xl bg-primary py-2 px-4 text-sm font-medium text-white shadow outline-none hover:shadow-md hover:shadow-purple-700 focus:outline-none active:bg-gray-700"
+                      onClick={() => router.push('../Tabs')}
+                    >
+                      <div className="my-1 flex flex-row items-center justify-center">
+                        <FiPlusCircle className="mr-2" size={17} />
+                        Add Shops
+                      </div>
                     </button>
                   </div>
                 </div>
@@ -86,44 +76,44 @@ export default function Reward() {
                   <table class="table-striped -mb-1 table">
                     <thead>
                       <tr>
-                        <th class="border-b-2 border-slate-100 bg-slate-200 px-4 py-2 text-left font-medium text-slate-500">
-                          Name
+                        <th class="rounded-tl-xl border-b-2 border-slate-100 bg-slate-200 px-4 py-2 text-left font-medium text-slate-500">
+                          Shops
                         </th>
-                        <th class="border-b-2 border-slate-100 bg-slate-200 px-4 py-2 text-right font-medium text-slate-500">
-                          Allocation
+                        <th class="rounded-tr-xl border-b-2 border-slate-100 bg-slate-200 px-4 py-2 text-right font-medium text-slate-500">
+                          Allocations
                         </th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="whitespace-nowrap px-4 py-2 text-slate-500">
-                          some cafe
+                        <td class="whitespace-nowrap px-4 py-2 font-semibold text-slate-500">
+                          Camber Coffee
                         </td>
                         <td class="whitespace-nowrap px-4 py-2 text-right text-slate-500">
                           10%
                         </td>
                       </tr>
                       <tr>
-                        <td class="whitespace-nowrap bg-slate-100 px-4 py-2 text-slate-500">
-                          some other cafe
+                        <td class="whitespace-nowrap bg-slate-100 px-4 py-2 font-semibold text-slate-500">
+                          Kogane Ramen
                         </td>
                         <td class="whitespace-nowrap bg-slate-100 px-4 py-2 text-right text-slate-500">
-                          10%
+                          15%
                         </td>
                       </tr>
                       <tr>
-                        <td class="whitespace-nowrap px-4 py-2 text-slate-500">
-                          no where
+                        <td class="whitespace-nowrap px-4 py-2 font-semibold text-slate-500">
+                          Basta Hiro
                         </td>
                         <td class="whitespace-nowrap px-4 py-2 text-right text-slate-500">
-                          10%
+                          20%
                         </td>
                       </tr>
                       <tr>
-                        <td class="whitespace-nowrap bg-slate-100 px-4 py-2 text-slate-500">
-                          favorite cafe
+                        <td class="whitespace-nowrap rounded-bl-xl bg-slate-100 px-4 py-2 font-semibold text-slate-500">
+                          Drift Land Bar
                         </td>
-                        <td class="whitespace-nowrap bg-slate-100 px-4 py-2 text-right text-slate-500">
+                        <td class="whitespace-nowrap rounded-br-xl bg-slate-100 px-4 py-2 text-right text-slate-500">
                           70%
                         </td>
                       </tr>

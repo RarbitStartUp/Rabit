@@ -5,17 +5,16 @@ import { MdSort } from 'react-icons/md'
 import { FilterIcon } from '@heroicons/react/solid'
 
 function Header() {
-
   return (
     <div className="fixed top-12 z-20 flex ">
       {/* Search Bar*/}
-      <div className="pl-5 ">
+      <div className="pl-5">
         {/* <div className="relative mt-2 shadow"> */}
         <div className="pointer-events-none relative inset-y-1/2 flex items-center pl-3">
-          <SearchIcon className="h-5 w-5 text-gray-500" />
+          <SearchIcon className="h-5 w-5 text-gray-400" />
         </div>
         <input
-          className="sm-text-sm focus:border-1  w-full rounded-3xl border-0 border-primary bg-gray-50/90 pl-10 placeholder-secondary focus:border-primary focus:ring-primary"
+          className="sm-text-sm focus:border-1 w-full rounded-3xl border-0 border-primary bg-gray-50/90 pl-10 placeholder-secondary focus:border-primary focus:ring-primary"
           type="text"
           placeholder="Search"
         />

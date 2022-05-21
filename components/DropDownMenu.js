@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Menu, Transition } from '@headlessui/react'
 import { Fragment, useEffect, useRef, useState } from 'react'
 import { FcMenu } from 'react-icons/Fc'
@@ -9,14 +10,27 @@ export default function PopUpMenu() {
   return (
     // <div className="w-106 top-106 fixed text-right">
     <Menu as="div" className="relative inline-block text-left">
-      <div>
-        <Menu.Button className="inline-flex w-full justify-center rounded-md bg-white bg-opacity-0 px-4 py-2 text-sm font-medium text-violet-500 hover:bg-opacity-60 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-          {/* <FcMenu size={20} /> */}
-          Rewards / Voting
-          <ChevronDownIcon
-              className="ml-2 -mr-1 h-5 w-5 text-violet-200 hover:text-violet-100"
+      <div className="flex-row ">
+         <Menu.Button className="inline-flex w-[8rem] justify-center rounded-md bg-slate-100 bg-opacity-90 px-4 py-2 text-sm font-medium text-gray-600 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+          <div className="my-1 flex flex-row items-center justify-center space-x-3">
+              USD
+              <div className="ml-3">
+            <Image
+            src="/img/flag/us-flag.webp"
+            alt="thumbnail"
+            width={15}
+            height={10}
+            // layout="fill"
+            objectFit="cover"
+            className="ml-5"
+          />
+
+              </div>
+            <ChevronDownIcon 
+              className="mx-2 h-5 w-5 text-violet-200 hover:text-violet-100"
               aria-hidden="true"
             />
+        </div>  
         </Menu.Button>
       </div>
       <Transition
@@ -42,7 +56,7 @@ export default function PopUpMenu() {
                   ) : (
                     <MdHistory className="mr-2 h-5 w-5" aria-hidden="true" />
                   )}
-                  Record
+                  USD
                 </button>
               )}
             </Menu.Item>
@@ -58,7 +72,7 @@ export default function PopUpMenu() {
                   ) : (
                     <MdLanguage className="mr-2 h-5 w-5" aria-hidden="true" />
                   )}
-                  Language
+                  HKD
                 </button>
               )}
             </Menu.Item>
