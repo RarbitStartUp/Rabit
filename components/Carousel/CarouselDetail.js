@@ -2,6 +2,10 @@ import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 import Swipe from 'react-easy-swipe'
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
+import {
+  IoMdArrowDropleftCircle,
+  IoMdArrowDroprightCircle,
+} from 'react-icons/io'
 
 /**
  * Carousel component for nextJS and Tailwind.
@@ -65,10 +69,10 @@ export default function CarouselDetail({
   return (
     <div>
       <div className="relative">
-        <AiOutlineLeft
+        <IoMdArrowDropleftCircle
           size={30}
           onClick={handlePrevSlide}
-          className="absolute inset-y-1/2 left-3 z-20 m-auto cursor-pointer text-white/50"
+          className="absolute inset-y-1/2 left-3 z-20 m-auto cursor-pointer rounded-full bg-white/20 text-white/50"
         />
         <div
           className={
@@ -102,10 +106,10 @@ export default function CarouselDetail({
             })}
           </Swipe>
         </div>
-        <AiOutlineRight
+        <IoMdArrowDroprightCircle
           size={30}
           onClick={handleNextSlide}
-          className="absolute inset-y-1/2 right-3 z-10 m-auto cursor-pointer text-white/50 "
+          className="absolute inset-y-1/2 right-3 z-10 m-auto cursor-pointer rounded-full bg-white/20 text-white/50 "
         />
 
         {/* dots */}
@@ -116,7 +120,7 @@ export default function CarouselDetail({
               <div
                 className={
                   index === currentSlide
-                    ? 'mx-2 mb-2 h-2 w-2 cursor-pointer rounded-full bg-white/50'
+                    ? 'mx-2 mb-2 h-2 w-2 cursor-pointer rounded-full  bg-white/50'
                     : 'mx-2 mb-2 h-1.5 w-1.5 cursor-pointer rounded-full bg-white/30 '
                   // ? 'mx-2 mb-2 h-2 w-2 cursor-pointer rounded-full bg-primary'
                   // : 'mx-2 mb-2 h-1.5 w-1.5 cursor-pointer rounded-full bg-gray-300 '
