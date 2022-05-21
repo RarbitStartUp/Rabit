@@ -6,7 +6,7 @@ import {
   MdRedeem,
   MdOutlineGeneratingTokens,
 } from 'react-icons/md'
-import CarouselCard from '../../pages/CarouselCard'
+import CarouselCard from '../Carousel/CarouselCard'
 import { useRouter } from 'next/router'
 
 export default function DiscountsCard({

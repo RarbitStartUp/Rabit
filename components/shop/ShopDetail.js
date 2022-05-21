@@ -10,7 +10,8 @@ import {
   MdOutlineGeneratingTokens,
 } from 'react-icons/md'
 import { useRouter } from 'next/router'
-import CarouselDetail from '../../pages/CarouselDetail'
+import CarouselDetail from '../Carousel/CarouselDetail'
+import ImageGallery from '../ImageGallery'
 
 export default function ShopDetail({
   shopName,
@@ -114,6 +115,13 @@ export default function ShopDetail({
         <p className="text-md m-2 font-bold text-third">Shop Description</p>
         <p className="m-2 text-sm text-black dark:text-white">{description}</p>
       </div>
+      <ImageGallery
+        imagePath={imagePath}
+        imagePath1={imagePath1}
+        imagePath2={imagePath2}
+        imagePath3={imagePath3}
+        imagePath4={imagePath4}
+      />
     </div>
   )
 }

@@ -9,7 +9,7 @@ module.exports = {
       colors: {
         primary: '#8B5CF6',
         secondary: '#D5D5D5',
-        third: '#6366F1',
+        third: '#52525B',
         content: '#7b80b3',
         miniIcon: '#D8D26C',
         icon: '#C2C5CC ',

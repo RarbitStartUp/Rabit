@@ -7,7 +7,7 @@ import {
 } from 'react-icons/md'
 import { FaVoteYea, FaCommentDots } from 'react-icons/fa'
 import { useRouter } from 'next/router'
-import CarouselCard from '../../pages/CarouselCard'
+import CarouselCard from '../Carousel/CarouselCard'
 
 export default function ShopCard({
   shopName,
