@@ -18,15 +18,15 @@ export default function Tabs() {
   return (
     <div>
       <Tab.Group>
-        <Tab.List className="sticky top-0 z-10 flex justify-around pb-20">
+        <Tab.List className="sticky top-0 z-10 mb-20 flex justify-around bg-white/90">
           <Tab
             className={({ selected }) =>
               classNames(
-                'rounded-3xl bg-white py-2.5 px-4 text-sm font-medium leading-5 text-primary',
-                'ring-offset-5 ring-white ring-opacity-60 ring-offset-blue-400 focus:outline-none focus:ring-2',
+                'rounded-3xl py-2.5 px-4 text-sm font-medium leading-5 text-primary',
+                'ring-offset-5 ring-white ring-opacity-60 ring-offset-blue-400 focus:outline-none focus:ring-0',
                 selected
                   ? 'bg-white px-10 text-primary shadow'
-                  : 'text-secondary hover:bg-white/[0.12] hover:text-white '
+                  : 'text-secondary hover:bg-white/[0.12] hover:text-primary '
               )
             }
           >
@@ -38,11 +38,11 @@ export default function Tabs() {
           <Tab
             className={({ selected }) =>
               classNames(
-                'rounded-3xl bg-white py-2.5 px-4 text-sm font-medium leading-5 text-primary',
-                'ring-offset-5 ring-white ring-opacity-60 ring-offset-blue-400 focus:outline-none focus:ring-2',
+                'rounded-3xl  py-2.5 px-4 text-sm font-medium leading-5 text-primary',
+                'ring-offset-5 ring-white ring-opacity-60 ring-offset-blue-400 focus:outline-none focus:ring-0',
                 selected
                   ? 'bg-white px-8 text-primary shadow'
-                  : 'text-secondary hover:bg-white/[0.12] hover:text-white'
+                  : 'text-secondary hover:bg-white/[0.12] hover:text-primary'
               )
             }
           >
@@ -54,11 +54,11 @@ export default function Tabs() {
           <Tab
             className={({ selected }) =>
               classNames(
-                'rounded-3xl bg-white py-2.5 px-4 text-sm font-medium leading-5 text-primary',
-                'ring-offset-5 ring-white ring-opacity-60 ring-offset-blue-400 focus:outline-none focus:ring-2',
+                'rounded-3xl  py-2.5 px-4 text-sm font-medium leading-5 text-primary',
+                'ring-offset-5 ring-white ring-opacity-60 ring-offset-blue-400 focus:outline-none focus:ring-0',
                 selected
                   ? 'bg-white px-8 text-primary shadow'
-                  : 'text-secondary hover:bg-white/[0.12] hover:text-white'
+                  : 'hover:text-primary text-secondary hover:bg-white/[0.12]'
               )
             }
           >

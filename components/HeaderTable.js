@@ -12,7 +12,7 @@ function Header() {
   const router = useRouter()
 
   return (
-    <div className="fixed top-12 z-10 flex ">
+    <div className="flex ">
       {/* Search Bar*/}
       <div className="pl-5 ">
         {/* <div className="relative mt-2 shadow"> */}
@@ -28,15 +28,15 @@ function Header() {
       </div>
 
       {/* Right Side */}
-      <div className="fixed right-5 flex flex-row items-center justify-end space-x-3 ">
+      <div className="relative mr-3 flex flex-row items-center justify-end space-x-3 ">
         <button
-          className="m-auto ml-4 mt-5 flex flex-row items-center justify-center rounded-xl bg-white/90 p-2.5 text-primary  duration-300 ease-linear hover:bg-primary hover:text-white "
+          className="m-auto ml-2 mt-5 flex flex-row items-center justify-center rounded-xl  p-2.5 text-primary  duration-300 ease-linear hover:bg-primary hover:text-white "
           onClick={() => {}}
         >
           <FilterIcon className="h-5 w-5" />
         </button>
         <button
-          className="m-auto mt-5 flex flex-row items-center justify-center rounded-xl bg-white/90 p-2.5 text-primary  duration-300 ease-linear hover:bg-primary hover:text-white "
+          className="m-auto mt-5 flex flex-row items-center justify-center rounded-xl  p-2.5 text-primary  duration-300 ease-linear hover:bg-primary hover:text-white "
           onClick={() => {}}
         >
           <MdSort className="h-5 w-5" />

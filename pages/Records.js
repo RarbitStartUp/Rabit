@@ -1,5 +1,5 @@
 // import DropdownMenu from './DropDownMenu'
-import RewardTable2 from '../components/RewardTable2'
+import TailwindRewardTable2 from '../components/TailwindRewardTable2'
 import DatePicker from '../components/DatePicker'
 
 export default function Records() {
@@ -10,7 +10,7 @@ export default function Records() {
       <DatePicker />
       <div className="mt-10"></div>
       {/* <DropdownMenu /> */}
-      <RewardTable2 />
+      <TailwindRewardTable2 />
     </div>
   )
 }

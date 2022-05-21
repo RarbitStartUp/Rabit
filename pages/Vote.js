@@ -1,5 +1,5 @@
 import RangeSlider3 from '../components/RangeSlider3'
-import RewardTable from '../components/RewardTable'
+import TailwindRewardTable2 from '../components/TailwindRewardTable2'
 import VoteButton from '../components/VoteButton'
 
 export default function Vote() {
@@ -14,7 +14,7 @@ export default function Vote() {
         Vote for This Shop
       </h1>
       <div className="mt-5"></div>
-      <RewardTable />
+      <TailwindRewardTable2 />
       <VoteButton routePath="/Login" />
     </div>
   )
