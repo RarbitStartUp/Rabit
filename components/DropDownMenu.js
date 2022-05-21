@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { Menu, Transition } from '@headlessui/react'
 import { Fragment, useEffect, useRef, useState } from 'react'
-import { FcMenu } from 'react-icons/Fc'
 import { MdLanguage, MdHistory, MdLogout } from 'react-icons/md'
 
 import { ChevronDownIcon } from '@heroicons/react/solid'
