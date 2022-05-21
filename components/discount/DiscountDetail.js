@@ -116,8 +116,8 @@ export default function DiscountDetail({
         <Image
           src={'/img/RarbitQRCode/RarbitQRCode.png'}
           alt="thumbnail"
-          width={200}
-          height={200}
+          width={150}
+          height={150}
           // layout="fill"
           objectFit="cover"
           // className=""
