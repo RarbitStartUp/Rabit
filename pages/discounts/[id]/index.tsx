@@ -27,6 +27,9 @@ const Post = ({ data }: any) => {
         tokenAllocations={data.tokenAllocations}
         imagePath={data.imagePath}
         imagePath1={data.imagePath1}
+        imagePath2={data.imagePath2}
+        imagePath3={data.imagePath3}
+        imagePath4={data.imagePath4}
         description={data.description}
       />
     </div>

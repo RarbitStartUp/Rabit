@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { db } from '../../firebase'
 import DiscountsAvailableCard from '../../components/discount/DiscountsAvailableCard'
-import Header from '../../components/Header'
+import HeaderDA from '../../components/HeaderDA'
 
 export default function FDiscountsAvailableList() {
   const [discounts, setDiscounts] = useState([])
@@ -23,13 +23,13 @@ export default function FDiscountsAvailableList() {
 
   return (
     <div>
-      <h1 className="ml-5 mt-10 flex text-2xl font-bold text-primary">
-        Discounts Available
-      </h1>
-      <p className="ml-5 mt-2 flex text-xl font-bold text-secondary">
-        from this shop
-      </p>
-      <Header />
+      <div className="flex flex-row content-end items-end justify-start space-x-2 py-2">
+        <h1 className="mt-20 ml-5 flex text-2xl font-bold text-primary">
+          Discounts Available
+        </h1>
+        <p className="text-xl font-bold text-secondary">from this shop</p>
+      </div>
+      <HeaderDA />
       <div className="mx-auto flex-col space-y-3">
         {discounts.map((discount) => (
           <Link href={'/discountsAvailable/' + discount.id} key={discount.id}>
@@ -38,6 +38,9 @@ export default function FDiscountsAvailableList() {
                 discountName={discount.data().discountName}
                 imagePath={discount.data().imagePath}
                 imagePath1={discount.data().imagePath1}
+                imagePath2={discount.data().imagePath2}
+                imagePath3={discount.data().imagePath3}
+                imagePath4={discount.data().imagePath4}
                 rewardPointsGain={discount.data().rewardPointsGain}
               />
             </a>

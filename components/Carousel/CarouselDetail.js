@@ -105,11 +105,11 @@ export default function CarouselDetail({
         <AiOutlineRight
           size={30}
           onClick={handleNextSlide}
-          className="absolute inset-y-1/2 right-3 z-20 m-auto cursor-pointer text-white/50 "
+          className="absolute inset-y-1/2 right-3 z-10 m-auto cursor-pointer text-white/50 "
         />
 
         {/* dots */}
-        <div className="relative bottom-5 z-20 flex justify-center">
+        <div className="relative bottom-5 z-10 flex justify-center">
           {/* <div className="relative flex justify-center pt-5"> */}
           {images.map((_, index) => {
             return (

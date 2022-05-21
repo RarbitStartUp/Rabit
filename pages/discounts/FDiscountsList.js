@@ -37,6 +37,9 @@ export default function FDiscountsList() {
                   tokenAllocations={discount.data().tokenAllocations}
                   imagePath={discount.data().imagePath}
                   imagePath1={discount.data().imagePath1}
+                  imagePath2={discount.data().imagePath2}
+                  imagePath3={discount.data().imagePath3}
+                  imagePath4={discount.data().imagePath4}
                 />
               </a>
             </Link>

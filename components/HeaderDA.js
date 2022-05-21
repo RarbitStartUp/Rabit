@@ -5,9 +5,8 @@ import { MdSort } from 'react-icons/md'
 import { FilterIcon } from '@heroicons/react/solid'
 
 function Header() {
-
   return (
-    <div className="fixed top-12 z-20 flex ">
+    <div className="fixed top-3 z-20 flex ">
       {/* Search Bar*/}
       <div className="pl-5 ">
         {/* <div className="relative mt-2 shadow"> */}

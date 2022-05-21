@@ -7,20 +7,28 @@ import { useRouter } from 'next/router'
 export default function DiscountsCard({
   imagePath,
   imagePath1,
+  imagePath2,
+  imagePath3,
+  imagePath4,
   discountName,
   rewardPointsGain,
 }) {
   const router = useRouter()
 
   return (
-    <div className="mt-3  flex h-[28rem] w-screen grid-cols-2 flex-col  rounded-2xl bg-white  shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[25rem] md:w-[28rem] ">
-      <div className=" relative h-full w-full  basis-2/3 rounded-2xl ">
+    <div className="mt-3  flex h-[28rem] w-screen grid-cols-2 flex-col  bg-white shadow-lg  duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[25rem] md:w-[28rem] md:rounded-2xl ">
+      <div className=" relative h-full w-full  basis-2/3 md:rounded-2xl ">
         {/* <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>
         </div> */}
-        <div className="relative h-full w-full rounded-2xl border-0 border-white">
-          <CarouselCard imagePath={imagePath} imagePath1={imagePath1} />
-
+        <div className="relative h-full w-full border-0 border-white md:rounded-t-2xl">
+          <CarouselCard
+            imagePath={imagePath}
+            imagePath1={imagePath1}
+            imagePath2={imagePath2}
+            imagePath3={imagePath3}
+            imagePath4={imagePath4}
+          />
           {/* {imagePath && (
             <Image
               src={imagePath}

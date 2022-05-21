@@ -8,6 +8,7 @@ import {
 import { FaCommentDots, FaVoteYea } from 'react-icons/fa'
 import { useRouter } from 'next/router'
 import CarouselDetail from '../Carousel/CarouselDetail'
+import ImageGallery from '../ImageGallery'
 
 export default function DiscountDetail({
   shopName,
@@ -17,6 +18,9 @@ export default function DiscountDetail({
   tokenAllocations,
   imagePath,
   imagePath1,
+  imagePath2,
+  imagePath3,
+  imagePath4,
   description,
 }) {
   const router = useRouter()
@@ -24,8 +28,14 @@ export default function DiscountDetail({
   return (
     <div>
       {/* <div className="w-[20.5rem]basis-2/3 md:h-[20.5rem]border-2 mt-3 h-[30rem] rounded-2xl border-white shadow-md"> */}
-      <div className=" ">
-        <CarouselDetail imagePath={imagePath} imagePath1={imagePath1} />
+      <div className="">
+        <CarouselDetail
+          imagePath={imagePath}
+          imagePath1={imagePath1}
+          imagePath2={imagePath2}
+          imagePath3={imagePath3}
+          imagePath4={imagePath4}
+        />
         {/* 
         {imagePath && (
           <Image
@@ -113,6 +123,13 @@ export default function DiscountDetail({
           // className=""
         />
       </div>
+      <ImageGallery
+        imagePath={imagePath}
+        imagePath1={imagePath1}
+        imagePath2={imagePath2}
+        imagePath3={imagePath3}
+        imagePath4={imagePath4}
+      />
     </div>
   )
 }
