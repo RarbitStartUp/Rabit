@@ -18,7 +18,7 @@ export default function Tabs() {
   return (
     <div>
       <Tab.Group>
-        <Tab.List className="flex justify-around">
+        <Tab.List className="sticky top-0 z-10 flex justify-around pb-20">
           <Tab
             className={({ selected }) =>
               classNames(

@@ -12,37 +12,35 @@ function Header() {
   const router = useRouter()
 
   return (
-    <div className="flex">
-      <div className="flex max-w-6xl justify-between">
-        {/* Search Bar*/}
-        <div className="max-w-6xl pt-5 pl-5">
-          <div className="relative mt-2 rounded-md">
-            <div className="pointer-events-none absolute inset-y-0 flex items-center pl-3">
-              <SearchIcon className="h-5 w-5 text-gray-500" />
-            </div>
-            <input
-              className="sm-text-sm focus:border-1 block w-full rounded-3xl border-0 border-primary bg-gray-50 pl-10 placeholder-secondary focus:border-primary focus:ring-primary"
-              type="text"
-              placeholder="Search"
-            />
+    <div className="fixed top-12 z-10 flex ">
+      {/* Search Bar*/}
+      <div className="pt-5 pl-5">
+        <div className="relative mt-2 flex rounded-md">
+          <div className="pointer-events-none absolute inset-y-0 flex items-center pl-3">
+            <SearchIcon className="h-5 w-5 text-gray-500" />
           </div>
+          <input
+            className="sm-text-sm focus:border-1  w-full rounded-3xl border-0 border-primary bg-gray-50 pl-10 placeholder-secondary focus:border-primary focus:ring-primary"
+            type="text"
+            placeholder="Search"
+          />
         </div>
+      </div>
 
-        {/* Right Side */}
-        <div className="flex flex-row items-center justify-end space-x-3 pr-5">
-          <button
-            className="shadow-grey m-auto ml-4 mt-6 flex flex-row items-center justify-center rounded-xl bg-white p-2.5 text-primary shadow-md duration-300 ease-linear hover:bg-primary hover:text-white "
-            onClick={() => {}}
-          >
-            <FilterIcon className="h-5 w-5" />
-          </button>
-          <button
-            className="shadow-grey m-auto mt-6 flex flex-row items-center justify-center rounded-xl bg-white p-2.5 text-primary shadow-md duration-300 ease-linear hover:bg-primary hover:text-white "
-            onClick={() => {}}
-          >
-            <MdSort className="h-5 w-5" />
-          </button>
-        </div>
+      {/* Right Side */}
+      <div className="fixed right-5 flex flex-row items-center justify-end space-x-3 ">
+        <button
+          className="shadow-grey m-auto ml-4 mt-6 flex flex-row items-center justify-center rounded-xl bg-white p-2.5 text-primary shadow-md duration-300 ease-linear hover:bg-primary hover:text-white "
+          onClick={() => {}}
+        >
+          <FilterIcon className="h-5 w-5" />
+        </button>
+        <button
+          className="shadow-grey m-auto mt-6 flex flex-row items-center justify-center rounded-xl bg-white p-2.5 text-primary shadow-md duration-300 ease-linear hover:bg-primary hover:text-white "
+          onClick={() => {}}
+        >
+          <MdSort className="h-5 w-5" />
+        </button>
       </div>
     </div>
   )
