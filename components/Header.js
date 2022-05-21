@@ -12,7 +12,7 @@ function Header() {
   const router = useRouter()
 
   return (
-    <div className="fixed top-12 z-10 flex ">
+    <div className="fixed top-12 z-20 flex ">
       {/* Search Bar*/}
       <div className="pl-5 ">
         {/* <div className="relative mt-2 shadow"> */}

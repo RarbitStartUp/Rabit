@@ -18,7 +18,7 @@ export default function Tabs() {
   return (
     <div>
       <Tab.Group>
-        <Tab.List className="sticky top-0 z-10 mb-20 flex justify-around bg-white/90">
+        <Tab.List className="sticky top-0 z-20 mb-20 flex justify-around bg-white/90">
           <Tab
             className={({ selected }) =>
               classNames(
@@ -58,7 +58,7 @@ export default function Tabs() {
                 'ring-offset-5 ring-white ring-opacity-60 ring-offset-blue-400 focus:outline-none focus:ring-0',
                 selected
                   ? 'bg-white px-8 text-primary shadow'
-                  : 'hover:text-primary text-secondary hover:bg-white/[0.12]'
+                  : 'text-secondary hover:bg-white/[0.12] hover:text-primary'
               )
             }
           >
