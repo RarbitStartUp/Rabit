@@ -10,7 +10,7 @@ import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
  * @param images - Array of images with src and alt attributes
  * @returns React component
  */
-export default function Carousel({
+export default function CarouselCard({
   imagePath,
   imagePath1,
   imagePath2,
@@ -84,7 +84,7 @@ export default function Carousel({
         <Swipe
           onSwipeLeft={handleNextSlide}
           onSwipeRight={handlePrevSlide}
-          className="relative h-full w-full"
+          className="relative z-10 h-full w-full"
         >
           {images.map((image, index) => {
             if (index === currentSlide) {

@@ -10,7 +10,7 @@ import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
  * @param images - Array of images with src and alt attributes
  * @returns React component
  */
-export default function Carousel({
+export default function CarouselDetail({
   imagePath,
   imagePath1,
   imagePath2,
@@ -109,14 +109,17 @@ export default function Carousel({
         />
 
         {/* dots */}
-        <div className="relative flex justify-center pt-5">
+        <div className="relative bottom-5 z-20 flex justify-center">
+          {/* <div className="relative flex justify-center pt-5"> */}
           {images.map((_, index) => {
             return (
               <div
                 className={
                   index === currentSlide
-                    ? 'mx-2 mb-2 h-2 w-2 cursor-pointer rounded-full bg-primary'
-                    : 'mx-2 mb-2 h-1.5 w-1.5 cursor-pointer rounded-full bg-gray-300 '
+                    ? 'mx-2 mb-2 h-2 w-2 cursor-pointer rounded-full bg-white/50'
+                    : 'mx-2 mb-2 h-1.5 w-1.5 cursor-pointer rounded-full bg-white/30 '
+                  // ? 'mx-2 mb-2 h-2 w-2 cursor-pointer rounded-full bg-primary'
+                  // : 'mx-2 mb-2 h-1.5 w-1.5 cursor-pointer rounded-full bg-gray-300 '
                 }
                 key={index}
                 onClick={() => {

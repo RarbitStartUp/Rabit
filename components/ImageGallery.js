@@ -12,11 +12,26 @@ export default function MasonryImageList({
   imagePath4,
 }) {
   const image = [
-    `${imagePath}`,
-    `${imagePath1}`,
-    `${imagePath2}`,
-    `${imagePath3}`,
-    `${imagePath4}`,
+    {
+      img: `${imagePath}`,
+      title: '',
+    },
+    {
+      img: `${imagePath1}`,
+      title: '',
+    },
+    {
+      img: `${imagePath2}`,
+      title: '',
+    },
+    {
+      img: `${imagePath3}`,
+      title: '',
+    },
+    {
+      img: `${imagePath4}`,
+      title: '',
+    },
   ]
 
   return (
@@ -25,9 +40,9 @@ export default function MasonryImageList({
         {image.map((image) => (
           <ImageListItem key={image}>
             <img
-              src={`${image}?w=248&fit=crop&auto=format`}
-              // srcSet={`${image}?w=248&fit=crop&auto=format&dpr=2 2x`}
-              // alt={image.title}
+              src={`${image.img}`}
+              //   srcSet={`${image.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+              alt={image.title}
               loading="lazy"
               className="rounded-xl"
             />
@@ -37,3 +52,5 @@ export default function MasonryImageList({
     </Box>
   )
 }
+
+// src={`${image.img}?w=248&fit=crop&auto=format`}
