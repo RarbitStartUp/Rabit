@@ -20,7 +20,6 @@ const Post = ({ data }: any) => {
   return (
     <div>
       <ShopDetail
-        key={data.id}
         shopName={data.shopName}
         categories={data.categories}
         location={data.location}

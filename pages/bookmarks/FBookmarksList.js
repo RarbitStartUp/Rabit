@@ -30,7 +30,6 @@ export default function FBookmarksList() {
             <Link href={'/bookmarks/' + bookmark.id} key={bookmark.id}>
               <a>
                 <ShopCard
-                  key={bookmark.id}
                   shopName={bookmark.data().shopName}
                   categories={bookmark.data().categories}
                   location={bookmark.data().location}
