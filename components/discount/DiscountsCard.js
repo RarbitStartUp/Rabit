@@ -12,6 +12,9 @@ import { useRouter } from 'next/router'
 export default function DiscountsCard({
   imagePath,
   imagePath1,
+  imagePath2,
+  imagePath3,
+  imagePath4,
   discountName,
   shopName,
   rewardPointsGain,
@@ -27,7 +30,13 @@ export default function DiscountsCard({
           <h1>NEW</h1>
         </div> */}
         <div className="relative h-full w-full border-0 border-white md:rounded-t-2xl">
-          <CarouselCard imagePath={imagePath} imagePath1={imagePath1} />
+          <CarouselCard
+            imagePath={imagePath}
+            imagePath1={imagePath1}
+            imagePath2={imagePath2}
+            imagePath3={imagePath3}
+            imagePath4={imagePath4}
+          />
 
           {/* {imagePath && (
             <Image
