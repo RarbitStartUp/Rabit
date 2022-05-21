@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { FaCommentDots } from 'react-icons/fa'
 import { MdRedeem } from 'react-icons/md'
-import CarouselCard from '../../pages/CarouselCard'
+import CarouselCard from '../Carousel/CarouselCard'
 import { useRouter } from 'next/router'
 
 export default function DiscountsCard({

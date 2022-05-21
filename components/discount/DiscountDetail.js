@@ -7,7 +7,7 @@ import {
 } from 'react-icons/md'
 import { FaCommentDots, FaVoteYea } from 'react-icons/fa'
 import { useRouter } from 'next/router'
-import CarouselDetail from '../../pages/CarouselDetail'
+import CarouselDetail from '../Carousel/CarouselDetail'
 
 export default function DiscountDetail({
   shopName,
