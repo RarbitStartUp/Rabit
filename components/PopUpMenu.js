@@ -9,7 +9,7 @@ export default function PopUpMenu() {
 
   return (
     // <div className="w-106 top-106 fixed text-right">
-    <Menu as="div" className="relative inline-block text-left">
+    <Menu as="div" className="relative z-20 inline-block text-left">
       <div>
         <Menu.Button className="inline-flex w-full justify-center rounded-md bg-slate-100 bg-opacity-0 px-4 py-2 text-sm font-medium hover:bg-opacity-100 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
           <FcMenu size={20} className="text-gray hover:text-white" />
