@@ -1,7 +1,9 @@
 import BottomTabsReward from '../components/BottomTabs/BottomTabsReward'
 import PopUpMenu from '../components/PopUpMenu'
 import DropDownMenu from '../components/DropDownMenu'
+import TailwindRewardTable3 from '../components/TailwindRewardTable3'
 import { FiPlusCircle } from 'react-icons/fi'
+import { AiOutlineArrowUp } from 'react-icons/ai'
 import { useRouter } from 'next/router'
 
 export default function Reward() {
@@ -29,21 +31,7 @@ export default function Reward() {
                   <div class="flex cursor-pointer px-2 text-green-500">
                     {' '}
                     +4.1%
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide ml-0.5 h-4 w-4"
-                    >
-                      <line x1="12" y1="19" x2="12" y2="5"></line>
-                      <polyline points="5 12 12 5 19 12"></polyline>
-                    </svg>
+                    <AiOutlineArrowUp />
                   </div>
                 </div>
 
@@ -119,6 +107,7 @@ export default function Reward() {
                       </tr>
                     </tbody>
                   </table>
+                  <TailwindRewardTable3 />
                 </div>
               </div>
             </div>
