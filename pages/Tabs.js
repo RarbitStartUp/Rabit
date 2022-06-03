@@ -30,7 +30,7 @@ export default function Tabs() {
               )
             }
           >
-            <div className=" my-1 flex flex-row items-center justify-center">
+            <div className="my-1 flex flex-row items-center justify-center">
               <ImSpoonKnife className="mr-2" size={17} />
               Shops
             </div>

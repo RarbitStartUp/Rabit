@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 import Swipe from 'react-easy-swipe'
-import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 import {
   IoMdArrowDropleftCircle,
   IoMdArrowDroprightCircle,

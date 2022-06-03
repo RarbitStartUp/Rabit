@@ -61,58 +61,20 @@ export default function Reward() {
                 </div>
 
                 <div class="w-100 mt-7 overflow-x-auto overflow-y-hidden">
-                  <table class="table-striped -mb-1 table">
-                    <thead>
-                      <tr>
-                        <th class="rounded-tl-xl border-b-2 border-slate-100 bg-slate-200 px-4 py-2 text-left font-medium text-slate-500">
-                          Shops
-                        </th>
-                        <th class="rounded-tr-xl border-b-2 border-slate-100 bg-slate-200 px-4 py-2 text-right font-medium text-slate-500">
-                          Allocations
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="whitespace-nowrap px-4 py-2 font-semibold text-slate-500">
-                          Camber Coffee
-                        </td>
-                        <td class="whitespace-nowrap px-4 py-2 text-right text-slate-500">
-                          10%
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="whitespace-nowrap bg-slate-100 px-4 py-2 font-semibold text-slate-500">
-                          Kogane Ramen
-                        </td>
-                        <td class="whitespace-nowrap bg-slate-100 px-4 py-2 text-right text-slate-500">
-                          15%
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="whitespace-nowrap px-4 py-2 font-semibold text-slate-500">
-                          Basta Hiro
-                        </td>
-                        <td class="whitespace-nowrap px-4 py-2 text-right text-slate-500">
-                          20%
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="whitespace-nowrap rounded-bl-xl bg-slate-100 px-4 py-2 font-semibold text-slate-500">
-                          Drift Land Bar
-                        </td>
-                        <td class="whitespace-nowrap rounded-br-xl bg-slate-100 px-4 py-2 text-right text-slate-500">
-                          70%
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
                   <TailwindRewardTable3 />
+                  <div
+                    onClick={() => router.push('../Records')}
+                    className="cursor-pointer truncate pl-2 text-sm font-medium text-primary underline md:text-2xl"
+                  >
+                    See More
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           {/* <div class="py-5 text-center">Tab bar goes here</div> */}
+
+          <div className="py-10" />
         </div>
       </div>
       <BottomTabsReward />
