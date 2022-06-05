@@ -4,7 +4,7 @@ import { SearchIcon } from '@heroicons/react/outline'
 import { MdSort } from 'react-icons/md'
 import { FilterIcon } from '@heroicons/react/solid'
 
-function Header() {
+function HeaderDA() {
   return (
     <div className="fixed top-3 z-20 flex ">
       {/* Search Bar*/}

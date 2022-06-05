@@ -49,7 +49,7 @@ export default function Reward() {
                   </div>
                   <div class="ml-auto flex items-center">
                     <button
-                      className="rounded-xl bg-primary py-2 px-4 text-sm font-medium text-white shadow outline-none hover:shadow-md hover:shadow-purple-700 focus:outline-none active:bg-gray-700"
+                      className="rounded-xl py-2 px-4 text-xs font-medium text-primary shadow outline-none   focus:outline-none active:bg-primary active:text-white"
                       onClick={() => router.push('../Tabs')}
                     >
                       <div className="my-1 flex flex-row items-center justify-center">
