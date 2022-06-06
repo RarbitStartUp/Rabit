@@ -4,6 +4,7 @@ import DropDownMenu from '../components/DropDownMenu'
 import TailwindRewardTable3 from '../components/TailwindRewardTable3'
 import { FiPlusCircle } from 'react-icons/fi'
 import { AiOutlineArrowUp } from 'react-icons/ai'
+import { MdHistory, MdLanguage, MdLogout } from 'react-icons/md'
 import { useRouter } from 'next/router'
 
 export default function Reward() {
@@ -17,10 +18,27 @@ export default function Reward() {
               <span class="text-2xl font-bold text-gray-600">Rarbit</span>
             </div>
 
-            <div class="-my-2 -mr-2">
-              <PopUpMenu />
-            </div>
+            {/* <div class="-my-2 -mr-2"> */}
+            {/* <PopUpMenu /> */}
+
+            <MdHistory
+              onClick={() => router.push('/Records')}
+              className="mr-5 h-7 w-7 text-secondary"
+              aria-hidden="true"
+            />
+
+            <MdLanguage
+              className="mr-5 h-7 w-7 text-secondary"
+              aria-hidden="true"
+            />
+
+            <MdLogout
+              onClick={() => router.push('../Login')}
+              className="mr-2 h-7 w-7 text-secondary"
+              aria-hidden="true"
+            />
           </div>
+
           <div class="flex-grow flex-col gap-y-10">
             <div class="box sm:flex">
               <div class="flex flex-1 flex-col justify-center rounded-2xl bg-white p-8 shadow">
