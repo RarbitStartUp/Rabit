@@ -21,20 +21,14 @@ export default function Reward() {
             {/* <div class="-my-2 -mr-2"> */}
             {/* <PopUpMenu /> */}
 
-            <MdHistory
-              onClick={() => router.push('/Records')}
-              className="mr-5 h-7 w-7 text-secondary"
-              aria-hidden="true"
-            />
-
             <MdLanguage
-              className="mr-5 h-7 w-7 text-secondary"
+              className="mr-5 h-6 w-6 text-secondary"
               aria-hidden="true"
             />
 
             <MdLogout
               onClick={() => router.push('../Login')}
-              className="mr-2 h-7 w-7 text-secondary"
+              className="mr-5 h-6 w-6 text-secondary"
               aria-hidden="true"
             />
           </div>
@@ -65,16 +59,23 @@ export default function Reward() {
                   <div class="text-1xl truncate font-medium md:text-2xl">
                     Total Allocations
                   </div>
-                  <div class="ml-auto flex items-center">
-                    <button
-                      className="rounded-xl py-2 px-4 text-xs font-medium text-primary shadow outline-none   focus:outline-none active:bg-primary active:text-white"
-                      onClick={() => router.push('../Tabs')}
-                    >
-                      <div className="my-1 flex flex-row items-center justify-center">
-                        <FiPlusCircle className="mr-2" size={17} />
+                  <div class="ml-auto flex items-center justify-center ">
+                    <div className="mr-5 flex flex-col items-center">
+                      <MdHistory
+                        className="h-7 w-7 text-primary"
+                        onClick={() => router.push('../Records')}
+                      />
+                      <div className="text-[10px] text-primary">Records</div>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <FiPlusCircle
+                        className="mr-2 h-6 w-6 text-primary"
+                        onClick={() => router.push('../Tabs')}
+                      />
+                      <div className="mt-1 text-[10px] text-primary">
                         Add Shops
                       </div>
-                    </button>
+                    </div>
                   </div>
                 </div>
 
