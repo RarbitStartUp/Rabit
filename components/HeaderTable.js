@@ -6,7 +6,7 @@ import { FilterIcon } from '@heroicons/react/solid'
 import { useRouter } from 'next/router'
 import { signIn, signOut, useSession } from 'next-auth/react'
 
-function Header() {
+export default function HeaderTable() {
   const { data: session } = useSession()
 
   const router = useRouter()
@@ -45,5 +45,3 @@ function Header() {
     </div>
   )
 }
-
-export default Header

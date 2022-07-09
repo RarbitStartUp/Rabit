@@ -4,7 +4,7 @@ import { SearchIcon } from '@heroicons/react/outline'
 import { MdSort } from 'react-icons/md'
 import { FilterIcon } from '@heroicons/react/solid'
 
-function HeaderDA() {
+export default function HeaderDA() {
   return (
     <div className="fixed top-3 z-20 flex ">
       {/* Search Bar*/}
@@ -39,5 +39,3 @@ function HeaderDA() {
     </div>
   )
 }
-
-export default Header
