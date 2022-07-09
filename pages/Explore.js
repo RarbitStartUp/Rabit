@@ -16,7 +16,7 @@ function Explore() {
           width="150"
           height="150"
           objectFit="cover"
-          className=" rounded-2xl"
+          className="rounded-2xl"
         />
       </div>
 

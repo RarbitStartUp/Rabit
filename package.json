@@ -52,6 +52,7 @@
     "@types/react": "17.0.38",
     "autoprefixer": "^10.4.7",
     "babel-preset-expo": "^9.1.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "postcss": "^8.4.13",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.1",
