@@ -1,7 +1,7 @@
 import { Tab } from '@headlessui/react'
 
 import { MdRedeem } from 'react-icons/md'
-import { ImSpoonKnife } from 'react-icons/im'
+import { BiShoppingBag } from 'react-icons/bi'
 import { RiBookMarkFill } from 'react-icons/ri'
 
 import FShopsList from './shops/FShopsList'
@@ -31,7 +31,7 @@ export default function Tabs() {
             }
           >
             <div className="my-1 flex flex-row items-center justify-center">
-              <ImSpoonKnife className="mr-2" size={17} />
+              <BiShoppingBag className="mr-2" size={17} />
               Shops
             </div>
           </Tab>
@@ -70,6 +70,7 @@ export default function Tabs() {
         </Tab.List>
         <Tab.Panels>
           <Tab.Panel>
+            <h>Tabs</h>
             <FShopsList />
           </Tab.Panel>
           <Tab.Panel>
