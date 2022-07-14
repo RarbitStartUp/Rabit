@@ -14,6 +14,12 @@ module.exports = {
         miniIcon: '#D8D26C',
         icon: '#C2C5CC ',
         hover: '#8B5CF6',
+        bc: '#1F1F23',
+        danger: '#F8EF12',
+        lightGrey: '#3F3E41',
+      },
+      boxShadow: {
+        custom: '0 0 10px #F8EF12',
       },
       animation: {
         slideL: 'slideL 500ms linear',

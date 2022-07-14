@@ -26,11 +26,14 @@ export default function FShopsList() {
       <Header />
       <div className="flex">
         <h>FShop</h>
+        {shops.map((shop) => (
+          <h>hi{shop.data().shopName}</h>
+        ))}
         <div className="mx-auto flex-col space-y-3">
           {shops.map((shop) => (
             <Link href={'/shops/' + shop.id} key={shop.id}>
               <a>
-                <h>hi</h>
+                <h>{shop.data().shopName}</h>
                 <ShopCard
                   key={shop.id}
                   shopName={shop.data().shopName}
