@@ -10,7 +10,13 @@ export default function CoinItem({ coins }) {
       <p className="text-xl font-semibold uppercase text-primary">
         {coins.symbol}
       </p>
-      <img src={coins.image} alt="" />
+      <img
+        src={coins.image}
+        alt=""
+        width="50"
+        height="50"
+        className="rounded-full"
+      />
     </div>
   )
 }
