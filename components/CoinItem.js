@@ -5,9 +5,9 @@ export default function CoinItem({ coins }) {
   //   var coins = coins[0]
 
   return (
-    <div>
-      <p className="text-xl text-primary">{coins.current_price}</p>
-      <p className="text-xl font-semibold uppercase text-primary">
+    <div className="flex">
+      <p className="pr-3 pt-3 text-xl text-primary">{coins.current_price}</p>
+      <p className="text-md pt-4 pr-3 font-semibold uppercase text-primary">
         {coins.symbol}
       </p>
       <img

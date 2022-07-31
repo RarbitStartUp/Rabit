@@ -1,5 +1,6 @@
 import BottomTabsReward from '../components/BottomTabs/BottomTabsReward'
 import PopUpMenu from '../components/PopUpMenu'
+import CoinGecko from './CoinGecko'
 import DropDownMenu from '../components/DropDownMenu'
 import TailwindRewardTable3 from '../components/TailwindRewardTable3'
 import { FiPlusCircle } from 'react-icons/fi'
@@ -38,14 +39,15 @@ export default function Reward() {
               <div class="flex flex-1 flex-col justify-center rounded-2xl bg-white p-8 shadow">
                 <DropDownMenu />
 
-                <div class="mt-[25px] flex items-center">
+                <CoinGecko />
+                {/* <div class="mt-[25px] flex items-center">
                   <div class="relative text-2xl font-medium">$400.00</div>
                   <div class="flex cursor-pointer px-2 text-green-500">
                     {' '}
                     +4.1%
                     <AiOutlineArrowUp />
                   </div>
-                </div>
+                </div> */}
 
                 <div class="mt-2 leading-relaxed text-slate-500 dark:text-slate-500">
                   {' '}
