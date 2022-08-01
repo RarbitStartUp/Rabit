@@ -53,11 +53,6 @@ export default function Reward() {
                     <AiOutlineArrowUp />
                   </div>
                 </div> */}
-
-                <div class="mt-2 leading-relaxed text-slate-500 dark:text-slate-500">
-                  {' '}
-                  Total value of 100 reward points
-                </div>
               </div>
             </div>
             <div class="box sm:flex">
