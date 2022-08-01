@@ -3,13 +3,11 @@ import axios from 'axios'
 export default async function handler(req, res) {
   if (req.method === 'GET') {
     console.log(req.query.convertFrom)
-    const rarbit = 100
     const options = {
       method: 'GET',
       url: 'https://currency-conversion-and-exchange-rates.p.rapidapi.com/convert',
       params: {
-        // from: `${req.query.convertFrom}`,
-        from: `${rarbit}`,
+        from: `${req.query.convertFrom}`,
         to: `${req.query.convertTo}`,
         amount: `${req.query.amount}`,
       },

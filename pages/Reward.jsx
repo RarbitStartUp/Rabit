@@ -1,7 +1,7 @@
 import BottomTabsReward from '../components/BottomTabs/BottomTabsReward'
 import PopUpMenu from '../components/PopUpMenu'
 import CoinGecko from './CoinGecko'
-import DropDownMenu from '../components/DropDownMenu'
+// import DropDownMenu from '../components/DropDownMenu'
 import TailwindRewardTable3 from '../components/TailwindRewardTable3'
 import { FiPlusCircle } from 'react-icons/fi'
 import { AiOutlineArrowUp } from 'react-icons/ai'
@@ -37,7 +37,12 @@ export default function Reward() {
           <div class="flex-grow flex-col gap-y-10">
             <div class="box sm:flex">
               <div class="flex flex-1 flex-col justify-center rounded-2xl bg-white p-8 shadow">
-                <DropDownMenu />
+                {/* <DropDownMenu /> */}
+
+                <div class="mt-2 leading-relaxed text-slate-500 dark:text-slate-500">
+                  {' '}
+                  You've Earned
+                </div>
 
                 <CoinGecko />
                 {/* <div class="mt-[25px] flex items-center">
@@ -58,8 +63,8 @@ export default function Reward() {
             <div class="box sm:flex">
               <div class="mt-4 flex flex-1 flex-col justify-center rounded-2xl bg-white p-8 shadow">
                 <div class="flex items-center">
-                  <div class="text-1xl truncate font-medium md:text-2xl">
-                    Total Allocations
+                  <div class="text-1xl truncate font-medium text-slate-500 md:text-2xl">
+                    Top 5 allocations
                   </div>
                   <div class="ml-auto flex items-center justify-center ">
                     <div className="mr-5 flex flex-col items-center">
