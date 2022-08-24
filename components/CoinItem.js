@@ -14,7 +14,7 @@ export default function CoinItem({ coins }) {
         </p>
         <p className="pr-3 pt-3 text-xl text-primary">=</p>
         <p className="pr-3 pt-3 text-xl text-primary">
-          {earning * coins.current_price}
+          {Math.floor(earning * coins.current_price)}
         </p>
         <p className="text-md pt-4 pr-5 font-semibold uppercase text-primary">
           USD
