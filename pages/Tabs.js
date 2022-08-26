@@ -70,7 +70,6 @@ export default function Tabs() {
         </Tab.List>
         <Tab.Panels>
           <Tab.Panel>
-            <h>Tabs</h>
             <FShopsList />
           </Tab.Panel>
           <Tab.Panel>
