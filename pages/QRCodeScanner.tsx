@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserMultiFormatReader, Result } from '@zxing/library'
 import Webcam from 'react-webcam'
 
-export const QRCodeScannerComponent = ({
+export const QRCodeScanner = ({
   width,
   height,
   onUpdate,
@@ -46,4 +46,4 @@ export const QRCodeScannerComponent = ({
   )
 }
 
-export default QRCodeScannerComponent
+export default QRCodeScanner
