@@ -22,8 +22,7 @@ export default function Scan() {
       {/* <div className="absolute bottom-16 right-4">
         <Image src="/img/RarbitLogo/RarbitLogo.png" width={80} height={80} />
       </div> */}
-      <div className="h-18" />
-
+      <div className="h-20" />
       <BottomTabsScan />
     </div>
   )

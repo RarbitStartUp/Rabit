@@ -15,15 +15,14 @@ export default function BottomTabs() {
           </a>
         </Link>
 
-        <a
-          href="#"
-          class="block w-full py-4 px-3 text-center hover:text-primary"
-        >
-          <div className="flex flex-col items-center justify-center">
-            <BsFillCameraFill size={20} />
-            <div className="text-xs">Scan</div>
-          </div>
-        </a>
+        <Link href="/Scan">
+          <a class="block w-full py-4 px-3 text-center hover:text-primary">
+            <div className="flex flex-col items-center justify-center">
+              <BsFillCameraFill size={20} />
+              <div className="text-xs">Scan</div>
+            </div>
+          </a>
+        </Link>
 
         <Link href="/Tabs">
           <a class="block w-full py-4 px-3 text-center text-primary hover:text-primary">
