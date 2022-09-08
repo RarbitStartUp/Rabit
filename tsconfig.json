@@ -13,7 +13,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "strict": false
   },
   "include": [
     "next-env.d.ts",
@@ -22,7 +23,8 @@
     "pages/_app.tsx",
     "pages/index.js",
     "pages/index.js",
-    "pages/index1tsx"
-, "pages/DatePicker.jsx"  ],
+    "pages/index1tsx",
+    "pages/DatePicker.jsx"
+  ],
   "exclude": ["node_modules"]
 }
