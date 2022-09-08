@@ -16,7 +16,7 @@ export default function Scan() {
           </h>
         </div>
       </div>
-      <p className="py-3 text-center text-sm text-slate-400">
+      <p className="py-3 text-center text-xs text-slate-400">
         Contact us to enquire about Rarbit POS
       </p>
       <div className="absolute bottom-16 right-4">
