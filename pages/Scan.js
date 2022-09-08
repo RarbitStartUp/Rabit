@@ -14,12 +14,11 @@ export default function Scan() {
             using Rarbit POS ( Point of Sale ) system to receive Rarbit Reward
             Points
           </h>
-          <p className="py-3 text-center text-sm text-slate-400">
-            Contact us to inquire about Rarbit POS
-          </p>
         </div>
       </div>
-      <div className="py-3"></div>
+      <p className="py-3 text-center text-sm text-slate-400">
+        Contact us to enquire about Rarbit POS
+      </p>
       <div className="absolute bottom-16 right-4">
         <Image src="/img/RarbitLogo/RarbitLogo.png" width={80} height={80} />
       </div>
