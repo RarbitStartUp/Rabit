@@ -11,8 +11,8 @@ export default function Scan() {
         <div class="items-center">
           <h className="flex text-center text-primary">
             You can Scan the QR Code on the receipts provided by the Merchants
-            using Rarbit POS ( Point of Sale ) system to receive Rarbit Reward
-            Points
+            using Rarbit POS ( Point of Sale ) protocol / system to receive
+            Rarbit Reward Points
           </h>
         </div>
       </div>
