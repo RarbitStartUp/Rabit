@@ -19,10 +19,10 @@ export default function Scan() {
       <p className="py-3 text-center text-xs text-slate-400">
         Contact us to enquire about Rarbit POS
       </p>
-      <div className="absolute bottom-16 right-4">
+      {/* <div className="absolute bottom-16 right-4">
         <Image src="/img/RarbitLogo/RarbitLogo.png" width={80} height={80} />
-      </div>
-      <div className="h-20" />
+      </div> */}
+      <div className="h-18" />
 
       <BottomTabsScan />
     </div>
