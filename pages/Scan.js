@@ -14,7 +14,7 @@ export default function Scan() {
             using Rarbit POS ( Point of Sale ) protocol / system to receive
             Rarbit Reward Points
           </h>
-          <p className="py-3 text-center text-xs text-slate-400">
+          <p className="py-3 text-center text-sm text-slate-400">
             Contact us to enquire about Rarbit POS
           </p>
         </div>
