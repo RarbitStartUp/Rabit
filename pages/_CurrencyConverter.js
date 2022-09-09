@@ -46,8 +46,7 @@ export default function Home({ symbols }) {
         <Input
           label="To Currency"
           dropdown={true}
-          onChange={(setConvertTo, convertCurrency)}
-          onClick={convertCurrency}
+          onChange={setConvertTo}
           symbols={symbols}
         />
         <Input
