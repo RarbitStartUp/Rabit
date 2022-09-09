@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import BottomTabsScan from '../components/BottomTabs/BottomTabsScan'
-import { QRCodeScanner } from './QRCodeScanner'
+import QRCodeScanner from './QRCodeScanner'
 
 export default function Scan() {
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { QrReader } from 'react-qr-reader'
 
-export function QRCodeScanner(props) {
+export default function QRCodeScanner(props) {
   const [data, setData] = useState('No result')
 
   return (
