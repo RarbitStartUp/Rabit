@@ -17,9 +17,11 @@ export default function QRCodeScanner(props) {
           }
         }}
         style={{ width: '100%' }}
-        constraints={'environment'}
+        constraints={{ facingMode: 'environment' }}
       />
-      <p>{data}</p>
+      <p className="px-4 text-center text-slate-400">
+        You've earned {data} Rarbit Points !
+      </p>
     </>
   )
 }
