@@ -17,7 +17,7 @@ export default function QRCodeScanner(props) {
           }
         }}
         style={{ width: '100%' }}
-        constraints={(facingMode = 'environment')}
+        constraints={'environment'}
       />
       <p>{data}</p>
     </>
