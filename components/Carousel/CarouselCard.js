@@ -67,11 +67,12 @@ export default function CarouselCard({
 
   return (
     <div className="static">
-      <IoMdArrowDropleftCircle
+      {/* -- Left Arrow -- */}
+      {/* <IoMdArrowDropleftCircle
         size={30}
         onClick={handlePrevSlide}
         className="absolute inset-y-1/2 left-3 z-20 m-auto cursor-pointer rounded-full bg-white/20 text-white/50"
-      />
+      /> */}
       <div
         className={
           'relative m-auto flex h-[40vh] w-full overflow-hidden'
@@ -104,12 +105,12 @@ export default function CarouselCard({
           })}
         </Swipe>
       </div>
-      <IoMdArrowDroprightCircle
+      {/* -- Right Arrow -- */}
+      {/* <IoMdArrowDroprightCircle
         size={30}
         onClick={handleNextSlide}
         className="absolute inset-y-1/2 right-3 z-10 m-auto cursor-pointer rounded-full bg-white/20 text-white/50 "
-      />
-
+      /> */}
       {/* dots */}
       <div className="relative bottom-5 z-10 flex justify-center">
         {images.map((_, index) => {
