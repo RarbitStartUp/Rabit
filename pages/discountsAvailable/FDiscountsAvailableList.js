@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { db } from '../../firebase'
 import DiscountsAvailableCard from '../../components/discount/DiscountsAvailableCard'
-import HeaderDA from '../../components/HeaderDA'
+import HeaderDA from '../../components/Header/HeaderDA'
 
 export default function FDiscountsAvailableList() {
   const [discounts, setDiscounts] = useState([])
@@ -24,13 +24,15 @@ export default function FDiscountsAvailableList() {
   return (
     <div>
       <div className="flex flex-row content-end items-end justify-start space-x-2 py-2">
-        <h1 className="mt-20 ml-5 flex text-2xl font-bold text-primary">
+        <div className="md:pl-7">
+          <HeaderDA />
+        </div>
+        <h1 className="mt-20 flex pl-5 text-xl font-bold text-primary md:pl-5">
           Discounts Available
         </h1>
-        <p className="text-xl font-bold text-secondary">from this shop</p>
+        <p className="text-md font-bold text-secondary">from this shop</p>
       </div>
-      <HeaderDA />
-      <div className="mx-auto flex-col space-y-3">
+      <div>
         {discounts.map((discount) => (
           <Link href={'/discountsAvailable/' + discount.id} key={discount.id}>
             <a>

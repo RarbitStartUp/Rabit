@@ -26,7 +26,7 @@ export default function DiscountsCard({
   return (
     // set the parent Components (in other files maybe) to "static" to avoid padding exceed the screen width and made the screen movable, "w-screen" needs to be on the same layer of the padding "pxy-"
     <div className="relative w-screen px-2 ">
-      <div className=" mt-3 flex h-[28rem] grid-cols-2 flex-col rounded-2xl bg-white p-0 pr-2 pl-2 shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[29rem] md:w-[25rem] md:rounded-2xl ">
+      <div className=" mt-3 flex h-[28rem] grid-cols-2 flex-col rounded-2xl bg-white shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[29rem] md:w-[25rem] md:rounded-2xl ">
         <div className="relative h-full w-full  basis-2/3 md:rounded-2xl">
           {/* <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>
