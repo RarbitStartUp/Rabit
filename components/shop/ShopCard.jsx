@@ -8,6 +8,7 @@ import {
 import { FaVoteYea, FaCommentDots } from 'react-icons/fa'
 import { useRouter } from 'next/router'
 import CarouselCard from '../Carousel/CarouselCard'
+import Star from '../Lottie/Star'
 import { Component } from 'react'
 
 export default function ShopCard({
@@ -29,9 +30,12 @@ export default function ShopCard({
     <div className="relative w-screen px-2 md:pl-10 ">
       <div className="relative mt-3 flex h-[26rem] flex-col rounded-2xl bg-white shadow-lg  duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[28rem] md:w-[25rem]  md:rounded-2xl ">
         {/* <div className="relative basis-1/3"> */}
-        {/* <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
+        {/* <div className=" absolute z-30 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>
         </div> */}
+        <div className="absolute top-3 right-5 z-30 text-white">
+          <Star />
+        </div>
         <div className=" flex flex-col">
           <CarouselCard
             imagePath={imagePath}
