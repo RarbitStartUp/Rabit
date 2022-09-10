@@ -18,15 +18,15 @@ export default function Tabs() {
   return (
     <div>
       <Tab.Group>
-        <Tab.List className="sticky top-0 z-20 mb-20 flex justify-around bg-white/90">
+        <Tab.List className="absolute sticky top-0 z-20 mb-20 flex justify-around bg-white/90">
           <Tab
             className={({ selected }) =>
               classNames(
                 'rounded-3xl py-2.5 px-4 text-sm font-medium leading-5 text-primary',
-                'ring-offset-5 ring-white ring-opacity-60 ring-offset-blue-400 focus:outline-none focus:ring-0',
+                ' ring-white ring-opacity-60 ring-offset-0 ring-offset-blue-400 focus:outline-none focus:ring-0',
                 selected
-                  ? 'bg-white px-10 text-primary shadow'
-                  : 'text-secondary hover:bg-white/[0.12] hover:text-primary '
+                  ? 'bg-white px-4 text-primary shadow'
+                  : 'text-slate-400 hover:bg-white/[0.12] hover:text-primary '
               )
             }
           >
@@ -41,8 +41,8 @@ export default function Tabs() {
                 'rounded-3xl  py-2.5 px-4 text-sm font-medium leading-5 text-primary',
                 'ring-offset-5 ring-white ring-opacity-60 ring-offset-blue-400 focus:outline-none focus:ring-0',
                 selected
-                  ? 'bg-white px-8 text-primary shadow'
-                  : 'text-secondary hover:bg-white/[0.12] hover:text-primary'
+                  ? 'bg-white px-4 text-primary shadow'
+                  : 'text-slate-400 hover:bg-white/[0.12] hover:text-primary'
               )
             }
           >
@@ -57,8 +57,8 @@ export default function Tabs() {
                 'rounded-3xl  py-2.5 px-4 text-sm font-medium leading-5 text-primary',
                 'ring-offset-5 ring-white ring-opacity-60 ring-offset-blue-400 focus:outline-none focus:ring-0',
                 selected
-                  ? 'bg-white px-8 text-primary shadow'
-                  : 'text-secondary hover:bg-white/[0.12] hover:text-primary'
+                  ? 'bg-white px-4 text-primary shadow'
+                  : 'text-slate-400 hover:bg-white/[0.12] hover:text-primary'
               )
             }
           >
