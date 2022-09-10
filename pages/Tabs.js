@@ -22,7 +22,7 @@ export default function Tabs() {
           <Tab
             className={({ selected }) =>
               classNames(
-                ' py-2.5 text-sm font-medium text-primary focus:outline-none ',
+                'rounded-3xl py-2.5 text-sm font-medium text-primary focus:outline-none ',
                 selected
                   ? ' text-primary'
                   : 'text-slate-400 hover:text-primary '
