@@ -3,7 +3,7 @@ import React from 'react'
 import { SearchIcon } from '@heroicons/react/outline'
 import { MdSort } from 'react-icons/md'
 import { FilterIcon } from '@heroicons/react/solid'
-import BackButton from '../BackButton'
+import BackButton from '../BackButton/BackButton'
 
 export default function HeaderDA() {
   return (

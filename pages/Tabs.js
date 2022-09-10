@@ -42,7 +42,7 @@ export default function Tabs() {
               )
             }
           >
-            <div className="mx-5 flex flex-row items-center justify-center">
+            <div className="my-1 mx-5 flex flex-row items-center justify-center">
               <MdRedeem className="mr-2" size={17} />
               Discounts
             </div>
@@ -57,7 +57,7 @@ export default function Tabs() {
               )
             }
           >
-            <div className=" flex flex-row items-center justify-center md:mx-5">
+            <div className="my-1 mx-5 flex flex-row items-center justify-center md:mx-5">
               <RiBookMarkFill className="mr-2" size={17} />
               Bookmarks
             </div>

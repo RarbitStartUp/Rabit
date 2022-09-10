@@ -55,39 +55,7 @@ export default function DiscountsCard({
         <div className="ml-3 mb-5">
           <div className=" mr-2 rounded-2xl ">
             <div className="flex max-w-6xl justify-between">
-              <p className="text-md mt-3 ml-2 mr-2 text-secondary">
-                {shopName}
-              </p>
-              <div className="mt-3 mr-5 flex flex-row items-center justify-end space-x-4">
-                <button
-                  className=" flex flex-row items-center justify-center "
-                  onClick={() =>
-                    router.push(
-                      '../../discountsAvailable/FDiscountsAvailableList'
-                    )
-                  }
-                >
-                  <MdRedeem className=" h-6 w-6 text-icon hover:text-hover" />
-                </button>
-                <button
-                  className=" flex flex-row items-center justify-center "
-                  onClick={() => {}}
-                >
-                  <FaCommentDots className="ml-2 h-6 w-6 text-icon hover:text-hover" />
-                </button>
-                <button
-                  className=" flex flex-row items-center justify-center "
-                  onClick={() => router.push('../Vote')}
-                >
-                  <FaVoteYea className="ml-2 h-6 w-6 text-icon hover:text-hover" />
-                </button>
-                <button
-                  className=" flex flex-row items-center justify-center "
-                  onClick={() => {}}
-                >
-                  <MdBookmarks className="ml-2 h-6 w-6 text-icon hover:text-hover" />
-                </button>
-              </div>
+              <p className="text-md mx-2 mt-1 text-secondary">{shopName}</p>
             </div>
             <h1 className="mt-1 ml-2 mr-2 break-words text-xl font-bold text-primary dark:text-white">
               {discountName}

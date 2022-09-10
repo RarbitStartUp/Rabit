@@ -12,6 +12,7 @@ import {
 import { useRouter } from 'next/router'
 import CarouselDetail from '../Carousel/CarouselDetail'
 import ImageGallery from '../ImageGallery'
+import BackButtonDetailPage from '../BackButton/BackButtonDetailPage'
 
 export default function ShopDetail({
   shopName,
@@ -30,6 +31,10 @@ export default function ShopDetail({
 
   return (
     <div>
+      <div className="fixed top-3 z-20 flex flex-row justify-between ">
+        <BackButtonDetailPage />
+      </div>
+
       {/* <div className="w-[20.5rem]basis-2/3 md:h-[20.5rem]border-2 mt-3 h-[30rem] rounded-2xl border-white shadow-md"> */}
       <CarouselDetail
         imagePath={imagePath}
