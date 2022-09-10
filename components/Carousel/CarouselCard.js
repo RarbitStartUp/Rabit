@@ -98,7 +98,7 @@ export default function CarouselCard({
                   src={image}
                   layout="fill"
                   objectFit="cover"
-                  className="animate-fadeIn md:rounded-t-2xl"
+                  className="animate-fadeIn rounded-t-2xl md:rounded-t-2xl"
                 />
               )
             }
