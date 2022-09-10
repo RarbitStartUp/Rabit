@@ -75,7 +75,7 @@ export default function CarouselCard({
       /> */}
       <div
         className={
-          'relative m-auto flex h-[40vh] w-full overflow-hidden'
+          'relative flex h-[40vh] w-full '
           // ${
           //   trans
           //     ? '-translate-x-full transform transition duration-500 ease-linear'

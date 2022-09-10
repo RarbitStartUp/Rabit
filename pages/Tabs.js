@@ -18,7 +18,7 @@ export default function Tabs() {
   return (
     <div>
       <Tab.Group>
-        <Tab.List className="sticky top-0 z-20 mb-20  flex w-screen justify-around bg-black/100 ">
+        <Tab.List className="static sticky top-0 z-20 mb-20 flex w-screen justify-around bg-black/100 md:justify-start ">
           <Tab
             className={({ selected }) =>
               classNames(
@@ -29,7 +29,7 @@ export default function Tabs() {
               )
             }
           >
-            <div className="my-1 flex flex-row items-center justify-center">
+            <div className="my-1 mx-5 flex flex-row items-center justify-center">
               <BiShoppingBag className="mr-2" size={17} />
               Shops
             </div>
@@ -42,7 +42,7 @@ export default function Tabs() {
               )
             }
           >
-            <div className=" flex flex-row items-center justify-center">
+            <div className="mx-5 flex flex-row items-center justify-center">
               <MdRedeem className="mr-2" size={17} />
               Discounts
             </div>
@@ -57,7 +57,7 @@ export default function Tabs() {
               )
             }
           >
-            <div className="flex flex-row items-center justify-center">
+            <div className=" flex flex-row items-center justify-center md:mx-5">
               <RiBookMarkFill className="mr-2" size={17} />
               Bookmarks
             </div>
