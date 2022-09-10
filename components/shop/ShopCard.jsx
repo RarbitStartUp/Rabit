@@ -24,12 +24,12 @@ export default function ShopCard({
   const router = useRouter()
 
   return (
-    <div className="mx-2 mt-3 flex h-[28rem] w-screen flex-col  rounded-2xl bg-white shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[28rem] md:w-[25rem] md:rounded-2xl ">
-      <div className=" relative h-full w-full basis-2/3 ">
+    <div className="h-100 mx-2 mt-3 flex w-screen flex-col  rounded-2xl bg-white shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[28rem] md:w-[25rem] md:rounded-2xl ">
+      <div className="relative h-full w-full  ">
         {/* <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>
         </div> */}
-        <div className="relative flex h-full w-full flex-col rounded-t-2xl border-0 border-white  md:rounded-t-2xl">
+        <div className="relative flex h-full w-full flex-col rounded-t-2xl border-0 border-white ">
           <CarouselCard
             imagePath={imagePath}
             imagePath1={imagePath1}

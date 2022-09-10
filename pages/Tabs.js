@@ -18,7 +18,7 @@ export default function Tabs() {
   return (
     <div>
       <Tab.Group>
-        <Tab.List className="absolute sticky top-0 z-20 mb-20 flex w-screen justify-around bg-white/100">
+        <Tab.List className="sticky top-0 z-20 mb-20 flex w-screen justify-around bg-white/100">
           <Tab
             className={({ selected }) =>
               classNames(
