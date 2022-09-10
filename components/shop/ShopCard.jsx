@@ -24,20 +24,20 @@ export default function ShopCard({
   const router = useRouter()
 
   return (
-    <div className="h-100 mx-2 mt-3 flex w-screen flex-col  rounded-2xl bg-white shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[28rem] md:w-[25rem] md:rounded-2xl ">
-      <div className="relative h-full w-full  ">
-        {/* <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
+    <div className=" mt-3 h-[28rem] w-[25rem] flex-col rounded-2xl bg-white shadow-lg duration-300 ease-linear dark:bg-slate-800 dark:shadow-slate-700 md:h-[28rem] md:w-[25rem] md:rounded-2xl ">
+      {/* <div className="relative basis-1/3"> */}
+      {/* <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>
         </div> */}
-        <div className="relative flex h-full w-full flex-col rounded-t-2xl border-0 border-white ">
-          <CarouselCard
-            imagePath={imagePath}
-            imagePath1={imagePath1}
-            imagePath2={imagePath2}
-            imagePath3={imagePath3}
-            imagePath4={imagePath4}
-          />
-          {/* {imagePath && (
+      <div className="relative flex basis-2/3 flex-col">
+        <CarouselCard
+          imagePath={imagePath}
+          imagePath1={imagePath1}
+          imagePath2={imagePath2}
+          imagePath3={imagePath3}
+          imagePath4={imagePath4}
+        />
+        {/* {imagePath && (
             <Image
               src={imagePath}
               alt="thumbnail"
@@ -46,9 +46,9 @@ export default function ShopCard({
               className="md:rounded-t-2xl"
             />
           )} */}
-        </div>
       </div>
 
+      <div className="relative basis-1/3"></div>
       <div className="ml-5 mb-5">
         <div className="mr-2 rounded-2xl ">
           <div className="flex max-w-6xl justify-between">
