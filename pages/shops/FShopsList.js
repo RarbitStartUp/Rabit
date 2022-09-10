@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { db } from '../../firebase'
 import ShopCard from '../../components/shop/ShopCard'
-import Header from '../../components/Header'
+import Header from '../../components/Header/Header'
 
 export default function FShopsList() {
   const [shops, setShops] = useState([])

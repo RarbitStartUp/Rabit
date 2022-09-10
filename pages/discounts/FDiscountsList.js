@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { db } from '../../firebase'
 import DiscountCard from '../../components/discount/DiscountsCard'
-import Header from '../../components/Header'
+import Header from '../../components/Header/Header'
 
 export default function FDiscountsList() {
   const [discounts, setDiscounts] = useState([])
