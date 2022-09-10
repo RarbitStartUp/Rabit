@@ -14,7 +14,7 @@ export default function Header() {
           <SearchIcon className="h-5 w-5 text-gray-400" />
         </div>
         <input
-          className="sm-text-sm focus:border-1 w-full rounded-3xl border-0 border-primary bg-gray-100 pl-10 placeholder-secondary shadow-inner shadow-md focus:border-primary focus:ring-primary"
+          className="sm-text-sm focus:border-1 w-full rounded-3xl border-0 border-primary bg-gray-100 pl-10 placeholder-secondary shadow-inner  focus:border-primary focus:ring-primary"
           type="text"
           placeholder="Search"
         />
