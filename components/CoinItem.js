@@ -53,11 +53,11 @@ export default function CoinItem({ coins }) {
         />
       </div>
       <div class="mt-2 leading-relaxed text-slate-500 dark:text-slate-500">
-        Total value of 20 Rarbit reward points
+        Total value of {earning} Rarbit reward points
       </div>
       <div className="flex space-x-5">
         <div class="mt-1 text-xs leading-relaxed text-slate-500 dark:text-slate-500">
-          *1 rarbit = 0.5 sol
+          *1 rarbit = 1 sol
         </div>
         <div class="mt-1 text-xs leading-relaxed text-slate-500 dark:text-slate-500">
           *1 sol = {round10(coins.current_price, -2)} usd
