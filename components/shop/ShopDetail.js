@@ -60,45 +60,48 @@ export default function ShopDetail({
       <div className="ml-5">
         {/* ShopName and Categories */}
         <div className="mr-5 flex max-w-6xl justify-between">
-          <p className="mt-3 mr-2 ml-2 mb-1 text-lg font-bold text-secondary">
+          {/* <p className="mt-3 mr-2 ml-2 mb-1 text-lg font-bold text-secondary">
             {categories}
-          </p>
+          </p> */}
+          <h1 className="text-md mb-1 mt-3 ml-2 mr-2  text-primary dark:text-white">
+            {shopName}
+          </h1>
           {/* Icons Buttons */}
-          <div className="mt-3 mr-1 flex flex-row items-center justify-end space-x-4">
+          <div className="mt-2 mr-1 flex flex-row items-center justify-end space-x-4">
             <button
               className=" flex flex-row items-center justify-center "
               onClick={() =>
                 router.push('../../discountsAvailable/FDiscountsAvailableList')
               }
             >
-              <MdRedeem className=" h-6 w-6 text-icon hover:text-hover" />
+              <MdRedeem className=" h-5 w-5 text-icon hover:text-hover" />
             </button>
             <button
               className=" flex flex-row items-center justify-center "
               onClick={() => {}}
             >
-              <FaCommentDots className="ml-2 h-6 w-6 text-icon hover:text-hover" />
+              <FaCommentDots className="ml-2 h-5 w-5 text-icon hover:text-hover" />
             </button>
             <button
               className=" flex flex-row items-center justify-center "
               onClick={() => router.push('../Vote')}
             >
-              <FaVoteYea className="ml-2 h-6 w-6 text-icon hover:text-hover" />
+              <FaVoteYea className="ml-2 h-5 w-5 text-icon hover:text-hover" />
             </button>
             <button
               className=" flex flex-row items-center justify-center "
               onClick={() => {}}
             >
-              <MdBookmarks className="ml-2 h-6 w-6 text-icon hover:text-hover" />
+              <MdBookmarks className="ml-2 h-5 w-5 text-icon hover:text-hover" />
             </button>
           </div>
         </div>
-        <h1 className="mb-2 ml-2 mr-2 text-xl font-bold text-primary dark:text-white">
+        {/* <h1 className="text-md mb-1 mt-2 ml-2 mr-2  text-primary dark:text-white">
           {shopName}
-        </h1>
+        </h1> */}
 
         {/* Subtile Details */}
-        <div className="flex flex-row flex-wrap space-x-2">
+        <div className="flex-wrapspace-x-2 mt-2 flex flex-row">
           <div className="m-2 flex flex-row items-center">
             <MdRedeem size={20} className="text-miniIcon" />
             <h1 className="pl-1 text-sm dark:text-white">
@@ -117,8 +120,10 @@ export default function ShopDetail({
           </div>
         </div>
 
-        <p className="text-md m-2 font-bold text-third">Shop Description</p>
-        <p className="m-2 text-sm text-black dark:text-white">{description}</p>
+        {/* <p className="text-md m-2 font-bold text-third">Shop Description</p> */}
+        <p className="m-2 text-sm text-slate-400 dark:text-white">
+          {description}
+        </p>
       </div>
       <ImageGallery
         imagePath={imagePath}
