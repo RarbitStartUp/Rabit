@@ -58,7 +58,7 @@ export default function Reward() {
             <div class="box sm:flex">
               <div class="mt-4 flex flex-1 flex-col justify-center rounded-2xl bg-white p-8 shadow">
                 <div class="flex items-center">
-                  <div class="text-1xl truncate font-medium text-slate-500 md:text-2xl">
+                  <div class="text-1xl truncate font-medium text-slate-500 ">
                     Top 5 allocations
                   </div>
                   <div class="ml-auto flex items-center justify-center ">
@@ -85,7 +85,7 @@ export default function Reward() {
                   <TailwindRewardTable3 />
                   <div
                     onClick={() => router.push('../Records')}
-                    className="cursor-pointer truncate pl-2 text-sm font-medium text-primary underline md:text-2xl"
+                    className="cursor-pointer truncate pl-2 text-sm font-medium text-primary underline"
                   >
                     See More
                   </div>
