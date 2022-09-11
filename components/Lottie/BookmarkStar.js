@@ -6,6 +6,8 @@ const App = () => {
   const options = {
     animationData: BookmarkStar,
     loop: false,
+    width: 100,
+    height: 100,
   }
 
   const { View } = useLottie(options)

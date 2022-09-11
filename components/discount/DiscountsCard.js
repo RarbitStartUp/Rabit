@@ -31,6 +31,15 @@ export default function DiscountsCard({
           {/* <div className=" absolute z-10 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>
         </div> */}
+          <div className="absolute top-7 right-7 z-30 text-white">
+            <button
+              className=" flex flex-row items-center justify-center "
+              onClick={() => {}}
+            >
+              <MdBookmarks className="ml-2 h-6 w-6 text-white/50 hover:text-hover" />
+            </button>
+            {/* <Star /> */}
+          </div>
           <div className="relative h-full w-full">
             <CarouselCard
               imagePath={imagePath}
@@ -57,7 +66,7 @@ export default function DiscountsCard({
             <div className="flex max-w-6xl justify-between">
               <p className="text-md mx-2 mt-1 text-secondary">{shopName}</p>
             </div>
-            <h1 className="mt-1 ml-2 mr-2 break-words text-xl font-bold text-primary dark:text-white">
+            <h1 className="text-md mt-1 ml-2 mr-2 break-words text-primary dark:text-white">
               {discountName}
             </h1>
 

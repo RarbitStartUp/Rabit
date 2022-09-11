@@ -33,8 +33,14 @@ export default function ShopCard({
         {/* <div className=" absolute z-30 rounded-tl-2xl rounded-br-2xl bg-[#5865F2] pl-8 pr-8 pb-2  pt-2 font-semibold text-white">
           <h1>NEW</h1>
         </div> */}
-        <div className="absolute top-3 right-5 z-30 text-white">
-          <Star />
+        <div className="absolute top-7 right-7 z-30 text-white">
+          <button
+            className=" flex flex-row items-center justify-center "
+            onClick={() => {}}
+          >
+            <MdBookmarks className="ml-2 h-6 w-6 text-white/50 hover:text-hover" />
+          </button>
+          {/* <Star /> */}
         </div>
         <div className=" flex flex-col">
           <CarouselCard
@@ -64,7 +70,7 @@ export default function ShopCard({
               </p> */}
             </div>
 
-            <h1 className="mt-1 ml-2 mr-2 text-xl font-bold text-primary dark:text-white">
+            <h1 className="text-md mt-1 ml-2 mr-2 text-primary dark:text-white">
               {shopName}
             </h1>
 
