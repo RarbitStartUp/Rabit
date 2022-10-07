@@ -5,3 +5,9 @@
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.452);
   margin: 20px;
 }
+
+.walletButtons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 2rem;
+}

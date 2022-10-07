@@ -25,6 +25,6 @@
     "pages/index.js",
     "pages/index1tsx",
     "pages/DatePicker.jsx"
-  ],
+, "components/Lottie/Star.js"  ],
   "exclude": ["node_modules"]
 }

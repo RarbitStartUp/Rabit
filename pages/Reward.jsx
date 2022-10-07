@@ -1,3 +1,13 @@
+import {
+  WalletDisconnectButton,
+  WalletMultiButton,
+} from '@solana/wallet-adapter-react-ui'
+// import type { NextPage } from 'next'
+import styles from '../styles/Home.module.css'
+import { AnchorProvider, BN, Program, utils, web3 } from '@project-serum/anchor'
+import { Connection, PublicKey } from '@solana/web3.js'
+import { useAnchorWallet } from '@solana/wallet-adapter-react'
+
 import BottomTabsReward from '../components/BottomTabs/BottomTabsReward'
 import PopUpMenu from '../components/PopUpMenu'
 import CoinGecko from './CoinGecko'
@@ -7,6 +17,55 @@ import { FiPlusCircle } from 'react-icons/fi'
 import { AiOutlineArrowUp } from 'react-icons/ai'
 import { MdHistory, MdLanguage, MdLogout } from 'react-icons/md'
 import { useRouter } from 'next/router'
+
+const idl = require('../public/idl.json')
+const utf8 = utils.bytes.utf8
+
+// const Home: NextPage = () => {
+
+async function sendTransaction() {
+  const anchorWallet = useAnchorWallet()
+  if (!anchorWallet) {
+    return
+  }
+  const network = 'http://127.0.0.1:8899'
+  const connection = new Connection(network, 'processed')
+  const provider = new AnchorProvider(connection, anchorWallet, {
+    preflightCommitment: 'processed',
+  })
+  const program = new Program(idl, idl.metadata.address, provider)
+
+  try {
+    const toKey = new PublicKey('7k4uCFsyTDpSmBpBfminAMFzrfsrap7TX2QGBwwbi1Qm')
+    const [escrowPDA] = await web3.PublicKey.findProgramAddress(
+      [
+        utf8.encode('escrow'),
+        anchorWallet.publicKey.toBuffer(),
+        toKey.toBuffer(),
+      ],
+      program.programId
+    )
+
+    console.log('escrowPDA', escrowPDA)
+
+    const trans = await program.methods
+      .createEscrow(new BN(30))
+      .accounts({
+        escrow: escrowPDA,
+        from: anchorWallet.publicKey,
+        to: toKey,
+        systemProgram: web3.SystemProgram.programId,
+      })
+      .rpc()
+
+    console.log('trans', trans)
+
+    const escrowAccount = await program.account.escrowAccount.fetch(escrowPDA)
+    console.log('escrowAccount', escrowAccount)
+  } catch (err) {
+    console.log(err)
+  }
+}
 
 export default function Reward() {
   const router = useRouter()
@@ -94,7 +153,12 @@ export default function Reward() {
             </div>
           </div>
           {/* <div class="py-5 text-center">Tab bar goes here</div> */}
-
+          <div className="fixed bottom-20 z-10">
+            <div className="mt-5 flex flex-row justify-center space-x-10 shadow-xl shadow-slate-300">
+              <WalletMultiButton />
+              <WalletDisconnectButton />
+            </div>
+          </div>
           <div className="py-10" />
         </div>
       </div>
