@@ -2,7 +2,7 @@
 //   createDefaultAuthorizationResultCache,
 //   SolanaMobileWalletAdapter,
 // } from '@solana-mobile/wallet-adapter-mobile'
-import { WalletAdapterNetwork } from '@solana/wallet-adapter-base'
+// import { WalletAdapterNetwork } from '@solana/wallet-adapter-base'
 import {
   ConnectionProvider,
   WalletProvider,
