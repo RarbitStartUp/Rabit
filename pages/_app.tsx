@@ -26,15 +26,14 @@ import { SessionProvider } from 'next-auth/react'
 require('@solana/wallet-adapter-react-ui/styles.css')
 require('../styles/globals.css')
 
-
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   // const App: FC<AppProps> = ({ Component, pageProps }) => {
   // Can be set to 'devnet', 'testnet', or 'mainnet-beta'
   const network = 'http://127.0.0.1:8899'
-  
+
   // You can also provide a custom RPC endpoint
   const endpoint = useMemo(() => network, [network])
-  
+
   // @solana/wallet-adapter-wallets includes all the adapters but supports tree shaking and lazy loading --
   // Only the wallets you configure here will be compiled into your application, and only the dependencies
   // of wallets that your users connect to will be loaded
@@ -47,6 +46,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
       new PhantomWalletAdapter(),
       new GlowWalletAdapter(),
       new SlopeWalletAdapter(),
+      new SolflareWalletAdapter(),
       new TorusWalletAdapter(),
     ],
     []
