@@ -4,7 +4,6 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -24,7 +23,8 @@
     "pages/index.js",
     "pages/index.js",
     "pages/index1tsx",
-    "pages/DatePicker.jsx"
-, "components/Lottie/Star.js"  ],
+    "pages/DatePicker.jsx",
+    "components/Lottie/Star.js"
+  ],
   "exclude": ["node_modules"]
 }
