@@ -23,6 +23,7 @@
     "@mui/styled-engine-sc": "^5.10.6",
     "@mui/system": "^5.10.8",
     "@mui/x-data-grid": "^5.17.6",
+    "@mui/x-date-pickers": "^5.0.4",
     "@project-serum/anchor": "^0.25.0",
     "@solana-mobile/wallet-adapter-mobile": "^0.9.4",
     "@solana/wallet-adapter-base": "^0.9.18",
@@ -80,7 +81,9 @@
     "typescript": "^4.8.4",
     "webpack": "^5.74.0"
   },
-  "engines": { "node": ">=16" },
+  "engines": {
+    "node": ">=16"
+  },
   "types": "./index.d.ts",
   "name": "rarbit",
   "description": "This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).",
