@@ -79,9 +79,16 @@ export default function Reward() {
   const router = useRouter()
   // const { setVisible } = useWalletModal()
   const connect = async () => {
+    const params = {
+      cluster: 'devnet',
+      app_url: 'https://rarbit.com/',
+    }
+
     const url = 'https://phantom.app/ul/v1/connect'
     // Linking.openURL(url)
+    document.location.href = 'https://phantom.app/ul/v1/connect'
   }
+
   return (
     <div>
       <div className="fixed z-30 bg-white opacity-90">
@@ -113,16 +120,18 @@ export default function Reward() {
                   </>
                 ) : (
                   <div>
-                    <Link href="https://phantom.app/ul/v1/connect">
-                      <button className="mt-5 rounded-md bg-primary py-3 px-5 text-white">
-                        Connect Phantom via mobile
-                      </button>
-                    </Link>
+                    <button
+                      onClick={connect}
+                      className="fixed bottom-20 mt-5 rounded-md bg-primary py-3 px-5 font-semibold text-white shadow-xl lg:hidden"
+                    >
+                      Connect Phantom via phone
+                    </button>
                   </div>
                 )}
-
-                <div className={styles.walletButtons}>
-                  <WalletMultiButton />
+                <div className="invisible fixed bottom-20 z-30 lg:visible">
+                  <div className={styles.walletButtons}>
+                    <WalletMultiButton />
+                  </div>
                 </div>
                 {/* <div class="mt-[25px] flex items-center">
                   <div class="relative text-2xl font-medium">$400.00</div>
