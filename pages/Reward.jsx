@@ -160,13 +160,13 @@ export default function Reward() {
           <div className="fixed bottom-20 z-10">
             <div className="mt-5 flex flex-row justify-center space-x-10">
               <div className=" bg-white text-primary shadow-xl shadow-slate-300">
-                <button
+                {/* <button
                   // onClick={setVisible(true)}
                   // onClick={() => router.back()}
                   className="h-100 w-100 bg-white text-primary shadow-xl shadow-slate-300"
                 >
                   hi
-                </button>
+                </button> */}
                 <WalletMultiButton />
               </div>
               <div className="shadow-xl shadow-slate-300">
