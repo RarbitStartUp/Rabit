@@ -158,19 +158,22 @@ export default function Reward() {
           </div>
           {/* <div class="py-5 text-center">Tab bar goes here</div> */}
           <div className="fixed bottom-20">
-            <div className="flex justify-center space-x-5">
-              <div className="shadow-xl shadow-slate-300">
-                {/* <button
+            <div className={styles.walletButtons}>
+              {/* <div className="flex justify-center space-x-5 shadow-xl shadow-slate-300"> */}
+              {/* <div className="shadow-xl shadow-slate-300"> */}
+              {/* <button
                   // onClick={setVisible(true)}
                   // onClick={() => router.back()}
                   className="h-100 w-100 bg-white text-primary shadow-xl shadow-slate-300"
                 >
                   hi
                 </button> */}
+              <div className="shadow-xl shadow-slate-300">
                 <WalletMultiButton />
               </div>
               <div className="shadow-xl shadow-slate-300">
                 <WalletDisconnectButton />
+                {/* </div> */}
               </div>
             </div>
           </div>
