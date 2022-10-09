@@ -174,7 +174,7 @@ export default function Reward() {
               </div>
             </div>
           </div>
-          <div className="py-10" />
+          <div className="py-20" />
         </div>
       </div>
       <BottomTabsReward />
