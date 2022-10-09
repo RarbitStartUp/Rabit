@@ -157,7 +157,7 @@ export default function Reward() {
             </div>
           </div>
           {/* <div class="py-5 text-center">Tab bar goes here</div> */}
-          <div className="fixed bottom-20 shadow-xl shadow-slate-300">
+          <div className="fixed bottom-20 shadow-xl">
             <div className={styles.walletButtons}>
               {/* <div className="flex justify-center space-x-5 shadow-xl shadow-slate-300"> */}
               {/* <div className="shadow-xl shadow-slate-300"> */}
