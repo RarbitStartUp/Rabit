@@ -1,11 +1,15 @@
 import React from 'react'
 import { MdLanguage, MdLogout } from 'react-icons/md'
+import { useRouter } from 'next/router'
 
 function RewardHeader() {
+  const router = useRouter()
   return (
     <div class="flex w-screen items-center justify-between">
       <div class="justify-start">
-        <div class="py-7 pl-10 text-2xl font-bold text-gray-600">Rarbit</div>
+        <div class="pb-4 pl-10 pt-7 text-2xl font-bold text-gray-600">
+          Rarbit
+        </div>
       </div>
 
       {/* <div class="-my-2 -mr-2"> */}
