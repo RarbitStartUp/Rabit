@@ -158,7 +158,7 @@ export default function Reward() {
           </div>
           {/* <div class="py-5 text-center">Tab bar goes here</div> */}
           <div className="fixed bottom-20">
-            <div className="flex flex-row justify-center space-x-5">
+            <div className="flex justify-center space-x-5">
               <div className="shadow-xl shadow-slate-300">
                 {/* <button
                   // onClick={setVisible(true)}
