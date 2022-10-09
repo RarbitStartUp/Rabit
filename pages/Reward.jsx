@@ -108,6 +108,9 @@ export default function Reward() {
                 </div>
 
                 <CoinGecko />
+                <div className={styles.walletButtons}>
+                  <WalletMultiButton />
+                </div>
                 {/* <div class="mt-[25px] flex items-center">
                   <div class="relative text-2xl font-medium">$400.00</div>
                   <div class="flex cursor-pointer px-2 text-green-500">
@@ -157,21 +160,6 @@ export default function Reward() {
             </div>
           </div>
           {/* <div class="py-5 text-center">Tab bar goes here</div> */}
-          <div className="fixed bottom-20 shadow-xl">
-            <div className={styles.walletButtons}>
-              {/* <div className="flex justify-center space-x-5 shadow-xl shadow-slate-300"> */}
-              {/* <div className="shadow-xl shadow-slate-300"> */}
-              {/* <button
-                  // onClick={setVisible(true)}
-                  // onClick={() => router.back()}
-                  className="h-100 w-100 bg-white text-primary shadow-xl shadow-slate-300"
-                >
-                  hi
-                </button> */}
-              <WalletMultiButton />
-              <WalletDisconnectButton />
-            </div>
-          </div>
           <div className="py-20" />
         </div>
       </div>
