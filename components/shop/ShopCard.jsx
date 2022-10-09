@@ -35,7 +35,7 @@ export default function ShopCard({
         </div> */}
         <div className="absolute top-7 right-7 z-30 text-white">
           <button
-            className=" flex flex-row items-center justify-center "
+            className="flex flex-row items-center justify-center "
             onClick={() => {}}
           >
             <MdBookmarks className="ml-2 h-6 w-6 text-white/50 hover:text-hover" />

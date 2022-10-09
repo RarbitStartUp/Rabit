@@ -16,8 +16,9 @@ import CoinGecko from './CoinGecko'
 import TailwindRewardTable3 from '../components/TailwindRewardTable3'
 import { FiPlusCircle } from 'react-icons/fi'
 import { AiOutlineArrowUp } from 'react-icons/ai'
-import { MdHistory, MdLanguage, MdLogout } from 'react-icons/md'
+import { MdHistory } from 'react-icons/md'
 import { useRouter } from 'next/router'
+import RewardHeader from '../components/RewardHeader'
 
 const idl = require('../public/idl.json')
 const utf8 = utils.bytes.utf8
@@ -75,28 +76,12 @@ export default function Reward() {
   // const { setVisible } = useWalletModal()
   return (
     <div>
+      <div className="opacity-90 fixed z-30 bg-white">
+        <RewardHeader />
+      </div>
       <div className="h-screen bg-white">
-        <div class="mx-auto flex h-screen max-w-7xl flex-col px-9 sm:px-9 md:px-4">
-          <div class="flex items-center justify-between pt-10 pb-7">
-            <div class="flex flex-auto justify-start lg:w-0 lg:flex-1">
-              <span class="text-2xl font-bold text-gray-600">Rarbit</span>
-            </div>
-
-            {/* <div class="-my-2 -mr-2"> */}
-            {/* <PopUpMenu /> */}
-
-            <MdLanguage
-              className="mr-5 h-6 w-6 text-secondary"
-              aria-hidden="true"
-            />
-
-            <MdLogout
-              onClick={() => router.push('../Login')}
-              className="mr-5 h-6 w-6 text-secondary"
-              aria-hidden="true"
-            />
-          </div>
-
+        <div className="mx-auto flex h-screen flex-col px-9">
+          <div className="py-10" />
           <div class="flex-grow flex-col gap-y-10">
             <div class="box sm:flex">
               <div class="flex flex-1 flex-col justify-center rounded-2xl bg-white p-8 shadow">
@@ -160,7 +145,7 @@ export default function Reward() {
             </div>
           </div>
           {/* <div class="py-5 text-center">Tab bar goes here</div> */}
-          <div className="py-20" />
+          <div className="py-10" />
         </div>
       </div>
       <BottomTabsReward />
