@@ -24,7 +24,7 @@ function RewardTable3() {
               >
                 Sora Ramen
               </th>
-              <td class="px-3 py-4 pl-7">10</td>
+              <td class="px-3 py-4 pl-7">20</td>
             </tr>
             <tr class="border-b bg-white hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600">
               <th
@@ -35,14 +35,33 @@ function RewardTable3() {
               </th>
               <td class="px-3 py-4 pl-7">15</td>
             </tr>
-            <tr class="bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-600">
+            <tr class="border-b bg-white hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600">
               <th
                 scope="row"
                 class="whitespace-pre-line px-3 py-4 pl-5 font-medium text-gray-900 dark:text-white"
               >
                 Aqua Bar
               </th>
-              <td class="px-3 py-4 pl-7">20</td>
+              <td class="px-3 py-4 pl-7">10</td>
+            </tr>
+            <tr class="border-b bg-white hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600">
+              <th
+                scope="row"
+                class="whitespace-pre-line px-3 py-4 pl-5 font-medium text-gray-900 dark:text-white"
+              >
+                Past Cafe
+              </th>
+              <td class="px-3 py-4 pl-7">5</td>
+            </tr>
+
+            <tr class="bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-600">
+              <th
+                scope="row"
+                class="whitespace-pre-line px-3 py-4 pl-5 font-medium text-gray-900 dark:text-white"
+              >
+                Syria Dessert
+              </th>
+              <td class="px-3 py-4 pl-7">1</td>
             </tr>
           </tbody>
         </table>

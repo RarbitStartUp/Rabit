@@ -92,7 +92,7 @@ export default function Reward() {
 
   return (
     <div>
-      <div className="fixed z-30 bg-white opacity-90">
+      <div className="fixed z-30 bg-white">
         <RewardHeader />
       </div>
       <div className="static h-screen bg-white">
@@ -200,7 +200,7 @@ export default function Reward() {
             </div>
           </div>
           {/* <div class="py-5 text-center">Tab bar goes here</div> */}
-          <div className="py-10" />
+          <div className="py-24" />
         </div>
       </div>
       <BottomTabsReward />
