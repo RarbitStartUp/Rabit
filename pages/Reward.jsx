@@ -21,6 +21,7 @@ import { MdHistory } from 'react-icons/md'
 import { useRouter } from 'next/router'
 import RewardHeader from '../components/RewardHeader'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const idl = require('../public/idl.json')
 const utf8 = utils.bytes.utf8
@@ -94,7 +95,7 @@ export default function Reward() {
       <div className="fixed z-30 bg-white opacity-90">
         <RewardHeader />
       </div>
-      <div className="h-screen bg-white">
+      <div className="static h-screen bg-white">
         <div className="mx-auto flex h-screen flex-col px-9">
           <div className="py-10" />
           <div class="flex-grow flex-col gap-y-10">
@@ -119,12 +120,29 @@ export default function Reward() {
                     <button>Disconnect</button>
                   </>
                 ) : (
-                  <div>
+                  <div className="z-30 flex w-screen flex-row justify-between">
                     <button
                       onClick={connect}
-                      className="fixed bottom-20 mt-5 rounded-md bg-primary py-3 px-5 font-semibold text-white shadow-xl lg:hidden"
+                      className="fixed bottom-36 rounded-xl bg-primary py-3 px-5 font-semibold text-white shadow-lg shadow-slate-400 hover:bg-purple-900 lg:hidden"
                     >
-                      Connect Phantom via phone
+                      <div className="flex">
+                        <div className="mr-3">Connect</div>
+                        <Image
+                          src={'/img/PhantomWalletLogo/phantom-icon-purple.png'}
+                          alt="thumbnail"
+                          width={25}
+                          height={25}
+                          // layout="fill"
+                          objectFit="cover"
+                        />
+                        <div className="ml-3">Phantom Wallet</div>
+                      </div>
+                    </button>
+                    <button
+                      onClick={connect}
+                      className="fixed bottom-20 rounded-xl bg-purple-800 px-20 py-3 font-semibold text-white shadow-lg shadow-slate-400 hover:bg-purple-900 lg:hidden"
+                    >
+                      Withdraw Fund
                     </button>
                   </div>
                 )}
