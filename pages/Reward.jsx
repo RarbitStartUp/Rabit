@@ -140,7 +140,7 @@ export default function Reward() {
                     </button>
                     <button
                       onClick={connect}
-                      className="fixed bottom-20 rounded-xl bg-gradient-to-tr from-[#000000ad] via-[#5b056a] to-[#79168a] px-20 py-3 font-semibold text-white shadow-lg shadow-slate-400 hover:bg-purple-900 lg:hidden"
+                      className="fixed bottom-20 rounded-xl bg-gradient-to-tr from-[#000000cd] via-[#5b056a] to-[#79168a] px-20 py-3 font-semibold text-white shadow-lg shadow-slate-400 hover:bg-purple-900 lg:hidden"
                     >
                       Withdraw SOL
                     </button>
