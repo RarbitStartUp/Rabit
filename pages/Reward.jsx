@@ -123,7 +123,7 @@ export default function Reward() {
                   <div className="z-30 flex w-screen flex-row justify-between">
                     <button
                       onClick={connect}
-                      className="fixed bottom-36 rounded-xl bg-primary py-3 px-5 font-semibold text-white shadow-lg shadow-slate-400 hover:bg-purple-900 lg:hidden"
+                      className="fixed bottom-36 rounded-xl bg-gradient-to-tr from-[#5b056a] via-[#79168a] to-[#00ffa2a8]   py-3 px-5 font-semibold text-white shadow-lg shadow-slate-400 hover:bg-purple-900 lg:hidden"
                     >
                       <div className="flex">
                         <div className="mr-3">Connect</div>
@@ -140,9 +140,9 @@ export default function Reward() {
                     </button>
                     <button
                       onClick={connect}
-                      className="fixed bottom-20 rounded-xl bg-purple-800 px-20 py-3 font-semibold text-white shadow-lg shadow-slate-400 hover:bg-purple-900 lg:hidden"
+                      className="fixed bottom-20 rounded-xl bg-gradient-to-tr from-[#000000ad] via-[#5b056a] to-[#79168a] px-20 py-3 font-semibold text-white shadow-lg shadow-slate-400 hover:bg-purple-900 lg:hidden"
                     >
-                      Withdraw Fund
+                      Withdraw SOL
                     </button>
                   </div>
                 )}
