@@ -146,7 +146,7 @@ export default function Reward() {
                     </button>
                   </div>
                 )}
-                <div className="invisible fixed bottom-20 z-30 lg:visible">
+                <div className="invisible fixed right-52 top-0 z-30 lg:visible">
                   <div className={styles.walletButtons}>
                     <WalletMultiButton />
                   </div>
@@ -200,7 +200,8 @@ export default function Reward() {
             </div>
           </div>
           {/* <div class="py-5 text-center">Tab bar goes here</div> */}
-          <div className="py-24" />
+          <div className="py-24 lg:hidden" />
+          <div className="sm:py-24 md:py-14 lg:py-14 " />
         </div>
       </div>
       <BottomTabsReward />
