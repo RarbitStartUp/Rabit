@@ -30,9 +30,9 @@ import RewardHeader from '../components/RewardHeader'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect } from 'react'
-import { decryptPayload } from './utils/decryptPayload'
-import { encryptPayload } from './utils/encryptPayload'
-import { buildUrl } from './utils/ buildUrl'
+import { decryptPayload } from './utils/decryptPayload.page'
+import { encryptPayload } from './utils/encryptPayload.page'
+import { buildUrl } from './utils/ buildUrl.page'
 
 const idl = require('../public/idl.json')
 const utf8 = utils.bytes.utf8
