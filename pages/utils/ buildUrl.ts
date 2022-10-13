@@ -1,4 +1,5 @@
-import { BASE_URL } from '../constants'
+import { BASE_URL } from '../constants/index.page'
 
-export const buildUrl = (path: string, params: URLSearchParams) =>
-  `${BASE_URL}${path}?${params.toString()}`
+export function buildUrl(path: string, params: URLSearchParams) {
+  return `${BASE_URL}${path}?${params.toString()}`
+}

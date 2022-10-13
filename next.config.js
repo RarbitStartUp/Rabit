@@ -20,11 +20,12 @@ const nextConfig = {
       'www.worldatlas.com',
     ],
   },
-  // experimental: {
-  //   forceSwcTransforms: true,
-  // },
-  // webpack5: true,
+  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
 }
+// experimental: {
+//   forceSwcTransforms: true,
+// },
+// webpack5: true,
 
 module.exports = withPlugins(
   [
