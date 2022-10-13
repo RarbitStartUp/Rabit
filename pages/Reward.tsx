@@ -223,7 +223,7 @@ export default function Reward() {
                     </div>
                     {/* <button>Withdraw</button> */}
 
-                    <button>Disconnect</button>
+                    <button onClick={disconnect}>Disconnect</button>
                   </>
                 ) : (
                   <div className="z-30 flex w-screen flex-row justify-between">
