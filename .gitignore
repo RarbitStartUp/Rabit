@@ -44,6 +44,9 @@ yarn-error.log*
 **/public/sw.js.map
 **/public/workbox-*.js.map
 **/public/worker-*.js.map
+**/public/precache.*.*.js
+**/public/fallback-*.js
+**/public/fallback-*.js
 
 # @generated: @expo/next-adapter@4.0.5
 /.expo/*

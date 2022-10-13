@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
+const { withExpo } = require('@expo/next-adapter')
+const withPlugins = require('next-compose-plugins')
+const withTM = require('next-transpile-modules')(['react-native-web'])
+// const withImages = require('next-images')
 const withPWA = require('next-pwa')({
   dest: 'public',
   register: true,
@@ -6,7 +10,7 @@ const withPWA = require('next-pwa')({
   disable: process.env.NODE_ENV === 'development',
 })
 
-module.exports = withPWA({
+const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: [
@@ -16,4 +20,18 @@ module.exports = withPWA({
       'www.worldatlas.com',
     ],
   },
-})
+  // experimental: {
+  //   forceSwcTransforms: true,
+  // },
+  // webpack5: true,
+}
+
+module.exports = withPlugins(
+  [
+    [withTM],
+    [withPWA],
+    // [withImages, { projectRoot: __dirname }],
+    [withExpo, { projectRoot: __dirname }],
+  ],
+  nextConfig
+)
