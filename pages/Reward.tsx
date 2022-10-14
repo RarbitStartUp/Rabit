@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import {
   useWalletModal,
   WalletDisconnectButton,
@@ -29,16 +29,19 @@ import { useRouter } from 'next/router'
 import RewardHeader from '../components/RewardHeader'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useEffect } from 'react'
 import { decryptPayload } from '../components/utils/decryptPayload'
 import { encryptPayload } from '../components/utils/encryptPayload'
 import { buildUrl } from '../components/utils/ buildUrl'
+// import { URL } from 'node:url'
 
 const idl = require('../public/idl.json')
 const utf8 = utils.bytes.utf8
 
+const connection = new Connection(clusterApiUrl('devnet'))
+
 // const Home: NextPage = () => {
 export default function Reward() {
+  // Anchor send Transaction
   async function sendTransaction() {
     const anchorWallet = useAnchorWallet()
     if (!anchorWallet) {
@@ -85,6 +88,8 @@ export default function Reward() {
     }
   }
 
+  // Connect Phantom Wallet
+
   const [phantomWalletPublicKey, setPhantomWalletPublicKey] =
     useState<PublicKey | null>(null)
   // export default function Reward() {
@@ -94,11 +99,12 @@ export default function Reward() {
   const [dappKeyPair] = useState(nacl.box.keyPair())
   const [sharedSecret, setSharedSecret] = useState<Uint8Array>()
   const onConnectRedirectLink = Linking.createURL('onConnect')
+  const onDisconnectRedirectLink = Linking.createURL('onDisconnect')
 
   const [deepLink, setDeepLink] = useState<string>('')
   const [session, setSession] = useState<string>()
 
-  // On app start up, check if we were opened by an inbound deeplink. If so, track the intial URL
+  // On app start up, check if we were opened by an inbound deep link. If so, track the initial URL
   // Then, listen for a "url" event
   useEffect(() => {
     const initializeDeeplinks = async () => {
@@ -118,12 +124,13 @@ export default function Reward() {
   const handleDeepLink = ({ url }: Linking.EventType) => {
     setDeepLink(url)
   }
-  const url = new URL(deepLink)
-  const params = url.searchParams
 
   // Handle in-bound links
   useEffect(() => {
     if (!deepLink) return
+
+    const url = new URL(deepLink)
+    const params = url.searchParams
 
     // Handle an error response from Phantom
     if (params.get('errorCode')) {
@@ -151,6 +158,12 @@ export default function Reward() {
       setPhantomWalletPublicKey(new PublicKey(connectData.public_key))
       console.log(`connected to ${connectData.public_key.toString()}`)
     }
+
+    // Handle a `disconnect` response from Phantom
+    if (/onDisconnect/.test(url.pathname)) {
+      setPhantomWalletPublicKey(null)
+      console.log('disconnected')
+    }
   }, [deepLink])
 
   // Initiate a new connection to Phantom
@@ -166,14 +179,6 @@ export default function Reward() {
     Linking.openURL(url)
     // NextJS way of doing (openURL) :
     // document.location.href = 'https://phantom.app/ul/v1/connect'
-  }
-
-  const onDisconnectRedirectLink = Linking.createURL('onDisconnect')
-
-  // Handle a `disconnect` response from Phantom
-  if (/onDisconnect/.test(url.pathname)) {
-    setPhantomWalletPublicKey(null)
-    console.log('disconnected')
   }
 
   // Initiate a disconnect from Phantom
