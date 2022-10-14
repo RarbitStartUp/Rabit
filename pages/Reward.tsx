@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
   useWalletModal,
   WalletDisconnectButton,
@@ -34,7 +34,7 @@ import { encryptPayload } from '../components/utils/encryptPayload'
 import { buildUrl } from '../components/utils/ buildUrl'
 // import { URL } from 'node:url'
 
-const idl = require('../public/idl.json')
+const idl = require('../public/blockchain/idl.json')
 const utf8 = utils.bytes.utf8
 
 const connection = new Connection(clusterApiUrl('devnet'))
@@ -175,7 +175,8 @@ export default function Reward() {
       redirect_link: onConnectRedirectLink,
     })
 
-    const url = `https://phantom.app/ul/v1/connect?${params.toString()}`
+    // const url = `https://phantom.app/ul/v1/connect?${params.toString()}`
+    const url = buildUrl('connect', params)
     Linking.openURL(url)
     // NextJS way of doing (openURL) :
     // document.location.href = 'https://phantom.app/ul/v1/connect'
