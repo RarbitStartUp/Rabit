@@ -173,7 +173,8 @@ export default function Reward() {
       cluster: 'devnet',
       app_url: 'https://rarbit.com',
       // app_url: 'rarbit://',
-      redirect_link: onConnectRedirectLink,
+      // redirect_link: onConnectRedirectLink,
+      redirect_link: 'https://rarbit.com',
     })
 
     // const url = `https://phantom.app/ul/v1/connect?${params.toString()}`
