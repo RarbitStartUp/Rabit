@@ -171,7 +171,7 @@ export default function Reward() {
     const params = new URLSearchParams({
       dapp_encryption_public_key: bs58.encode(dappKeyPair.publicKey),
       cluster: 'devnet',
-      app_url: 'https://phantom.app',
+      app_url: 'https://rarbit.com',
       redirect_link: onConnectRedirectLink,
     })
 
