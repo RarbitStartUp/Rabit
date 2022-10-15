@@ -225,15 +225,21 @@ export default function Reward() {
 
                 {phantomWalletPublicKey ? (
                   <>
-                    <div className="z-40 text-black">
-                      {`Connected to: ${phantomWalletPublicKey.toString()}`}
-                    </div>
-                    {/* <button>Withdraw</button> */}
+                    <button
+                      onClick={connect}
+                      className="fixed bottom-36 z-10 rounded-xl bg-gradient-to-tr from-[#5b056a] via-[#79168a] to-[#00ffa2a8]   py-3 px-5 font-semibold text-white shadow-lg shadow-slate-400 hover:bg-purple-900 lg:hidden"
+                    >
+                      <div className="flex">
+                        <div className="z-10">
+                          {`Connected to: ${phantomWalletPublicKey.toString()}`}
+                        </div>
+                      </div>
+                    </button>
 
                     <button onClick={disconnect}>Disconnect</button>
                   </>
                 ) : (
-                  <div className="z-30 flex w-screen flex-row justify-between">
+                  <div className="z-10 flex w-screen flex-row justify-between">
                     <button
                       onClick={connect}
                       className="fixed bottom-36 rounded-xl bg-gradient-to-tr from-[#5b056a] via-[#79168a] to-[#00ffa2a8]   py-3 px-5 font-semibold text-white shadow-lg shadow-slate-400 hover:bg-purple-900 lg:hidden"
@@ -251,11 +257,11 @@ export default function Reward() {
                         <div className="ml-3">Phantom Wallet</div>
                       </div>
                     </button>
-                    <button className="fixed bottom-20 rounded-xl bg-gradient-to-tr from-[#000000cd] via-[#5b056a] to-[#79168a] px-20 py-3 font-semibold text-white shadow-lg shadow-slate-400 hover:bg-purple-900 lg:hidden">
-                      Withdraw SOL
-                    </button>
                   </div>
                 )}
+                <button className="fixed bottom-20 z-10 rounded-xl bg-gradient-to-tr from-[#000000cd] via-[#5b056a] to-[#79168a] px-20 py-3 font-semibold text-white shadow-lg shadow-slate-400 hover:bg-purple-900 lg:hidden">
+                  Withdraw SOL
+                </button>
                 <div className="invisible fixed right-52 top-0 z-30 lg:visible">
                   <div className={styles.walletButtons}>
                     <WalletMultiButton />
