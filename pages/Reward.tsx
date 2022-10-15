@@ -174,7 +174,7 @@ export default function Reward() {
       app_url: 'https://rarbit.com',
       // app_url: 'rarbit://',
       // redirect_link: onConnectRedirectLink,
-      redirect_link: 'https://rarbit.com',
+      redirect_link: 'https://rarbit.com/onConnect',
     })
 
     // const url = `https://phantom.app/ul/v1/connect?${params.toString()}`
