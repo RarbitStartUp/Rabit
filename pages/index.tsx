@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Login from './Login'
+import Reward from './Reward'
 
 const Home: NextPage = () => {
   return (
@@ -10,7 +10,7 @@ const Home: NextPage = () => {
           <title>Rarbit</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Login />
+        <Reward />
       </div>
     </>
   )
