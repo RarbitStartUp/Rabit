@@ -29,9 +29,9 @@ import { useRouter } from 'next/router'
 import RewardHeader from '../components/RewardHeader'
 import Link from 'next/link'
 import Image from 'next/image'
-import { decryptPayload } from '../components/utils/decryptPayload'
-import { encryptPayload } from '../components/utils/encryptPayload'
-import { buildUrl } from '../components/utils/ buildUrl'
+import { decryptPayload } from '../utils/decryptPayload'
+import { encryptPayload } from '../utils/encryptPayload'
+import { buildUrl } from '../utils/ buildUrl'
 // import { URL } from 'node:url'
 
 const idl = require('../public/blockchain/idl.json')
