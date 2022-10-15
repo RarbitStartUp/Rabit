@@ -7,7 +7,7 @@ import { AnchorProvider, BN, Program, utils, web3 } from '@project-serum/anchor'
 import { Connection, PublicKey } from '@solana/web3.js'
 import { useAnchorWallet } from '@solana/wallet-adapter-react'
 
-const idl = require('../public/idl.json')
+const idl = require('../public/blockchain/idl.json')
 const utf8 = utils.bytes.utf8
 
 function Testing1() {
