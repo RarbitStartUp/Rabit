@@ -32,8 +32,13 @@ import Image from 'next/image'
 import { decryptPayload } from '../utils/decryptPayload'
 import { encryptPayload } from '../utils/encryptPayload'
 import { buildUrl } from '../utils/ buildUrl'
-// import { URL } from 'node:url'
+import { Buffer } from 'buffer'
+global.Buffer = global.Buffer || Buffer
+import 'react-native-get-random-values'
+import 'react-native-url-polyfill/auto'
 
+const onConnectRedirectLink = Linking.createURL('onConnect')
+const onDisconnectRedirectLink = Linking.createURL('onDisconnect')
 const idl = require('../public/blockchain/idl.json')
 const utf8 = utils.bytes.utf8
 
@@ -98,11 +103,9 @@ export default function Reward() {
 
   const [dappKeyPair] = useState(nacl.box.keyPair())
   const [sharedSecret, setSharedSecret] = useState<Uint8Array>()
-  const onConnectRedirectLink = Linking.createURL('onConnect')
-  const onDisconnectRedirectLink = Linking.createURL('onDisconnect')
+  const [session, setSession] = useState<string>()
 
   const [deepLink, setDeepLink] = useState<string>('')
-  const [session, setSession] = useState<string>()
 
   // On app start up, check if we were opened by an inbound deep link. If so, track the initial URL
   // Then, listen for a "url" event
@@ -125,6 +128,21 @@ export default function Reward() {
     setDeepLink(url)
   }
 
+  // Initiate a new connection to Phantom
+  const connect = async () => {
+    const params = new URLSearchParams({
+      dapp_encryption_public_key: bs58.encode(dappKeyPair.publicKey),
+      cluster: 'devnet',
+      app_url: '"https://phantom.app"',
+      redirect_link: onConnectRedirectLink,
+    })
+
+    // const url = `https://phantom.app/ul/v1/connect?${params.toString()}`
+    const url = buildUrl('connect', params)
+    Linking.openURL(url)
+    // NextJS way of doing (openURL) :
+    // document.location.href = 'https://phantom.app/ul/v1/connect'
+  }
   // Handle in-bound links
   useEffect(() => {
     if (!deepLink) return
@@ -165,22 +183,6 @@ export default function Reward() {
       console.log('disconnected')
     }
   }, [deepLink])
-
-  // Initiate a new connection to Phantom
-  const connect = async () => {
-    const params = new URLSearchParams({
-      dapp_encryption_public_key: bs58.encode(dappKeyPair.publicKey),
-      cluster: 'devnet',
-      app_url: 'https://rarbit.com',
-      redirect_link: onConnectRedirectLink,
-    })
-
-    // const url = `https://phantom.app/ul/v1/connect?${params.toString()}`
-    const url = buildUrl('connect', params)
-    Linking.openURL(url)
-    // NextJS way of doing (openURL) :
-    // document.location.href = 'https://phantom.app/ul/v1/connect'
-  }
 
   // Initiate a disconnect from Phantom
   const disconnect = async () => {
