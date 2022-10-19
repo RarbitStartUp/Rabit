@@ -2,7 +2,18 @@ import { useRouter } from 'next/router'
 import SignIn from './SignIn'
 import { getProviders, signIn } from 'next-auth/react'
 
-export default function SocialLogin() {
+// Server ( SSR )
+export async function getServerSideProps() {
+  const providers = await getProviders()
+
+  return {
+    props: {
+      providers,
+    },
+  }
+}
+
+export default function SocialLogin({ providers }) {
   const router = useRouter()
 
   const array = [
@@ -15,12 +26,12 @@ export default function SocialLogin() {
       type: 'Google',
       icon: '/img/social/google.svg',
       //   provider: () => router.push('/Reward'),
-      //   provider: () => {
-      //     signIn('google'), { callbackUrl: '/Reward' }
-      //   },
       provider: () => {
-        SignIn()
+        signIn('google', { callbackUrl: '/Reward' })
       },
+      //   provider: () => {
+      //     SignIn()
+      //   },
     },
     {
       type: 'Meta',

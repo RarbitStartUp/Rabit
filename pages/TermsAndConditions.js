@@ -6,7 +6,7 @@ function TermsAndConditions() {
     <div>
       <div className="flex items-center space-x-5">
         <BackButton />
-        <p className="text-md mt-5 font-bold text-primary">
+        <p className="text-md mt-5 font-bold text-primary lg:pl-7">
           Rarbit Ltd. - Terms and Conditions
         </p>
       </div>

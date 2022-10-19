@@ -212,32 +212,44 @@ export default function Reward() {
     <div>
       <div className=" bg-white">
         <div className="flex w-screen items-center justify-between">
-          <div className="justify-start pb-4 pl-10 pt-7 text-2xl font-bold text-gray-600">
+          <div className="fixed top-0 h-20 w-screen  justify-start bg-white pt-6 pb-4 pl-10 text-2xl font-bold text-gray-600">
             Rarbit
           </div>
-          <div className="fixed right-5 flex flex-row items-center justify-end space-x-3 ">
+          <div className="fixed top-5 right-10 flex flex-row items-center justify-end">
             {/* <div className="flex flex-row justify-end pr-7"> */}
             {LoginSession ? (
-              <div className="flex items-center">
-                <p className="font-bold" text-slate-100>
-                  Hi,
-                  <Image
-                    src={LoginSession.user.image}
-                    alt="profile pic"
-                    width={30}
-                    height={30}
-                    // layout="fill"
-                    objectFit="cover"
-                    className="rounded-full"
-                  />
-                  {LoginSession.user.name}
-                </p>
-                <button className="text-sm font-bold" onClick={() => signOut()}>
+              <div className=" flex flex-row items-center space-x-3 ">
+                <div className="flex flex-row items-center space-x-2">
+                  <p className="font-bold text-primary" text-slate-100>
+                    Hi,
+                  </p>
+                  <div className="mt-1">
+                    <Image
+                      src={LoginSession.user.image}
+                      alt="profile pic"
+                      width={30}
+                      height={30}
+                      // layout="fill"
+                      objectFit="cover"
+                      className="rounded-full"
+                    />
+                  </div>
+                  <p className="font-bold text-primary" text-slate-100>
+                    {LoginSession.user.name}
+                  </p>
+                </div>
+                <button
+                  className="text-sm font-bold text-slate-400"
+                  onClick={() => signOut()}
+                >
                   Sign Out
                 </button>
               </div>
             ) : (
-              <button className="text-sm font-bold" onClick={() => signIn()}>
+              <button
+                className="text-sm font-bold text-slate-300"
+                onClick={() => router.push('./Login')}
+              >
                 Sign In
               </button>
             )}
@@ -298,7 +310,7 @@ export default function Reward() {
                 <button className="fixed bottom-20 z-10 rounded-xl bg-gradient-to-tr from-[#000000cd] via-[#5b056a] to-[#79168a] px-20 py-3 font-semibold text-white shadow-lg shadow-slate-400 hover:bg-purple-900 lg:hidden">
                   Withdraw SOL
                 </button>
-                <div className="invisible fixed right-64 top-0 z-30 lg:visible">
+                <div className="invisible fixed right-72 top-0 z-30 lg:visible">
                   <div className={styles.walletButtons}>
                     <WalletMultiButton />
                   </div>
