@@ -25,6 +25,7 @@ import TailwindRewardTable3 from '../components/TailwindRewardTable3'
 import { FiPlusCircle } from 'react-icons/fi'
 import { AiOutlineArrowUp } from 'react-icons/ai'
 import { MdHistory } from 'react-icons/md'
+import { HiOutlineDotsVertical } from 'react-icons/Hi'
 import { useRouter } from 'next/router'
 import RewardHeader from '../components/RewardHeader'
 import Link from 'next/link'
@@ -135,7 +136,7 @@ export default function Reward() {
     const params = new URLSearchParams({
       dapp_encryption_public_key: bs58.encode(dappKeyPair.publicKey),
       cluster: 'devnet',
-      app_url: '"https://phantom.app"',
+      app_url: 'https://rarbit.com',
       redirect_link: onConnectRedirectLink,
     })
 
@@ -217,7 +218,7 @@ export default function Reward() {
           </div>
           <div className="fixed top-5 right-10 flex flex-row items-center justify-end">
             {/* <div className="flex flex-row justify-end pr-7"> */}
-            {LoginSession ? (
+            {LoginSession && (
               <div className=" flex flex-row items-center space-x-3 ">
                 <div className="flex flex-row items-center space-x-2">
                   <div className="mt-1">
@@ -235,21 +236,10 @@ export default function Reward() {
                     {LoginSession.user.name}
                   </p>
                 </div>
-                <button
-                  className="text-sm font-bold text-slate-400"
-                  onClick={() => signOut()}
-                >
-                  Sign Out
-                </button>
               </div>
-            ) : (
-              <button
-                className="mt-2 text-sm font-bold text-slate-300"
-                onClick={() => router.push('./Login')}
-              >
-                Sign In
-              </button>
             )}
+            <PopUpMenu />
+            {/* <HiOutlineDotsVertical className="h-5 w-5 text-slate-400" /> */}
           </div>
         </div>
       </div>
