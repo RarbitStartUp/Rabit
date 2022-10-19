@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
-import { signIn } from 'next-auth/react'
 import SignIn from './SignIn'
+import { getProviders, signIn } from 'next-auth/react'
 
 export default function SocialLogin() {
   const router = useRouter()
@@ -9,17 +9,23 @@ export default function SocialLogin() {
     {
       type: 'Twitter',
       icon: '/img/social/twitter.svg',
-      provider: () => router.push('/Reward'),
+      //   provider: () => router.push('/Reward'),
     },
     {
       type: 'Google',
       icon: '/img/social/google.svg',
-      provider: () => router.push('/Reward'),
+      //   provider: () => router.push('/Reward'),
+      //   provider: () => {
+      //     signIn('google'), { callbackUrl: '/Reward' }
+      //   },
+      provider: () => {
+        SignIn()
+      },
     },
     {
       type: 'Meta',
       icon: '/img/social/facebook.svg',
-      provider: () => router.push('/Reward'),
+      provider: () => signIn('facebook'),
     },
   ]
 
@@ -35,7 +41,7 @@ export default function SocialLogin() {
               className="mr-2 mb-1 inline-flex items-center rounded bg-white px-2 py-2 text-xs font-bold uppercase text-gray-800 shadow outline-none hover:shadow-md focus:outline-none active:bg-gray-100"
               type="button"
               onClick={social.provider}
-              // onClick={SignIn}
+              //   onClick={SignIn}
             >
               <img alt={social.type} src={social.icon} />
             </button>

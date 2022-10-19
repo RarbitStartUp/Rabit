@@ -37,6 +37,7 @@ global.Buffer = global.Buffer || Buffer
 /* eslint-disable */
 // import 'react-native-get-random-values'
 // import 'react-native-url-polyfill/auto'
+import { useSession, signIn, signOut } from 'next-auth/react'
 
 const onConnectRedirectLink = Linking.createURL('onConnect')
 const onDisconnectRedirectLink = Linking.createURL('onDisconnect')
@@ -205,10 +206,43 @@ export default function Reward() {
     console.log('signAndSendTransaction')
   }
 
+  const { data: LoginSession } = useSession()
+
   return (
     <div>
-      <div className="fixed z-30 bg-white">
-        <RewardHeader />
+      <div className=" bg-white">
+        <div className="flex w-screen items-center justify-between">
+          <div className="justify-start pb-4 pl-10 pt-7 text-2xl font-bold text-gray-600">
+            Rarbit
+          </div>
+          <div className="fixed right-5 flex flex-row items-center justify-end space-x-3 ">
+            {/* <div className="flex flex-row justify-end pr-7"> */}
+            {LoginSession ? (
+              <div className="flex items-center">
+                <p className="font-bold" text-slate-100>
+                  Hi,
+                  <Image
+                    src={LoginSession.user.image}
+                    alt="profile pic"
+                    width={30}
+                    height={30}
+                    // layout="fill"
+                    objectFit="cover"
+                    className="rounded-full"
+                  />
+                  {LoginSession.user.name}
+                </p>
+                <button className="text-sm font-bold" onClick={() => signOut()}>
+                  Sign Out
+                </button>
+              </div>
+            ) : (
+              <button className="text-sm font-bold" onClick={() => signIn()}>
+                Sign In
+              </button>
+            )}
+          </div>
+        </div>
       </div>
       <div className="static h-screen bg-white">
         <div className="mx-auto flex h-screen flex-col px-9">
@@ -264,7 +298,7 @@ export default function Reward() {
                 <button className="fixed bottom-20 z-10 rounded-xl bg-gradient-to-tr from-[#000000cd] via-[#5b056a] to-[#79168a] px-20 py-3 font-semibold text-white shadow-lg shadow-slate-400 hover:bg-purple-900 lg:hidden">
                   Withdraw SOL
                 </button>
-                <div className="invisible fixed right-52 top-0 z-30 lg:visible">
+                <div className="invisible fixed right-64 top-0 z-30 lg:visible">
                   <div className={styles.walletButtons}>
                     <WalletMultiButton />
                   </div>

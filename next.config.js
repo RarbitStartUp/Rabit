@@ -18,6 +18,7 @@ const nextConfig = {
       'platform-lookaside.fbsbx.com',
       'firebasestorage.googleapis.com',
       'www.worldatlas.com',
+      'lh3.googleusercontent.com',
     ],
   },
   pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],

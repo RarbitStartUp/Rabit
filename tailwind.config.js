@@ -21,6 +21,15 @@ module.exports = {
         danger: '#F8EF12',
         lightGrey: '#3F3E41',
       },
+      lineClamp: {
+        7: '7',
+        8: '8',
+        9: '9',
+        10: '10',
+      },
+      variants: {
+        lineClamp: ['responsive', 'hover'],
+      },
       boxShadow: {
         custom: '0 0 10px #F8EF12',
       },
@@ -46,6 +55,7 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
     require('tw-elements/dist/plugin'),
+    require('@tailwindcss/line-clamp'),
     // require('flowbite/plugin'),
   ],
 }
