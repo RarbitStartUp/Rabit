@@ -3,7 +3,7 @@ import { Menu, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import { FcMenu } from 'react-icons/fc'
 import { MdLanguage, MdHistory, MdLogout } from 'react-icons/md'
-import { HiOutlineDotsVertical } from 'react-icons/Hi'
+import { HiOutlineDotsVertical } from 'react-icons/hi'
 import { useSession, signIn, signOut } from 'next-auth/react'
 
 export default function PopUpMenu() {
