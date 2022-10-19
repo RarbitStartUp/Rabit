@@ -25,7 +25,6 @@ import TailwindRewardTable3 from '../components/TailwindRewardTable3'
 import { FiPlusCircle } from 'react-icons/fi'
 import { AiOutlineArrowUp } from 'react-icons/ai'
 import { MdHistory } from 'react-icons/md'
-import { HiOutlineDotsVertical } from 'react-icons/Hi'
 import { useRouter } from 'next/router'
 import RewardHeader from '../components/RewardHeader'
 import Link from 'next/link'
@@ -216,7 +215,7 @@ export default function Reward() {
           <div className="fixed top-0 h-20 w-screen  justify-start bg-white pt-6 pb-4 pl-10 text-2xl font-bold text-gray-600">
             Rarbit
           </div>
-          <div className="fixed top-5 right-10 flex flex-row items-center justify-end">
+          <div className="fixed top-6 right-10 flex flex-row items-center justify-end">
             {/* <div className="flex flex-row justify-end pr-7"> */}
             {LoginSession && (
               <div className=" flex flex-row items-center space-x-3 ">
@@ -297,7 +296,7 @@ export default function Reward() {
                 <button className="fixed bottom-20 z-10 rounded-xl bg-gradient-to-tr from-[#000000cd] via-[#5b056a] to-[#79168a] px-20 py-3 font-semibold text-white shadow-lg shadow-slate-400 hover:bg-purple-900 lg:hidden">
                   Withdraw SOL
                 </button>
-                <div className="invisible fixed right-72 top-0 z-30 lg:visible">
+                <div className="invisible fixed right-60 top-0 z-30 lg:visible">
                   <div className={styles.walletButtons}>
                     <WalletMultiButton />
                   </div>
