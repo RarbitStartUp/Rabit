@@ -220,9 +220,6 @@ export default function Reward() {
             {LoginSession ? (
               <div className=" flex flex-row items-center space-x-3 ">
                 <div className="flex flex-row items-center space-x-2">
-                  <p className="font-bold text-primary" text-slate-100>
-                    Hi,
-                  </p>
                   <div className="mt-1">
                     <Image
                       src={LoginSession.user.image}
@@ -247,7 +244,7 @@ export default function Reward() {
               </div>
             ) : (
               <button
-                className="text-sm font-bold text-slate-300"
+                className="mt-2 text-sm font-bold text-slate-300"
                 onClick={() => router.push('./Login')}
               >
                 Sign In
