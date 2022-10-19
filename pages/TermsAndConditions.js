@@ -92,10 +92,15 @@ function TermsAndConditions() {
           Services, delay or remove hosted content, remove any special status
           associated with your account(s), remove, not display, and/or demote
           listings, reduce, and take technical and/or legal steps to prevent you
-          from using our Services. We may cancel unconfirmed accounts or
-          accounts that have been inactive for a long time. Additionally, we
-          reserve the right to refuse, modify, or terminate all or part of our
-          Services to anyone for any reason at our discretion.
+          from using our Services.
+        </p>
+        <div className="h-3" />
+
+        <p>
+          We may cancel unconfirmed accounts or accounts that have been inactive
+          for a long time. Additionally, we reserve the right to refuse, modify,
+          or terminate all or part of our Services to anyone for any reason at
+          our discretion.
         </p>
       </div>
     </div>
