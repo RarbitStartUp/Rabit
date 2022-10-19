@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import SocialLogin from './auth/SocialLogin'
 import EmailLogin from './auth/EmailLogin'
+import { BsFillPersonFill } from 'react-icons/bs'
 // import Testing from './LoginTest'
 
 export default function Login() {
@@ -19,6 +20,24 @@ export default function Login() {
                   <hr className="border-b-1 mt-6 bg-slate-100" />
                 </div>
                 <EmailLogin />
+                <hr className="border-b-1 mt-3 bg-slate-100" />
+
+                <div className="flex-auto px-4 py-5 lg:px-10">
+                  <div className="mb-3 text-center font-bold text-slate-500">
+                    <small>Or take a tour without sign in</small>
+                  </div>
+
+                  <button
+                    className="mr-1 mb-1 w-full rounded border border-primary bg-white px-6 py-3 text-sm font-medium text-primary shadow  hover:shadow-lg "
+                    type="button"
+                    onClick={() => router.push('/Reward')}
+                  >
+                    <div className="flex flex-row items-center justify-center space-x-2">
+                      <div>Visitors</div>
+                      <BsFillPersonFill />
+                    </div>
+                  </button>
+                </div>
               </div>
               <button
                 onClick={() => router.push('/TermsAndConditions')}

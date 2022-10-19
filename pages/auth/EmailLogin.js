@@ -5,7 +5,7 @@ export default function EmailLogin() {
 
   return (
     <>
-      <div className="flex-auto px-4 py-10 pt-0 lg:px-10">
+      <div className="flex-auto px-4 pt-3 pb-3 lg:px-10">
         <div className="mb-3 text-center font-bold text-slate-500">
           <small>Or sign in with email</small>
         </div>
@@ -25,7 +25,7 @@ export default function EmailLogin() {
           </div>
           <div className="mt-6 text-center">
             <button
-              className="mr-1 mb-1 w-full rounded bg-primary px-6 py-3 text-sm font-medium text-white shadow  hover:shadow-lg  active:bg-red-700"
+              className="mr-1 mb-1 w-full rounded bg-primary px-6 py-3 text-sm font-medium text-white shadow  hover:shadow-lg"
               type="button"
               onClick={() => router.push('/Reward')}
             >
