@@ -1,4 +1,6 @@
 import { useRouter } from 'next/router'
+import { signIn } from 'next-auth/react'
+import SignIn from './SignIn'
 
 export default function SocialLogin() {
   const router = useRouter()
@@ -30,9 +32,10 @@ export default function SocialLogin() {
         <div className="btn-wrapper text-center">
           {array.map((social) => (
             <button
-              className="mr-2 mb-1 inline-flex items-center rounded bg-white px-2 py-2 text-xs font-normal font-bold uppercase text-gray-800 shadow outline-none hover:shadow-md focus:outline-none active:bg-gray-100"
+              className="mr-2 mb-1 inline-flex items-center rounded bg-white px-2 py-2 text-xs font-bold uppercase text-gray-800 shadow outline-none hover:shadow-md focus:outline-none active:bg-gray-100"
               type="button"
               onClick={social.provider}
+              // onClick={SignIn}
             >
               <img alt={social.type} src={social.icon} />
             </button>

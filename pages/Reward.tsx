@@ -34,8 +34,9 @@ import { encryptPayload } from '../utils/encryptPayload'
 import { buildUrl } from '../utils/ buildUrl'
 import { Buffer } from 'buffer'
 global.Buffer = global.Buffer || Buffer
-import 'react-native-get-random-values'
-import 'react-native-url-polyfill/auto'
+/* eslint-disable */
+// import 'react-native-get-random-values'
+// import 'react-native-url-polyfill/auto'
 
 const onConnectRedirectLink = Linking.createURL('onConnect')
 const onDisconnectRedirectLink = Linking.createURL('onDisconnect')
