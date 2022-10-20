@@ -5,10 +5,10 @@ export default function EmailLogin() {
 
   return (
     <>
-      <div className="flex-auto px-4 pt-3 pb-3 lg:px-10">
-        <div className="mb-3 text-center font-bold text-slate-500">
+      <div className="flex-auto px-4 pt-0 pb-3 lg:px-10">
+        {/* <div className="mb-3 text-center font-bold text-slate-500">
           <small>Or sign in with email</small>
-        </div>
+        </div> */}
         <form>
           <div className="relative mb-3 w-full">
             <label
@@ -21,6 +21,17 @@ export default function EmailLogin() {
               type="email"
               className=" focus:border-1 w-full rounded border-slate-100 bg-white px-3 py-3 text-sm text-slate-700 placeholder-slate-400 focus:border-primary"
               placeholder="Email"
+            />
+            <label
+              className="mb-2 ml-1 mt-5 block text-xs font-bold uppercase text-slate-700"
+              htmlFor="grid-password"
+            >
+              Password
+            </label>
+            <input
+              type="password"
+              className=" focus:border-1 w-full rounded border-slate-100 bg-white px-3 py-3 text-sm text-slate-700 placeholder-slate-400 focus:border-primary"
+              placeholder="Password"
             />
           </div>
           <div className="mt-6 text-center">
