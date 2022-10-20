@@ -22,7 +22,7 @@ export default function EmailLogin() {
               className=" focus:border-1 w-full rounded border-slate-100 bg-white px-3 py-3 text-sm text-slate-700 placeholder-slate-400 focus:border-primary"
               placeholder="Email"
             />
-            <label
+            {/* <label
               className="mb-2 ml-1 mt-5 block text-xs font-bold uppercase text-slate-700"
               htmlFor="grid-password"
             >
@@ -32,7 +32,7 @@ export default function EmailLogin() {
               type="password"
               className=" focus:border-1 w-full rounded border-slate-100 bg-white px-3 py-3 text-sm text-slate-700 placeholder-slate-400 focus:border-primary"
               placeholder="Password"
-            />
+            /> */}
           </div>
           <div className="mt-6 text-center">
             <button
